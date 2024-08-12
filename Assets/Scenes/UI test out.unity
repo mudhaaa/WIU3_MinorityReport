@@ -609,5 +609,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog System
       objectReference: {fileID: 0}
+    - target: {fileID: 96538270290089189, guid: 26772ed4bbb1c454483151f4dedcf15b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26772ed4bbb1c454483151f4dedcf15b, type: 3}

@@ -27,10 +27,6 @@ public class DialogSystem : MonoBehaviour
     public static readonly float[] DisplayCoolDowns = new float[5]{ 0.05f, 0.1f, 0.2f, 0.4f, 0.6f }; 
     public float DisplayCountDown;
 
-    private void Start()
-    {
-        //GetNewDialogues();
-    }
 
     // Update is called once per frame
     void Update()
@@ -43,7 +39,10 @@ public class DialogSystem : MonoBehaviour
         }
         else if(!IsCompleted && Input.GetKeyDown(KeyCode.Space))
         {
-            GetNewLine();
+            if(!GetNewLine())
+            {
+                gameObject.SetActive(false);
+            }
         }
         else if(IsCompleted && Input.GetKeyDown(KeyCode.Space))
         {
@@ -125,11 +124,10 @@ public class DialogSystem : MonoBehaviour
         DialogToDisplay = "";
         CharacterIndex = 0;
 
-        for (int i = 0; i < 2; ++i)
+        for (int i = 0; i < 5; ++i)
         {
             if((LineIndex + i) >= Dialogues.Length)
             {
-                IsCompleted = true;
                 Debug.Log("Error, missing content line, at line " + (LineIndex + i));
                 return false;
             }
@@ -138,6 +136,51 @@ public class DialogSystem : MonoBehaviour
             if(Dialogues[LineIndex + i].Substring(0, 2) == "N:")
             {
                 NameToDisplay = Dialogues[LineIndex + i].Substring(2);
+                continue;
+            }
+            else if(Dialogues[LineIndex + i].Substring(0, 4) == "LIM:")
+            {
+                if (Dialogues[LineIndex + i].Substring(4) == "Null")
+                {
+                    LeftImage.sprite = null;
+                    LeftImage.enabled = false;
+                }
+                else 
+                {
+                    LeftImage.enabled = true;
+                    LeftImage.sprite = Resources.Load<Sprite>("DialogImages/" + Dialogues[LineIndex + i].Substring(4));
+                }
+
+                continue;
+            }
+            else if (Dialogues[LineIndex + i].Substring(0, 4) == "RIM:")
+            {
+                if (Dialogues[LineIndex + i].Substring(4) == "Null")
+                {
+                    RightImage.sprite = null;
+                    RightImage.enabled = false;
+                }
+                else
+                {
+                    RightImage.enabled = true;
+                    RightImage.sprite = Resources.Load<Sprite>("DialogImages/" + Dialogues[LineIndex + i].Substring(4));
+                }
+
+                continue;
+            }
+            else if (Dialogues[LineIndex + i].Substring(0, 4) == "MIM:")
+            {
+                if (Dialogues[LineIndex + i].Substring(4) == "Null")
+                {
+                    MiddleImage.sprite = null;
+                    MiddleImage.enabled = false;
+                }
+                else
+                {
+                    MiddleImage.enabled = true;
+                    MiddleImage.sprite = Resources.Load<Sprite>("DialogImages/" + Dialogues[LineIndex + i].Substring(4));
+                }
+
                 continue;
             }
             else if(Dialogues[LineIndex + i].Substring(0, 2) == "C:") // get the content
@@ -149,7 +192,6 @@ public class DialogSystem : MonoBehaviour
                 break;
             }
 
-            IsCompleted = true;
             Debug.Log("Error, missing content line, at line " + (LineIndex + i));
             return false;
         }

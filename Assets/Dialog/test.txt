@@ -1,3 +1,6 @@
 N:asd
 C:sdfsdfsdfasdasdasdasdasd.
+LIM:testcharacter
+RIM:testcharacter
+MIM:testcharacter
 C:dfgdfgasdasdasdasdasd.
