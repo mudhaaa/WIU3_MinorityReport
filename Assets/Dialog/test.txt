@@ -3,4 +3,6 @@ C:sdfsdfsdfasdasdasdasdasd.
 LIM:testcharacter
 RIM:testcharacter
 MIM:testcharacter
+BGRGBA:255,255,0,255
+BGIM:testcharacter
 C:dfgdfgasdasdasdasdasd.

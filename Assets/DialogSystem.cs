@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
+    public Image Background;
+
     public Text Content;
     public Text Name;
 
@@ -124,7 +128,7 @@ public class DialogSystem : MonoBehaviour
         DialogToDisplay = "";
         CharacterIndex = 0;
 
-        for (int i = 0; i < 5; ++i)
+        for (int i = 0; i < 7; ++i)
         {
             if((LineIndex + i) >= Dialogues.Length)
             {
@@ -179,6 +183,63 @@ public class DialogSystem : MonoBehaviour
                 {
                     MiddleImage.enabled = true;
                     MiddleImage.sprite = Resources.Load<Sprite>("DialogImages/" + Dialogues[LineIndex + i].Substring(4));
+                }
+
+                continue;
+            }
+            else if (Dialogues[LineIndex + i].Substring(0, 7) == "BGRGBA:")
+            {
+                string[] colorValues = Dialogues[LineIndex + i].Substring(7).Split(',');
+                if(colorValues.Length < 4 && colorValues.Length > 4)
+                {
+                    Debug.Log("Fail to change the background color, invalid color information. At Line " + (LineIndex + i));
+                    continue;
+                }
+
+                Color newColor = new Color(0, 0, 0, 0);
+                float temp = 0.0f;
+                for(int ii = 0; ii < 4; ++ii)
+                {
+                    temp = Convert.ToSingle(colorValues[ii]);
+                    temp = Mathf.Clamp(temp, 0, 255);
+
+                    switch(ii)
+                    {
+                        case 0:
+                            {
+                                newColor.r = (temp / 255.0f);
+                                break;
+                            }
+                        case 1:
+                            {
+                                newColor.g = (temp / 255.0f);
+                                break;
+                            }
+                        case 2:
+                            {
+                                newColor.b = (temp / 255.0f);
+                                break;
+                            }
+                        case 3:
+                            {
+                                newColor.a = (temp / 255.0f);
+                                break;
+                            }
+                    }
+                }
+
+                Background.color = newColor;
+                continue;
+            }
+            else if (Dialogues[LineIndex + i].Substring(0, 5) == "BGIM:")
+            {
+                if (Dialogues[LineIndex + i].Substring(5) == "Null")
+                {
+                    Background.sprite = null;
+                }
+                else
+                {
+                    Background.sprite = Resources.Load<Sprite>("DialogImages/" + Dialogues[LineIndex + i].Substring(5));
                 }
 
                 continue;
