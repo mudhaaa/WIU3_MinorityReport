@@ -13,6 +13,10 @@ public class TimeSystem : MonoBehaviour
 
     public bool warningGiven;
 
+    public int Day;
+    public bool IsNight;
+    public bool NextDay;
+
 
     // Update is called once per frame
     void Update()
@@ -20,12 +24,20 @@ public class TimeSystem : MonoBehaviour
         Debug.Log(Time.deltaTime * TimeMultipler);
         currentTiming += Time.deltaTime * TimeMultipler;
 
-        if(currentTiming >= 420.0f && warningGiven == false)
+        if(currentTiming >= (420.0f) && warningGiven == false)
         {
             GiveWarning();
+            return;
         }
-
-
+        else if(currentTiming >= LengthOfTime && IsNight == false)
+        {
+            EndTheDay();
+        }
+        else if(IsNight == true && NextDay == true)
+        {
+            StartNextDay();
+        }
+        
     }
 
     private void GiveWarning()
@@ -36,8 +48,21 @@ public class TimeSystem : MonoBehaviour
         warningGiven = true; 
     }
 
-    private void OnDayEnd()
+    private void EndTheDay()
     {
-        Debug.Log("Is night time now.");
+        pDialogSystem.FilePath = "Assets/Dialog/femalenight" + Day + ".txt";
+        pDialogSystem.StartNewDialogues();
+
+        IsNight = true;
+    }
+
+    private void StartNextDay()
+    {
+        ++Day;
+        currentTiming = 0;
+
+        warningGiven = false;
+        IsNight = false;
+        NextDay = false;
     }
 }

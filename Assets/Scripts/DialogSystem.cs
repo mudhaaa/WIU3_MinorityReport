@@ -281,7 +281,7 @@ public class DialogSystem : MonoBehaviour
                 }
                 else
                 {
-                    Background.sprite = Resources.Load<Sprite>("DialogImages/" + Dialogues[LineIndex + i].Substring(5));
+                    Background.sprite = Resources.Load<Sprite>("DialogBackground/" + Dialogues[LineIndex + i].Substring(5));
                 }
 
                 continue;

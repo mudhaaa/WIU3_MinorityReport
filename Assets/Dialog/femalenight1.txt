@@ -1,0 +1,8 @@
+BGIM:nightroom
+BGRGBA:255,255,255,255
+N:asd
+C:sdfsdfsdfsdfsdfsdfsdfsdfsdf.
+N:qwe
+C:werwerwerwerwerwer.
+N:asd
+C:sdfsdf...
