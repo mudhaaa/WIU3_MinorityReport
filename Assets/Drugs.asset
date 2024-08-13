@@ -18,4 +18,4 @@ MonoBehaviour:
   Healing: 0
   AttackDmg: 0
   Stackable: 1
-  image: {fileID: 0}
+  image: {fileID: -1500686425, guid: 5f77378e437bda04abf851aba1579973, type: 3}
