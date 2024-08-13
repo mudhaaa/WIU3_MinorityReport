@@ -3,7 +3,7 @@ C:sdfsdfsdfasdasdasdasdasd.
 LIM:testcharacter
 RIM:testcharacter
 MIM:testcharacter
-BGRGBA:255,255,0,255
+BGRGBA:0,0,0,255
 BGIM:testcharacter
 OPT:first,-1,second,0,third,1,>,testing
 C:dfgdfgasdasdasdasdasd.

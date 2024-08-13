@@ -29,7 +29,7 @@ public class DialogSystem : MonoBehaviour
     public int CharacterIndex;
 
     public bool IsLineCompleted;
-    public bool IsCompleted;
+    private bool nextLine;
 
     public static readonly float[] DisplayCoolDowns = new float[5]{ 0.05f, 0.1f, 0.2f, 0.4f, 0.6f }; 
     public float DisplayCountDown;
@@ -42,32 +42,30 @@ public class DialogSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Name.text = NameToDisplay;
-
         if (!IsLineCompleted)
         {
             UpdateLine();
         }
-        else if(isOption == false && IsLineCompleted && Input.GetKeyDown(KeyCode.Space))
+
+        if (isOption == false && Input.GetMouseButtonDown(0) && IsLineCompleted == true)
         {
-            if(!GetNewLine())
+            nextLine = true;
+        }
+
+        if (nextLine == true && IsLineCompleted == true)
+        {
+            if(GetNewLine() == false)
             {
-                gameObject.SetActive(false);
+                EndDialog();
             }
         }
-
-        if (LineIndex >= Dialogues.Length)
-        {
-            IsCompleted = true;
-        }
-
     }
 
     private bool Init()
     {
         //reset the variables
-        IsLineCompleted = false;
-        IsCompleted = false;
+        nextLine = true;
+        IsLineCompleted = true;
         LineIndex = 0;
         CharacterIndex = 0;
         isOption = false;
@@ -105,6 +103,8 @@ public class DialogSystem : MonoBehaviour
         //reset the countdown timer
         DisplayCountDown = 0;
 
+        TimeSystem.TimeMultipler = 0.0f;
+
         return true;
     }
 
@@ -126,16 +126,19 @@ public class DialogSystem : MonoBehaviour
         if(Dialogues.Length <= 0)
         {
             Debug.Log("Error! Not able to read in the dialogues file." + FilePath);
+
+            EndDialog();
             return false;
         }
 
         //reset the variable
         LineIndex = 0;
-        IsCompleted = false;
 
         if (!GetNewLine())
         {
             Debug.Log("Fail to load dialog file.");
+
+            EndDialog();
             return false;
         }
         else
@@ -148,7 +151,6 @@ public class DialogSystem : MonoBehaviour
     {
         if(LineIndex >= Dialogues.Length)
         {
-            IsCompleted = true;
             Debug.Log("Dialogues reached the end.");
             return false;
         }
@@ -164,7 +166,8 @@ public class DialogSystem : MonoBehaviour
         {
             Buttons[i].SetActive(false);
         }
-        
+
+        HideName();
 
         for (int i = 0; i < 7; ++i)
         {
@@ -177,7 +180,8 @@ public class DialogSystem : MonoBehaviour
             //get the name
             if(Dialogues[LineIndex + i].Substring(0, 2) == "N:")
             {
-                NameToDisplay = Dialogues[LineIndex + i].Substring(2);
+                Name.text = Dialogues[LineIndex + i].Substring(2);
+                ShowName();
                 continue;
             }
             else if(Dialogues[LineIndex + i].Substring(0, 4) == "LIM:")
@@ -321,7 +325,6 @@ public class DialogSystem : MonoBehaviour
             }
             else if (Dialogues[LineIndex + i].Substring(0, 3) == "END")
             {
-                IsCompleted = true;    
                 return false;
             }
             else if(Dialogues[LineIndex + i].Substring(0, 2) == "C:") // get the content
@@ -337,17 +340,7 @@ public class DialogSystem : MonoBehaviour
             return false;
         }
 
-        if(NameToDisplay == "")
-        {
-            //disable the Name display since no name need to display
-            HideName();
-        }
-        else
-        {
-            //able the Name display
-            ShowName();
-        }
-
+        nextLine = false;
         IsLineCompleted = false;
         return true;
     }
@@ -392,18 +385,17 @@ public class DialogSystem : MonoBehaviour
         Name.transform.parent.gameObject.SetActive(false);
     }
 
-    public void ChooseOption(int optionIndex)
+    private void EndDialog()
     {
-        IsLineCompleted = true;
-        
+        TimeSystem.TimeMultipler = 20.0f;
+        gameObject.SetActive(false);
+    }
+
+    public void ChooseOption(int optionIndex)
+    {   
         if(LineIndexesJumpTo[optionIndex] != -1)
         {
             LineIndex = LineIndexesJumpTo[optionIndex];
-        }
-
-        if (!GetNewLine())
-        {
-            gameObject.SetActive(false);
         }
 
         if(newAddedKey != "")
@@ -411,6 +403,7 @@ public class DialogSystem : MonoBehaviour
             ChoiceChosen[newAddedKey] = optionIndex;
         }
 
+        nextLine = true;
         return;
     }
 }
