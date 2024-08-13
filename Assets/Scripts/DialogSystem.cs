@@ -17,6 +17,9 @@ public class DialogSystem : MonoBehaviour
     public Image MiddleImage;
     public Image RightImage;
 
+    public GameObject[] Buttons;
+    public Text[] ButtonLabels;
+
     public string FilePath;
     public string[] Dialogues;
     public int LineIndex;
@@ -31,6 +34,10 @@ public class DialogSystem : MonoBehaviour
     public static readonly float[] DisplayCoolDowns = new float[5]{ 0.05f, 0.1f, 0.2f, 0.4f, 0.6f }; 
     public float DisplayCountDown;
 
+    private int[] LineIndexesJumpTo = null;
+    private Dictionary<string, int> ChoiceChosen = null;
+    private string newAddedKey;
+    private bool isOption;
 
     // Update is called once per frame
     void Update()
@@ -41,17 +48,19 @@ public class DialogSystem : MonoBehaviour
         {
             UpdateLine();
         }
-        else if(!IsCompleted && Input.GetKeyDown(KeyCode.Space))
+        else if(isOption == false && IsLineCompleted && Input.GetKeyDown(KeyCode.Space))
         {
             if(!GetNewLine())
             {
                 gameObject.SetActive(false);
             }
         }
-        else if(IsCompleted && Input.GetKeyDown(KeyCode.Space))
+
+        if (LineIndex >= Dialogues.Length)
         {
-            gameObject.SetActive(false);
+            IsCompleted = true;
         }
+
     }
 
     private bool Init()
@@ -61,6 +70,7 @@ public class DialogSystem : MonoBehaviour
         IsCompleted = false;
         LineIndex = 0;
         CharacterIndex = 0;
+        isOption = false;
 
         //clear the last display
         Name.text = "";
@@ -75,6 +85,19 @@ public class DialogSystem : MonoBehaviour
         MiddleImage.enabled = false;
         RightImage.sprite = null;
         RightImage.enabled = false;
+
+        //clear the background display
+        Background.sprite = null;
+        Background.color = new Color(1, 1, 1, 0);
+
+        //clear the button last display
+        for(int i = 0; i < 4; ++i)
+        {
+            Buttons[i].SetActive(false);
+            ButtonLabels[i].text = null;
+        }
+
+        ChoiceChosen = new Dictionary<string, int>();
 
         //clean dialogues
         Dialogues = null;
@@ -123,10 +146,25 @@ public class DialogSystem : MonoBehaviour
 
     public bool GetNewLine()
     {
+        if(LineIndex >= Dialogues.Length)
+        {
+            IsCompleted = true;
+            Debug.Log("Dialogues reached the end.");
+            return false;
+        }
+
         //reset the name and dialog display
         NameToDisplay = "";
         DialogToDisplay = "";
         CharacterIndex = 0;
+        newAddedKey = "";
+        isOption = false;
+
+        for(int i = 0; i < 4; ++i)
+        {
+            Buttons[i].SetActive(false);
+        }
+        
 
         for (int i = 0; i < 7; ++i)
         {
@@ -244,6 +282,48 @@ public class DialogSystem : MonoBehaviour
 
                 continue;
             }
+            else if (Dialogues[LineIndex + i].Substring(0, 4) == "OPT:") // get options
+            {
+                string[] temp = Dialogues[LineIndex + i].Substring(4).Split(',');
+                int numOfOptionReadIn = 0;
+
+                for(int ii = 0; ii < 10; ii += 2)
+                {
+                    if (temp[ii] == ">")
+                    {
+                        newAddedKey = temp[ii + 1];
+
+                        if (ChoiceChosen.ContainsKey(newAddedKey) == false)
+                        {
+                            ChoiceChosen.Add(newAddedKey, -1);
+                        }
+
+                        break;
+                    }
+                    else
+                    {
+                        Buttons[numOfOptionReadIn].SetActive(true);
+                        ButtonLabels[numOfOptionReadIn].text = temp[ii];
+                        ++numOfOptionReadIn;
+                    }
+                }
+
+                LineIndexesJumpTo = new int[numOfOptionReadIn];
+
+                for (int ii = 0; ii < numOfOptionReadIn; ++ii)
+                {
+                    LineIndexesJumpTo[ii] = Convert.ToInt32(temp[(ii * 2) + 1]);
+                }
+
+                isOption = true;
+
+                continue;
+            }
+            else if (Dialogues[LineIndex + i].Substring(0, 3) == "END")
+            {
+                IsCompleted = true;    
+                return false;
+            }
             else if(Dialogues[LineIndex + i].Substring(0, 2) == "C:") // get the content
             {
                 DialogToDisplay = Dialogues[LineIndex + i].Substring(2);
@@ -268,12 +348,6 @@ public class DialogSystem : MonoBehaviour
             ShowName();
         }
 
-        //if reach the last line
-        if (LineIndex >= Dialogues.Length)
-        {
-            IsCompleted = true;
-        }
-
         IsLineCompleted = false;
         return true;
     }
@@ -286,10 +360,19 @@ public class DialogSystem : MonoBehaviour
             return;
         }
 
-        CharacterIndex++;
-        Content.text = DialogToDisplay.Substring(0,CharacterIndex);
+        if (isOption == false)
+        {
+            CharacterIndex++;
 
-        if(CharacterIndex >= DialogToDisplay.Length)
+        }
+        else
+        {
+            CharacterIndex = DialogToDisplay.Length;
+        }
+
+        Content.text = DialogToDisplay.Substring(0, CharacterIndex);
+
+        if (CharacterIndex >= DialogToDisplay.Length)
         {
             IsLineCompleted = true;
         }
@@ -307,6 +390,28 @@ public class DialogSystem : MonoBehaviour
     private void HideName()
     {
         Name.transform.parent.gameObject.SetActive(false);
+    }
+
+    public void ChooseOption(int optionIndex)
+    {
+        IsLineCompleted = true;
+        
+        if(LineIndexesJumpTo[optionIndex] != -1)
+        {
+            LineIndex = LineIndexesJumpTo[optionIndex];
+        }
+
+        if (!GetNewLine())
+        {
+            gameObject.SetActive(false);
+        }
+
+        if(newAddedKey != "")
+        {
+            ChoiceChosen[newAddedKey] = optionIndex;
+        }
+
+        return;
     }
 }
 
