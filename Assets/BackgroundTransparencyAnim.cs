@@ -20,10 +20,11 @@ public class BackgroundTransparencyAnim : MonoBehaviour
 
     public IEnumerator Anim(float TargetTrans, float Accuracy)
     {
-        float time = 0;
         CoroutineRunning = true;
-        while (true)
+        float time = 0;
+        while (CoroutineRunning)
         {
+            Debug.Log("Coroutine Transparency");
             canvasgroup.alpha = Mathf.Lerp(canvasgroup.alpha, TargetTrans, time);
             time += Time.deltaTime * LerpSpeed;
             if (Mathf.Abs(canvasgroup.alpha - TargetTrans) <= Accuracy)
@@ -35,6 +36,7 @@ public class BackgroundTransparencyAnim : MonoBehaviour
             }
             yield return null;
         }
+        yield break;
     }
     void Update()
     {
@@ -44,7 +46,7 @@ public class BackgroundTransparencyAnim : MonoBehaviour
     private void OnEnable()
     {
         //Debug.Log("ENABLED");
-        //if (currentcoroutine != null)
+        //if (CoroutineRunning)
         //{
         //    StopCoroutine(currentcoroutine);
         //    CoroutineRunning = false;
@@ -54,7 +56,7 @@ public class BackgroundTransparencyAnim : MonoBehaviour
 
     private void OnDisable()
     {
-        if (currentcoroutine != null)
+        if (CoroutineRunning)
         {
             StopCoroutine(currentcoroutine);
             CoroutineRunning = false;

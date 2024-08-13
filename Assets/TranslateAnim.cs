@@ -24,8 +24,9 @@ public class TranslateAnim : MonoBehaviour
     {
         float time = 0;
         CoroutineRunning = true;
-        while (true)
+        while (CoroutineRunning)
         {
+            Debug.Log("Coroutine Translate");
             transform.localPosition = Vector2.Lerp(transform.localPosition, Targetpos, time);
             time += Time.deltaTime * LerpSpeed;
             if (Vector2.Distance(transform.localPosition, Targetpos) < Accuracy)
@@ -37,6 +38,7 @@ public class TranslateAnim : MonoBehaviour
             }
             yield return null;
         }
+        yield break;
     }
     void Update()
     {
@@ -46,7 +48,7 @@ public class TranslateAnim : MonoBehaviour
     private void OnEnable()
     {
         //Debug.Log("ENABLED");
-        //if (currentcoroutine != null)
+        //if (CoroutineRunning)
         //{
         //    StopCoroutine(currentcoroutine);
         //    CoroutineRunning = false;
@@ -56,7 +58,7 @@ public class TranslateAnim : MonoBehaviour
 
     private void OnDisable()
     {
-        if (currentcoroutine != null)
+        if (CoroutineRunning)
         {
             StopCoroutine(currentcoroutine);
             CoroutineRunning = false;
