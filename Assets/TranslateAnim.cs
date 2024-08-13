@@ -8,7 +8,6 @@ public class TranslateAnim : MonoBehaviour
 {
     public bool CoroutineRunning = false;
     [SerializeField] public Vector2 TargetPosition;
-    [SerializeField] float accuracy = 0.01f;
     [SerializeField] float LerpSpeed = 0.01f;
     public Coroutine currentcoroutine;
 
@@ -26,12 +25,10 @@ public class TranslateAnim : MonoBehaviour
         CoroutineRunning = true;
         while (CoroutineRunning)
         {
-            Debug.Log("Coroutine Translate");
             transform.localPosition = Vector2.Lerp(transform.localPosition, Targetpos, time);
             time += Time.deltaTime * LerpSpeed;
             if (Vector2.Distance(transform.localPosition, Targetpos) < Accuracy)
             {
-                Debug.Log("Anim End");
                 transform.localPosition = Targetpos;
                 CoroutineRunning = false;
                 yield break;

@@ -13,7 +13,6 @@ public class SanityBar : MonoBehaviour
 
 
     public bool CoroutineRunning = false;
-    [SerializeField] float accuracy = 0.01f;
     [SerializeField] float LerpSpeed = 0.01f;
     public Coroutine currentcoroutine;
 
@@ -62,7 +61,6 @@ public class SanityBar : MonoBehaviour
         float time = 0;
         while (CoroutineRunning)
         {
-            Debug.Log("Coroutine Sanity");
             slider.value = Mathf.Lerp(slider.value, TargetValue, time);
             time += Time.deltaTime * LerpSpeed;
             if (Mathf.Abs(slider.value - TargetValue) <= Accuracy)
@@ -80,10 +78,6 @@ public class SanityBar : MonoBehaviour
                 StopCoroutine(transparencyanim.currentcoroutine);
             }
             transparencyanim.currentcoroutine = StartCoroutine(transparencyanim.Anim(0.0f, 0.01f));
-        }
-        else
-        {
-            Debug.Log("Inventory Active");
         }
         CoroutineRunning = false;
         yield break;

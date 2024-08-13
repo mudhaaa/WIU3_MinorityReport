@@ -58,7 +58,6 @@ public class CloseInventory : MonoBehaviour
         {
             if (EquipmentTranslateAnim.CoroutineRunning == false && InventoryTranslateAnim.CoroutineRunning == false && backgroundTransparencyAnim.CoroutineRunning == false && SanityBar.CoroutineRunning ==false)
             {
-                Debug.Log("STOP RUNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNING");
                 CoroutineRunning = false;
                 gameObject.SetActive(false);
                 yield break;
