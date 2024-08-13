@@ -1,0 +1,3621 @@
+fileFormatVersion: 2
+guid: 4b835f9d2f34f3a4785e90a87c614981
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc27665dc4fe274aac46635d3b62be8
+      internalID: 1816522209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4fd2847f636cf40b77dc8475e0c2e4
+      internalID: 852102620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f08e84f357c4b140a1d1a24348867ad
+      internalID: 10503313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_3
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f585162bfb80cc941acb13e5e6978588
+      internalID: -522034857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_4
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588dbe363747e8c48a3d6352ddbc03b4
+      internalID: -1444535449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_5
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07e311ca73059e458a42402381d015c
+      internalID: -1898006007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_6
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8776b4fedcaf5f04bb2cc52c16b28964
+      internalID: -825014653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_7
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145dc59312c26d94d961144655459f9d
+      internalID: -50807240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_8
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82be8c42468961a4196f45fa1e75ca5a
+      internalID: 655135336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15aa507dbc6e61143bd879f1f33b1fe9
+      internalID: 1105615286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_10
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb4a8f7550befe44aaeb9f84f43d788
+      internalID: 1840916469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517c232555fe384469d589a58c726aa2
+      internalID: -480392654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_12
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fef7061df241b24b9a749ae3e857cfe
+      internalID: -326376081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_13
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b866cf8ff2d00824da00b0c71419ae06
+      internalID: 1590307816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_14
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 146
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711fd8ddf96355d45b6f27f154cfceb5
+      internalID: 1867050520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_15
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ecb0b1b41f4fe4ba816d3d0ba4dad6
+      internalID: 1122934432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7be5ae8e444d754e88c8d9c45c0bb66
+      internalID: 1305861072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_17
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d77416e1b82b3d488d61cbab537ddac
+      internalID: 1511207344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_18
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ba47957d657ce4bb314cd0f1877775
+      internalID: 443987441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_19
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb413b80e43b8f4c89fc8af6515e271
+      internalID: -1670655640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_20
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6460ecf81ce30e48a805a341129d3ce
+      internalID: 1121773270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_21
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97e4ab198e97a549a01f2ada602a241
+      internalID: 259780911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0348f55faebf2c5429be11a7ad5197eb
+      internalID: 8438426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_23
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c4bf0e22b0df0499ecbbf81e137bf1
+      internalID: 1179082107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_24
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf81680b56ea60b429813e9d996eb568
+      internalID: 1738252738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_25
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4b57e64f39d604baaa0fb84c7a5086
+      internalID: 1941423789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_26
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 137
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e564b1c301190848bf91acc8449aff6
+      internalID: -1325753772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_27
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80fa582d9ecf234689b21e94a062047
+      internalID: 725307620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_28
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b873dce7a147334bb549c784777f06b
+      internalID: -1967509668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_29
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e4eea3b716730408bfc7ad7eb74140
+      internalID: -1484464387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_30
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80738da759cdf074f87e24693f704559
+      internalID: 585530413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_31
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2809e60dde01c5429f7e29a77f033d4
+      internalID: 2110199428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4c14c9acc77b04197dd910e06ee5dd
+      internalID: -1388729827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_33
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b67bfcff730fc41a65d2b2fb9a79be
+      internalID: 729551324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_34
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8f2554be608994295aa88783104157
+      internalID: 1870608813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_35
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4981a02e7c22a5b4f8360e7b72ccbc85
+      internalID: 2085849711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_36
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f394b619439ae8f4da189ea214421f28
+      internalID: -1726539201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_37
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53019ce9b969091429c7823745b74a08
+      internalID: 1201753636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_38
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30060fbe3bf59f469b43061eaa1b2d3
+      internalID: 920267687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_39
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f958d1dc85a7b48b2b918dda559276
+      internalID: 777544499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_40
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8476cc670601c4a96de4412f248378
+      internalID: 1601013233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_41
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf9a5d414d2fd74a831495ca7333969
+      internalID: 1312931815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_42
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e67c537513d5548ba755e6850856dd
+      internalID: 2041516005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_43
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015ca62b7d6b5a541a034abe759f2800
+      internalID: -1257009307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_44
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923bd5ae536578f48acfe0e122d2b0aa
+      internalID: -375608374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_45
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51845eb710845e498d5722e43e0f253
+      internalID: 1094983344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_46
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263798c13023298449a0c52194453497
+      internalID: -27446732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_47
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39398022b9d050d47a7f4ba7fa1bd843
+      internalID: 941802800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_48
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122176b503eebfa438d6e93230e363d4
+      internalID: 141323569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_49
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ddb363b93f9094f8b7ea3155b0adf3
+      internalID: -1650073834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_50
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 119
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e51a76d9caaa25469683dd5309e5ce7
+      internalID: -1378706468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_51
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f270ceec86f8a41b5d5afe598b1e27
+      internalID: 1866086854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_52
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a61d58c208cee4cb86b14862672b54
+      internalID: 786478423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_53
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73982affcd58abc4483bd7a28573cca6
+      internalID: 689922619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_54
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02434959cae9bc1448ef76730d50de24
+      internalID: -88359448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_55
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b5f30d10565b04d86698962ffe587e
+      internalID: -2018718521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_56
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26b0e5f84b2a7442af45e9153124547
+      internalID: 2005722811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_57
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7bec4c39461e743b958b3eab3a6b6a
+      internalID: 1819389534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_58
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8450d7156e3b04344a8dd03aa2ae15a4
+      internalID: -1886490624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_59
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d095ee93ff8c9b141be031886b38cdaf
+      internalID: 1019173269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_60
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48107fcc85f79404483a45d3c49e405f
+      internalID: -1592673452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_61
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045ea5e6de32841428263b7b0654d5a7
+      internalID: 439262895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_62
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 110
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6735ec7ed9859e3419b84ecf414e0496
+      internalID: -382727414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_63
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a9aacb33673bc42a2d8d7781b31155
+      internalID: 125472167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_64
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ead2658c754caa4dbdc652f2fb3c59a
+      internalID: -725615110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_65
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58003560b115a44ab20fe7f530a0831
+      internalID: -383378379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_66
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da69ae626da15424a8dd4abd0381fea3
+      internalID: 562937333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_67
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6975dfe7e17de2a4186518aa8564e35f
+      internalID: 459144149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_68
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc36dbdd6319ce4191ad112c1c89dbd
+      internalID: -1519369720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_69
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd40a76c5ee8e54595f5034678e1d76
+      internalID: -770223137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_70
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f739ecee26626e743bd39fa58e3cb9df
+      internalID: -1495564930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_71
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef5708b9b4f9374ba29f2ff8de37da7
+      internalID: -1808200378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_72
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb7e8f5472e9ce4bb76ac8e3864873d
+      internalID: -2012152144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_73
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e8055741d85404094342891f82fbaa
+      internalID: -773518281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_74
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 101
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bebda48172cd56409adc134d66690d7
+      internalID: 879039081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_75
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c655575c7207ed0439f6cccc4aebc316
+      internalID: -1270475336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_76
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12144e302badd504286e2ad941cad3a6
+      internalID: -1861247927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_77
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1b4089788a42046bb138b08abdd05e
+      internalID: 712919824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_78
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406026cbad167844e9fe92835802b2d4
+      internalID: 367336301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_79
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4740fe01e27ac498d6f41498dcc8cc
+      internalID: -739788725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_80
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab45ba9fcc50384c91f599be4a906f9
+      internalID: -2071977943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_81
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4197d869acbc034b930287766ec2852
+      internalID: 226076247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_82
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db38a10c58125294680a28c621afed50
+      internalID: -571421584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_83
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477702ab116035347a76526f8bfaf0bf
+      internalID: -322205978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_84
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2814d6ce607044fa5d5e3216206e2c
+      internalID: 2104698024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_85
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcc01a2396d7a14cae70e9fd3272160
+      internalID: -1452381929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_86
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1a306c5e3938b44998a562890d032c
+      internalID: -2014056972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_87
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314feb346e6c2fd4a93eb8125f09b32c
+      internalID: 858207982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_88
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed42772041e4cfa4aa769a8c94c406a2
+      internalID: -1043070775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_89
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938536104d388314f8e922a02bc2999b
+      internalID: 1594314488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_90
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb13ae7e4c25a446b7f94a581575212
+      internalID: 1283012804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_91
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191acf36c21fcf94a9e4ef614de69160
+      internalID: -111177297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_92
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5914f1e5834d6f141a3c2c0b2255ab2f
+      internalID: 1223698822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_93
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6475703daf5511848b2ee4bda1a19491
+      internalID: -620467274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_94
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ecd46201b340e4ca2af05f69aafde6
+      internalID: -300831673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_95
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36accd6b0cfab6b4181ac20c16b7b629
+      internalID: -1855144269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_96
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 83
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad590a4cf5bc624d96ffef02198059b
+      internalID: -975197979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_97
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d009223fbedf3540840c6044573e07a
+      internalID: 2101346781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_98
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de27efc3fc64de45bd6098b60526a9d
+      internalID: -1406970677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_99
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e329dbbfda9d046a67dcafc628b777
+      internalID: 1086128113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_100
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e401c73e3233049ad1fba8270d2bd9
+      internalID: -1263712684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_101
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780e9f4e93823084aa7082432e7ed790
+      internalID: 2023718130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_102
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7028b033690e8440bf2ef7be1a73f41
+      internalID: -946893698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_103
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80953a77a793e3b4c90173e2cb2b6d53
+      internalID: 729513794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_104
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c709993bb8cb3fd4ba8c54c3faa059c4
+      internalID: -7984929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_105
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f451575cae2ea394b84ad7c1224cfe84
+      internalID: 628264164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_106
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fd901045130fd469d044f72c661b19
+      internalID: -508557937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_107
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 74
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f1929e4eb0f5344b1b49ff0444a201
+      internalID: 1464764452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_108
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5733d82fd6d1c744a285fa27b18aa02
+      internalID: -2021555616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_109
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1baff9fb8f914d4183aa1446e87e8f1
+      internalID: 1657083246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_110
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eae6a82b4445048b5d554ba0dc5c36
+      internalID: 1409100357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_111
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea0bdd82efda3a4a987c710cdd78f85
+      internalID: 1318748730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_112
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831275bb0a11c6145b753ab6a174a468
+      internalID: 388179027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_113
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee271f9541774f4c94b06a934c28851
+      internalID: 361319327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_114
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801d1c4b1b3540b4bbafa6338aefccec
+      internalID: 1062700686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_115
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061e55aa0ef55734fadf68e2e5718ebf
+      internalID: 1762138429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_116
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cda558f11b4d0542b9cdc5566b60bd3
+      internalID: 61309980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_117
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 65
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21060a1be4d0f3142847331022baf907
+      internalID: -592701188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_118
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2c3197bedffec4597f987adc0d2f82
+      internalID: 196159140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_119
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a427d7e18c70a4abb97086a528fabc
+      internalID: 2099323154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_120
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84de9d5b6f77d94c9ab0f576703b4e5
+      internalID: -1512045576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_121
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b04150a2041ab48914e9bbf7691d83
+      internalID: 655400501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_122
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67170b23122487b42a7d5c3d9c9a3460
+      internalID: -1378707980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_123
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc73012a5bd5e94ba68c307f1a57c11
+      internalID: 176905735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_124
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d187e81acf329e94092a7b91e86705f7
+      internalID: 1385966355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_125
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b8a5625090c2c4791f7a38165c7b9b
+      internalID: -807692155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_126
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9bffdc60f2920f42a2aedd43fb11339
+      internalID: 164925919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_127
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4646a616fddfe4a956d193ee7d763a
+      internalID: 727087597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_128
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 47
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9212c8bc24573c145bd8a58d7c76ae93
+      internalID: -1802007423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_129
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 41
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5faec7875392a9a4bbfb2ad21222632b
+      internalID: 2042762402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_130
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 41
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5af382b20a1e9844a3cb476658206de
+      internalID: 197570159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_131
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6615cb00784e9f4aa25b9e70ea817dc
+      internalID: 1806658720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_132
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6f737d4e3352543af98303f8e3acca
+      internalID: 1522001400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_133
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d00533f4a0e5f48b760197744f04e8
+      internalID: -2074997473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_134
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faa3404526960643b9b457b78c287d1
+      internalID: 1238143447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_135
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1f9db4c437c4843a5a743ea8b1ee42
+      internalID: 1428926251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_136
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 33
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0186c5b933cd91e4885b7850e6ea78a3
+      internalID: -609596243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_137
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 33
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ee2b06c5ff4604494ba00d4171bf96
+      internalID: 1417711861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_138
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 33
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505194740af268f4783b5914b35183af
+      internalID: -1335033383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_139
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 29
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694a5626cbf5d714eba3a3f1453208de
+      internalID: 697315424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_140
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 29
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70601c0843fcdf64589e36470d04c5de
+      internalID: 436559422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_141
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 29
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c17f8433af9484f8e5ff2e36d0440f
+      internalID: 639786040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_142
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 29
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e5eb0b5dce34348b50eaeb6a964c84
+      internalID: -1388700996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_143
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 29
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811ead64e13d5fe498a73433b948e889
+      internalID: 228621344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_144
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9eff9f2beaff53419eefb5764201c52
+      internalID: 307044985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_145
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0255862ce39134e81fb6edf030017f
+      internalID: 421817271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_146
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1abfb6d1a31290438a16175e37ee9cb
+      internalID: 964940454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_147
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dcc89ca78fcdf4c81d0c7ccb46aa45
+      internalID: -2017392121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_148
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5271fd6e26af734e8c1ff7368150a25
+      internalID: 1113186460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_149
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15d920b240b91f489a285467ac239c2
+      internalID: 969704975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_150
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 20
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4daf062ab367dc44a502746aa8dfb0b
+      internalID: 892483110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_151
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd4e7ab34f71274488e235f8ccd5981
+      internalID: -447681039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_152
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd627bd60b7c04f4d8e5a3756e0dde8d
+      internalID: 1921776228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_153
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdd80e096629484ca99fb4baf826998
+      internalID: 750493724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_154
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5fd4b1a0c28db45b3d849b05f9d4b4
+      internalID: -248161990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_155
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760c502ed0b2cfa4caf4e7780f6ad464
+      internalID: 1158543770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_156
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078f4b5aa935cf544852348aa8090063
+      internalID: 2010293220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_157
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab05135f98ebb8b4ca5d1c47e78e00c4
+      internalID: -1043689079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor and walls spritesheet black outline_158
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 2
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c96840fb55ac84eb0506beaa898054
+      internalID: 1708406140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      floor and walls spritesheet black outline_98: -1406970677
+      floor and walls spritesheet black outline_56: 2005722811
+      floor and walls spritesheet black outline_61: 439262895
+      floor and walls spritesheet black outline_48: 141323569
+      floor and walls spritesheet black outline_45: 1094983344
+      floor and walls spritesheet black outline_158: 1708406140
+      floor and walls spritesheet black outline_119: 2099323154
+      floor and walls spritesheet black outline_53: 689922619
+      floor and walls spritesheet black outline_120: -1512045576
+      floor and walls spritesheet black outline_126: 164925919
+      floor and walls spritesheet black outline_19: -1670655640
+      floor and walls spritesheet black outline_156: 2010293220
+      floor and walls spritesheet black outline_73: -773518281
+      floor and walls spritesheet black outline_80: -2071977943
+      floor and walls spritesheet black outline_136: -609596243
+      floor and walls spritesheet black outline_60: -1592673452
+      floor and walls spritesheet black outline_114: 1062700686
+      floor and walls spritesheet black outline_151: -447681039
+      floor and walls spritesheet black outline_23: 1179082107
+      floor and walls spritesheet black outline_101: 2023718130
+      floor and walls spritesheet black outline_154: -248161990
+      floor and walls spritesheet black outline_110: 1409100357
+      floor and walls spritesheet black outline_118: 196159140
+      floor and walls spritesheet black outline_31: 2110199428
+      floor and walls spritesheet black outline_64: -725615110
+      floor and walls spritesheet black outline_70: -1495564930
+      floor and walls spritesheet black outline_88: -1043070775
+      floor and walls spritesheet black outline_97: 2101346781
+      floor and walls spritesheet black outline_30: 585530413
+      floor and walls spritesheet black outline_5: -1898006007
+      floor and walls spritesheet black outline_57: 1819389534
+      floor and walls spritesheet black outline_25: 1941423789
+      floor and walls spritesheet black outline_117: -592701188
+      floor and walls spritesheet black outline_37: 1201753636
+      floor and walls spritesheet black outline_141: 639786040
+      floor and walls spritesheet black outline_78: 367336301
+      floor and walls spritesheet black outline_58: -1886490624
+      floor and walls spritesheet black outline_76: -1861247927
+      floor and walls spritesheet black outline_121: 655400501
+      floor and walls spritesheet black outline_16: 1305861072
+      floor and walls spritesheet black outline_11: -480392654
+      floor and walls spritesheet black outline_55: -2018718521
+      floor and walls spritesheet black outline_100: -1263712684
+      floor and walls spritesheet black outline_148: 1113186460
+      floor and walls spritesheet black outline_104: -7984929
+      floor and walls spritesheet black outline_115: 1762138429
+      floor and walls spritesheet black outline_49: -1650073834
+      floor and walls spritesheet black outline_155: 1158543770
+      floor and walls spritesheet black outline_24: 1738252738
+      floor and walls spritesheet black outline_127: 727087597
+      floor and walls spritesheet black outline_35: 2085849711
+      floor and walls spritesheet black outline_107: 1464764452
+      floor and walls spritesheet black outline_130: 197570159
+      floor and walls spritesheet black outline_142: -1388700996
+      floor and walls spritesheet black outline_146: 964940454
+      floor and walls spritesheet black outline_132: 1522001400
+      floor and walls spritesheet black outline_72: -2012152144
+      floor and walls spritesheet black outline_50: -1378706468
+      floor and walls spritesheet black outline_128: -1802007423
+      floor and walls spritesheet black outline_140: 436559422
+      floor and walls spritesheet black outline_95: -1855144269
+      floor and walls spritesheet black outline_116: 61309980
+      floor and walls spritesheet black outline_123: 176905735
+      floor and walls spritesheet black outline_94: -300831673
+      floor and walls spritesheet black outline_93: -620467274
+      floor and walls spritesheet black outline_137: 1417711861
+      floor and walls spritesheet black outline_3: -522034857
+      floor and walls spritesheet black outline_124: 1385966355
+      floor and walls spritesheet black outline_85: -1452381929
+      floor and walls spritesheet black outline_21: 259780911
+      floor and walls spritesheet black outline_68: -1519369720
+      floor and walls spritesheet black outline_129: 2042762402
+      floor and walls spritesheet black outline_81: 226076247
+      floor and walls spritesheet black outline_28: -1967509668
+      floor and walls spritesheet black outline_67: 459144149
+      floor and walls spritesheet black outline_7: -50807240
+      floor and walls spritesheet black outline_69: -770223137
+      floor and walls spritesheet black outline_59: 1019173269
+      floor and walls spritesheet black outline_22: 8438426
+      floor and walls spritesheet black outline_26: -1325753772
+      floor and walls spritesheet black outline_150: 892483110
+      floor and walls spritesheet black outline_14: 1867050520
+      floor and walls spritesheet black outline_9: 1105615286
+      floor and walls spritesheet black outline_90: 1283012804
+      floor and walls spritesheet black outline_106: -508557937
+      floor and walls spritesheet black outline_152: 1921776228
+      floor and walls spritesheet black outline_18: 443987441
+      floor and walls spritesheet black outline_29: -1484464387
+      floor and walls spritesheet black outline_108: -2021555616
+      floor and walls spritesheet black outline_41: 1312931815
+      floor and walls spritesheet black outline_38: 920267687
+      floor and walls spritesheet black outline_149: 969704975
+      floor and walls spritesheet black outline_32: -1388729827
+      floor and walls spritesheet black outline_157: -1043689079
+      floor and walls spritesheet black outline_42: 2041516005
+      floor and walls spritesheet black outline_13: 1590307816
+      floor and walls spritesheet black outline_99: 1086128113
+      floor and walls spritesheet black outline_86: -2014056972
+      floor and walls spritesheet black outline_91: -111177297
+      floor and walls spritesheet black outline_125: -807692155
+      floor and walls spritesheet black outline_138: -1335033383
+      floor and walls spritesheet black outline_153: 750493724
+      floor and walls spritesheet black outline_144: 307044985
+      floor and walls spritesheet black outline_63: 125472167
+      floor and walls spritesheet black outline_71: -1808200378
+      floor and walls spritesheet black outline_122: -1378707980
+      floor and walls spritesheet black outline_33: 729551324
+      floor and walls spritesheet black outline_83: -322205978
+      floor and walls spritesheet black outline_89: 1594314488
+      floor and walls spritesheet black outline_39: 777544499
+      floor and walls spritesheet black outline_96: -975197979
+      floor and walls spritesheet black outline_82: -571421584
+      floor and walls spritesheet black outline_46: -27446732
+      floor and walls spritesheet black outline_17: 1511207344
+      floor and walls spritesheet black outline_134: 1238143447
+      floor and walls spritesheet black outline_112: 388179027
+      floor and walls spritesheet black outline_109: 1657083246
+      floor and walls spritesheet black outline_77: 712919824
+      floor and walls spritesheet black outline_54: -88359448
+      floor and walls spritesheet black outline_131: 1806658720
+      floor and walls spritesheet black outline_139: 697315424
+      floor and walls spritesheet black outline_36: -1726539201
+      floor and walls spritesheet black outline_105: 628264164
+      floor and walls spritesheet black outline_44: -375608374
+      floor and walls spritesheet black outline_62: -382727414
+      floor and walls spritesheet black outline_10: 1840916469
+      floor and walls spritesheet black outline_4: -1444535449
+      floor and walls spritesheet black outline_92: 1223698822
+      floor and walls spritesheet black outline_2: 10503313
+      floor and walls spritesheet black outline_135: 1428926251
+      floor and walls spritesheet black outline_6: -825014653
+      floor and walls spritesheet black outline_145: 421817271
+      floor and walls spritesheet black outline_52: 786478423
+      floor and walls spritesheet black outline_1: 852102620
+      floor and walls spritesheet black outline_103: 729513794
+      floor and walls spritesheet black outline_51: 1866086854
+      floor and walls spritesheet black outline_74: 879039081
+      floor and walls spritesheet black outline_43: -1257009307
+      floor and walls spritesheet black outline_147: -2017392121
+      floor and walls spritesheet black outline_15: 1122934432
+      floor and walls spritesheet black outline_27: 725307620
+      floor and walls spritesheet black outline_75: -1270475336
+      floor and walls spritesheet black outline_66: 562937333
+      floor and walls spritesheet black outline_8: 655135336
+      floor and walls spritesheet black outline_143: 228621344
+      floor and walls spritesheet black outline_34: 1870608813
+      floor and walls spritesheet black outline_65: -383378379
+      floor and walls spritesheet black outline_79: -739788725
+      floor and walls spritesheet black outline_102: -946893698
+      floor and walls spritesheet black outline_111: 1318748730
+      floor and walls spritesheet black outline_84: 2104698024
+      floor and walls spritesheet black outline_0: 1816522209
+      floor and walls spritesheet black outline_20: 1121773270
+      floor and walls spritesheet black outline_12: -326376081
+      floor and walls spritesheet black outline_87: 858207982
+      floor and walls spritesheet black outline_47: 941802800
+      floor and walls spritesheet black outline_113: 361319327
+      floor and walls spritesheet black outline_40: 1601013233
+      floor and walls spritesheet black outline_133: -2074997473
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
