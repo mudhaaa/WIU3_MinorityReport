@@ -6,6 +6,7 @@ using UnityEngine.AI; // Add this namespace for NavMeshAgent
 [CreateAssetMenu(menuName = "PluggableAI/Actions/Patrol")]
 public class PatrolAction : Action
 {
+    
     public override void Act(StateController controller)
     {
         Patrol(controller);
@@ -13,6 +14,7 @@ public class PatrolAction : Action
 
     private void Patrol(StateController controller)
     {
+        
         Vector3 destination = controller.wayPointList[controller.nextWayPoint].position;
         Vector3 direction = (destination - controller.transform.position).normalized;
 
@@ -21,12 +23,14 @@ public class PatrolAction : Action
 
         // Set the character animation direction
         controller.characterRenderer.SetDirection(horizontal, vertical);
-
+        Vector2 force = direction * controller.moveSpeed * Time.deltaTime;
+        Debug.Log(force);
+        controller.rb.AddForce(force);
         // Move the StateController using the MovementController
-        controller.movementController.MovePosition(new Vector2(horizontal, vertical));
+        //controller.movementController.MovePosition(new Vector2(horizontal, vertical));
 
         float distance = Vector3.Distance(destination, controller.transform.position);
-        Debug.Log(distance);
+        controller.seeker.StartPath(controller.rb.position, destination);
         if (distance < 1.1f)
         {
             controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;

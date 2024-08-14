@@ -13,11 +13,12 @@ public class ChaseAction : Action
     private void Chase(StateController controller)
     {
         Vector3 direction = (controller.chaseTarget.position - controller.transform.position).normalized;
-
+        Vector2 force = direction * controller.moveSpeed * Time.deltaTime;
+        controller.rb.AddForce(force);
+        controller.seeker.StartPath(controller.rb.position, controller.chaseTarget.position);
         // Set character animation direction
         controller.characterRenderer.SetDirection(direction.x, direction.y);
 
-        // Move the StateController using the MovementController
-        controller.movementController.MovePosition(new Vector2(direction.x, direction.y));
+    
     }
 }

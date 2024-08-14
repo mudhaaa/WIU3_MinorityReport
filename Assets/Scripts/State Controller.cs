@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Pathfinding;
 
 public class StateController : MonoBehaviour
 {
@@ -25,8 +26,11 @@ public class StateController : MonoBehaviour
     [SerializeField] public List<Transform> wayPointList = new List<Transform>();
     [SerializeField] public int nextWayPoint = 0;
     public float moveSpeed = 2f;
-    public NavMeshAgent navMeshAgent; // Add this variable
 
+
+    public Path path;
+    public Seeker seeker;
+    public Rigidbody2D rb;
     public void SetupAI(bool aiActivationFromManager)
     {
        
@@ -56,8 +60,9 @@ public class StateController : MonoBehaviour
         {
             Debug.LogError("No player object found in the scene!");
         }
+        seeker = GetComponent<Seeker>();
+        rb = GetComponent<Rigidbody2D>();
     }
-
     void Update()
     {
         if (!aiActive)

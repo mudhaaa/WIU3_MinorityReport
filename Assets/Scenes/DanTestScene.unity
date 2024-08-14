@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 17107566}
   - component: {fileID: 17107567}
   - component: {fileID: 17107568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 162111619}
   - component: {fileID: 162111620}
   - component: {fileID: 162111621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6724,7 +6724,7 @@ GameObject:
   - component: {fileID: 271125150}
   - component: {fileID: 271125151}
   - component: {fileID: 271125152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gaming Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6854,7 +6854,7 @@ GameObject:
   - component: {fileID: 287689609}
   - component: {fileID: 287689610}
   - component: {fileID: 287689611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bedside Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6982,7 +6982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 303740487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bathroom Stuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7018,7 +7018,7 @@ GameObject:
   - component: {fileID: 308651370}
   - component: {fileID: 308651371}
   - component: {fileID: 308651372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7148,7 +7148,7 @@ GameObject:
   - component: {fileID: 330995817}
   - component: {fileID: 330995818}
   - component: {fileID: 330995819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7340,7 +7340,7 @@ GameObject:
   - component: {fileID: 435183934}
   - component: {fileID: 435183935}
   - component: {fileID: 435183936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7470,7 +7470,7 @@ GameObject:
   - component: {fileID: 436417264}
   - component: {fileID: 436417265}
   - component: {fileID: 436417266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7600,7 +7600,7 @@ GameObject:
   - component: {fileID: 450478565}
   - component: {fileID: 450478566}
   - component: {fileID: 450478567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7806,7 +7806,7 @@ Transform:
   m_GameObject: {fileID: 502211607}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.8, y: 2.07, z: -1.0714799}
+  m_LocalPosition: {x: 45.73, y: 2.02, z: -1.0714799}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7823,7 +7823,7 @@ GameObject:
   - component: {fileID: 539706010}
   - component: {fileID: 539706011}
   - component: {fileID: 539706012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Living Room Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7953,7 +7953,7 @@ GameObject:
   - component: {fileID: 541262058}
   - component: {fileID: 541262059}
   - component: {fileID: 541262060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8083,7 +8083,7 @@ GameObject:
   - component: {fileID: 562850222}
   - component: {fileID: 562850223}
   - component: {fileID: 562850224}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8213,7 +8213,7 @@ GameObject:
   - component: {fileID: 580397912}
   - component: {fileID: 580397913}
   - component: {fileID: 580397914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8343,7 +8343,7 @@ GameObject:
   - component: {fileID: 588043354}
   - component: {fileID: 588043355}
   - component: {fileID: 588043356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bathroom Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8693,7 +8693,7 @@ Transform:
   m_GameObject: {fileID: 638781204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.16, y: 3.6, z: -1.0714799}
+  m_LocalPosition: {x: 6.74, y: 3.19, z: -1.0714799}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8710,7 +8710,7 @@ GameObject:
   - component: {fileID: 641832859}
   - component: {fileID: 641832860}
   - component: {fileID: 641832861}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8726,7 +8726,7 @@ Transform:
   m_GameObject: {fileID: 641832858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.89, y: 3.53, z: 0}
+  m_LocalPosition: {x: -0.89, y: 2.94, z: 0}
   m_LocalScale: {x: 11, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8840,7 +8840,7 @@ GameObject:
   - component: {fileID: 646535153}
   - component: {fileID: 646535152}
   - component: {fileID: 646535154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9001,7 +9001,7 @@ GameObject:
   - component: {fileID: 795863708}
   - component: {fileID: 795863709}
   - component: {fileID: 795863710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gaming Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9131,7 +9131,7 @@ GameObject:
   - component: {fileID: 806251833}
   - component: {fileID: 806251834}
   - component: {fileID: 806251835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arcade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9147,7 +9147,7 @@ Transform:
   m_GameObject: {fileID: 806251832}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.73, y: 7.82, z: 0}
+  m_LocalPosition: {x: 2.73, y: 8.41, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9261,7 +9261,7 @@ GameObject:
   - component: {fileID: 807098546}
   - component: {fileID: 807098547}
   - component: {fileID: 807098548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9601,7 +9601,7 @@ GameObject:
   - component: {fileID: 827276427}
   - component: {fileID: 827276428}
   - component: {fileID: 827276429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9729,7 +9729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 833736833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kitchen Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9768,7 +9768,7 @@ GameObject:
   - component: {fileID: 836976096}
   - component: {fileID: 836976097}
   - component: {fileID: 836976098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9929,7 +9929,7 @@ GameObject:
   - component: {fileID: 927258366}
   - component: {fileID: 927258367}
   - component: {fileID: 927258368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10121,7 +10121,7 @@ GameObject:
   - component: {fileID: 972030553}
   - component: {fileID: 972030554}
   - component: {fileID: 972030555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10282,7 +10282,7 @@ GameObject:
   - component: {fileID: 992378186}
   - component: {fileID: 992378188}
   - component: {fileID: 992378187}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12188,7 +12188,7 @@ GameObject:
   - component: {fileID: 1008919527}
   - component: {fileID: 1008919528}
   - component: {fileID: 1008919529}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12559,7 +12559,7 @@ GameObject:
   - component: {fileID: 1038453377}
   - component: {fileID: 1038453378}
   - component: {fileID: 1038453379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12751,7 +12751,7 @@ GameObject:
   - component: {fileID: 1181172082}
   - component: {fileID: 1181172083}
   - component: {fileID: 1181172084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12767,7 +12767,7 @@ Transform:
   m_GameObject: {fileID: 1181172081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.25, y: 3.76, z: 0}
+  m_LocalPosition: {x: -7.25, y: 2.94, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12917,6 +12917,7 @@ GameObject:
   - component: {fileID: 1197106801}
   - component: {fileID: 1197106800}
   - component: {fileID: 1197106799}
+  - component: {fileID: 1197106809}
   m_Layer: 0
   m_Name: Abuser(Male)
   m_TagString: Abuser
@@ -12988,7 +12989,9 @@ MonoBehaviour:
   - {fileID: 976708735}
   - {fileID: 203375474}
   nextWayPoint: 0
-  moveSpeed: 1
+  moveSpeed: 200
+  seeker: {fileID: 1197106809}
+  rb: {fileID: 1197106803}
 --- !u!95 &1197106800
 Animator:
   serializedVersion: 5
@@ -13049,7 +13052,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -13177,6 +13180,34 @@ Transform:
   - {fileID: 1627591182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1197106809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197106798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &1219240293
 GameObject:
   m_ObjectHideFlags: 0
@@ -13186,7 +13217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1219240294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Living Room Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13236,7 +13267,7 @@ GameObject:
   - component: {fileID: 1260578549}
   - component: {fileID: 1260578548}
   - component: {fileID: 1260578550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13380,7 +13411,7 @@ Transform:
   m_GameObject: {fileID: 1262087113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.84, y: -16.31, z: -1.0714799}
+  m_LocalPosition: {x: 21.84, y: -14.87, z: -1.0714799}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13397,7 +13428,7 @@ GameObject:
   - component: {fileID: 1280224947}
   - component: {fileID: 1280224948}
   - component: {fileID: 1280224949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13527,7 +13558,7 @@ GameObject:
   - component: {fileID: 1306500892}
   - component: {fileID: 1306500893}
   - component: {fileID: 1306500894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25653,6 +25684,93 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1382459216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382459218}
+  - component: {fileID: 1382459217}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1382459217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382459216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAABAIexpr4hTXwIAABQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziWD+Siht9YQ0kMSJrSTiy9CWmMNsuTRR4Bk+O9dyTZ26fSEeO/t7tvVyp9EKFsBc9qsjeBPmgP5NiDhTL4MOvIRTnSv1VZ8QKt5E9wVQUSj5pU6oRFPQpjVJTgj2He1l0E8QtArkWtTrvgeUm2dRTin0gJSRrsQrRD6HJAT/gwXIeSMp/E8nD7wtBgNLnhkoByYTtoKW1mt8opJWlbAg+VOnExmjXw6izqF3TSS4JxpKYVtrBB3rmKrKa2sx0ZQwAXF1mL95G6CQAFiX7hgtB/+kucWXOPK0PNSGJxRnZf80PXgSmoPtbV3Kn2o9HUaTdU5n/6hh0mkc6PLx7ZsMgolXCHY4ZWeGbWuN9g+vOw5jwM6UnmgOwlvBahnvTbaK46kMz6EegvjZff32llaADt0eG31BvTV/68n9HCJzZ9SKcpdoO6mNbCVOg48Xj4YvJqfaDiuhm1SIBpc/Lbwi+77O9QQD8JYh1TTpQr2dtqbICWrOLPQjXepNgoi3JiuQFHpzhtM425v8Ibrlb1hHmh4LU3xhmsfwU1IhDv9aHRDbfTxelm20McnsMWLd1Io6EwH4hnnlGql6gXrz6QN23qTU9YL23vB/14tMk5Gye6e5TnP6WQ+Xgzni9n0fjFZsPv5nLEpkLh7QmGfVG5qo8148NZUl1zhnrUfkcHa0CouOzf0uBYfpe6NXKhcb5kBUC91hqtxMFgEnyVfcYED2oJzQsX7Jp8ZkZodgGfXRFnsdHVyhmZdloxU4l27gGQkjV+NjAT4ussbA+8CjqF4m+xCLn8AUEsDBBQAAAgIAABAIezt1iS7bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkaGBYZJFclpaSlqisbmRpa65pamJhaWxZbKFuXlyskmqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABAIexpr4hTXwIAABQFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIezt1iS7bQAAAHgAAAAJACQAAAAAAAAAAAAAAKwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZAMAAAAA
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &1382459218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382459216}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383078938
 GameObject:
   m_ObjectHideFlags: 0
@@ -25695,7 +25813,7 @@ GameObject:
   - component: {fileID: 1410112697}
   - component: {fileID: 1410112698}
   - component: {fileID: 1410112699}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25856,7 +25974,7 @@ GameObject:
   - component: {fileID: 1418539943}
   - component: {fileID: 1418539944}
   - component: {fileID: 1418539945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Kitchen Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25984,7 +26102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476906035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Master Room Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26356,7 +26474,7 @@ GameObject:
   - component: {fileID: 1655617728}
   - component: {fileID: 1655617727}
   - component: {fileID: 1655617729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bathtub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26580,7 +26698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690459055}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Storage Room Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26622,7 +26740,7 @@ GameObject:
   - component: {fileID: 1697305752}
   - component: {fileID: 1697305753}
   - component: {fileID: 1697305754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dresser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26752,7 +26870,7 @@ GameObject:
   - component: {fileID: 1698695512}
   - component: {fileID: 1698695513}
   - component: {fileID: 1698695514}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26930,7 +27048,7 @@ GameObject:
   - component: {fileID: 1751258356}
   - component: {fileID: 1751258357}
   - component: {fileID: 1751258358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27060,7 +27178,7 @@ GameObject:
   - component: {fileID: 1804065896}
   - component: {fileID: 1804065897}
   - component: {fileID: 1804065898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trashcan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27190,7 +27308,7 @@ GameObject:
   - component: {fileID: 1829667990}
   - component: {fileID: 1829667991}
   - component: {fileID: 1829667992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closet (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27206,7 +27324,7 @@ Transform:
   m_GameObject: {fileID: 1829667989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.15, y: 4.55, z: 0}
+  m_LocalPosition: {x: -23.3, y: 4.55, z: 0}
   m_LocalScale: {x: 12, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27444,7 +27562,7 @@ GameObject:
   - component: {fileID: 1998978819}
   - component: {fileID: 1998978820}
   - component: {fileID: 1998978821}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27574,7 +27692,7 @@ GameObject:
   - component: {fileID: 2009214698}
   - component: {fileID: 2009214699}
   - component: {fileID: 2009214700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27735,7 +27853,7 @@ GameObject:
   - component: {fileID: 2050034267}
   - component: {fileID: 2050034269}
   - component: {fileID: 2050034268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottom Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28821,7 +28939,7 @@ GameObject:
   - component: {fileID: 2109134878}
   - component: {fileID: 2109134879}
   - component: {fileID: 2109134880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cupboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28994,3 +29112,4 @@ SceneRoots:
   - {fileID: 625710090}
   - {fileID: 976708735}
   - {fileID: 203375474}
+  - {fileID: 1382459218}
