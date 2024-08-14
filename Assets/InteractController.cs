@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractController : MonoBehaviour
 {
+    public BackgroundTransparencyAnim BlackBackground;
+    public GameObject MiniGameBackground;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +15,8 @@ public class InteractController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && BlackBackground.CoroutineRunning == false && MiniGameBackground.activeSelf == false)
         {
-            Debug.Log("Pressed");
             Collider2D NearestCollision = null;
             float NearestDistance = 0;
             Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, 2.0f);
