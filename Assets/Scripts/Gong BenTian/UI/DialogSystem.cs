@@ -110,6 +110,13 @@ public class DialogSystem : MonoBehaviour
 
     public bool StartNewDialogues()
     {
+        //if the dialog system is running now, reject the start of the new dialogues
+        if(gameObject.activeSelf == true)
+        {
+            Debug.Log("Another dialog is current running.");
+            return false;
+        }
+
         Init();
         gameObject.SetActive(true);
 
