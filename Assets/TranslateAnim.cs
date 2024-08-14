@@ -8,7 +8,6 @@ public class TranslateAnim : MonoBehaviour
 {
     public bool CoroutineRunning = false;
     [SerializeField] public Vector2 TargetPosition;
-    [SerializeField] float accuracy = 0.01f;
     [SerializeField] float LerpSpeed = 0.01f;
     public Coroutine currentcoroutine;
 
@@ -24,19 +23,19 @@ public class TranslateAnim : MonoBehaviour
     {
         float time = 0;
         CoroutineRunning = true;
-        while (true)
+        while (CoroutineRunning)
         {
             transform.localPosition = Vector2.Lerp(transform.localPosition, Targetpos, time);
             time += Time.deltaTime * LerpSpeed;
             if (Vector2.Distance(transform.localPosition, Targetpos) < Accuracy)
             {
-                Debug.Log("Anim End");
                 transform.localPosition = Targetpos;
                 CoroutineRunning = false;
                 yield break;
             }
             yield return null;
         }
+        yield break;
     }
     void Update()
     {
@@ -46,7 +45,7 @@ public class TranslateAnim : MonoBehaviour
     private void OnEnable()
     {
         //Debug.Log("ENABLED");
-        //if (currentcoroutine != null)
+        //if (CoroutineRunning)
         //{
         //    StopCoroutine(currentcoroutine);
         //    CoroutineRunning = false;
@@ -56,7 +55,7 @@ public class TranslateAnim : MonoBehaviour
 
     private void OnDisable()
     {
-        if (currentcoroutine != null)
+        if (CoroutineRunning)
         {
             StopCoroutine(currentcoroutine);
             CoroutineRunning = false;

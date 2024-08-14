@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMainController : MonoBehaviour
 {
+    [SerializeField] AnimationEvents animationEvent;
     // Start is called before the first frame update
     AnimationController AnimationController;
     Rigidbody2D rb;
@@ -24,5 +25,10 @@ public class PlayerMainController : MonoBehaviour
         {
             AnimationController.PlayAnimation(rb.velocity, "Idle");
         }
+    }
+
+    public void CheckThisFrame()
+    {
+        Debug.Log("ThisFrame");
     }
 }
