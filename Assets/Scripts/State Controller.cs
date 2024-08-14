@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class StateController : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class StateController : MonoBehaviour
     [SerializeField] public Transform attackPos;
     [SerializeField] public MovementController movementController;
     [SerializeField] public CharacterRenderer characterRenderer;
-    [SerializeField] public Player playerstatus;
+    [SerializeField] public PlayerMainController playerstatus;
     public bool aiActive = true;
     public bool flip;
 
@@ -24,6 +25,7 @@ public class StateController : MonoBehaviour
     [SerializeField] public List<Transform> wayPointList = new List<Transform>();
     [SerializeField] public int nextWayPoint = 0;
     public float moveSpeed = 2f;
+    public NavMeshAgent navMeshAgent; // Add this variable
 
     public void SetupAI(bool aiActivationFromManager)
     {
@@ -42,6 +44,7 @@ public class StateController : MonoBehaviour
 
     private void Start()
     {
+
         SetupAI(aiActive);
         // Find the player object in the scene
         GameObject player = GameObject.FindGameObjectWithTag("Player");

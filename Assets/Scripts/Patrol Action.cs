@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI; // Add this namespace for NavMeshAgent
 
 [CreateAssetMenu(menuName = "PluggableAI/Actions/Patrol")]
 public class PatrolAction : Action
@@ -25,7 +26,8 @@ public class PatrolAction : Action
         controller.movementController.MovePosition(new Vector2(horizontal, vertical));
 
         float distance = Vector3.Distance(destination, controller.transform.position);
-        if (distance < 0.5f)
+        Debug.Log(distance);
+        if (distance < 1.1f)
         {
             controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
         }

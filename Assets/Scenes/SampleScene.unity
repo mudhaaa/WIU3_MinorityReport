@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &15553185
 Transform:
   m_ObjectHideFlags: 0
@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &130959053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   attackPos: {fileID: 59774415}
   movementController: {fileID: 130959056}
   characterRenderer: {fileID: 130959058}
-  playerstatus: {fileID: 1069510762}
+  playerstatus: {fileID: 0}
   aiActive: 1
   flip: 0
   wayPointList:
@@ -746,7 +746,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &439428511
 Transform:
   m_ObjectHideFlags: 0
@@ -1760,7 +1760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1353216971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1955,7 +1955,7 @@ MonoBehaviour:
   attackPos: {fileID: 1144062881}
   movementController: {fileID: 1382731780}
   characterRenderer: {fileID: 1382731781}
-  playerstatus: {fileID: 1069510762}
+  playerstatus: {fileID: 0}
   aiActive: 1
   flip: 0
   wayPointList:
@@ -2171,7 +2171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1446708790
 MonoBehaviour:
   m_ObjectHideFlags: 0
