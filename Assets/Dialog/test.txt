@@ -1,0 +1,8 @@
+N:asd
+C:sdfsdfsdfasdasdasdasdasd.
+LIM:testcharacter
+RIM:testcharacter
+MIM:testcharacter
+BGRGBA:0,0,0,255
+OPT:first,-1,second,0,third,1,>,testing
+C:dfgdfgasdasdasdasdasd.
