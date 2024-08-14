@@ -9,7 +9,6 @@ public class BackgroundTransparencyAnim : MonoBehaviour
     public bool CoroutineRunning = false;
     [SerializeField] CanvasGroup canvasgroup;
     [SerializeField] public float TransparencyMax = 0.5f;
-    [SerializeField] float accuracy = 0.01f;
     [SerializeField] float LerpSpeed = 0.01f;
     public Coroutine currentcoroutine;
 
@@ -20,21 +19,21 @@ public class BackgroundTransparencyAnim : MonoBehaviour
 
     public IEnumerator Anim(float TargetTrans, float Accuracy)
     {
-        float time = 0;
         CoroutineRunning = true;
-        while (true)
+        float time = 0;
+        while (CoroutineRunning)
         {
             canvasgroup.alpha = Mathf.Lerp(canvasgroup.alpha, TargetTrans, time);
             time += Time.deltaTime * LerpSpeed;
             if (Mathf.Abs(canvasgroup.alpha - TargetTrans) <= Accuracy)
             {
-                Debug.Log("Background Anim End");
                 canvasgroup.alpha = TargetTrans;
                 CoroutineRunning = false;
                 yield break;
             }
             yield return null;
         }
+        yield break;
     }
     void Update()
     {
@@ -44,7 +43,7 @@ public class BackgroundTransparencyAnim : MonoBehaviour
     private void OnEnable()
     {
         //Debug.Log("ENABLED");
-        //if (currentcoroutine != null)
+        //if (CoroutineRunning)
         //{
         //    StopCoroutine(currentcoroutine);
         //    CoroutineRunning = false;
@@ -54,7 +53,7 @@ public class BackgroundTransparencyAnim : MonoBehaviour
 
     private void OnDisable()
     {
-        if (currentcoroutine != null)
+        if (CoroutineRunning)
         {
             StopCoroutine(currentcoroutine);
             CoroutineRunning = false;
