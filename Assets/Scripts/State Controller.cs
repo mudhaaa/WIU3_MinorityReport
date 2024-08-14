@@ -16,6 +16,7 @@ public class StateController : MonoBehaviour
     [SerializeField] public Transform attackPos;
     [SerializeField] public MovementController movementController;
     [SerializeField] public CharacterRenderer characterRenderer;
+    [SerializeField] public Player playerstatus;
     public bool aiActive = true;
     public bool flip;
 

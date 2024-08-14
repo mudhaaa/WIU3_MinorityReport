@@ -9,6 +9,11 @@ public class NoChaseDecision : Decision
     public override bool Decide(StateController controller)
     {
         bool targetVisible = NoLook(controller);
+        if (targetVisible)
+        {
+            // If no chase, set the next way point to the nearest one
+            SetNearestWayPoint(controller);
+        }
         return targetVisible;
     }
 
@@ -23,7 +28,7 @@ public class NoChaseDecision : Decision
         LayerMask layerMask = LayerMask.GetMask("Player"); // Replace "Player" with the name of the layer your player is on
         RaycastHit2D hit = Physics2D.Linecast(controller.eyes.position, controller.chaseTarget.position, layerMask);
 
-        if (hit.collider != null)
+        if (hit.collider != null && !controller.playerstatus.Died && !controller.playerstatus.Hide)
         {
            
             return false;
@@ -31,6 +36,27 @@ public class NoChaseDecision : Decision
         else
         {
             return true;
+        }
+    }
+
+    private void SetNearestWayPoint(StateController controller)
+    {
+        float minDistance = float.MaxValue;
+        int nearestWayPointIndex = -1;
+
+        for (int i = 0; i < controller.wayPointList.Count; i++)
+        {
+            float distance = Vector3.Distance(controller.transform.position, controller.wayPointList[i].position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestWayPointIndex = i;
+            }
+        }
+
+        if (nearestWayPointIndex != -1)
+        {
+            controller.nextWayPoint = nearestWayPointIndex;
         }
     }
 }

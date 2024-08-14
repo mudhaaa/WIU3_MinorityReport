@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Playertest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] public Player testPlayer;
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Check if the collision is with an enemy
+        if (collision.gameObject.CompareTag("Abuser"))
+        {
+            // Destroy the player GameObject
+            testPlayer.Died = true;
+        }
     }
 }
