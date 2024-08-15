@@ -14,7 +14,7 @@ public class PatrolAction : Action
 
     private void Patrol(StateController controller)
     {
-        
+      
         Vector3 destination = controller.wayPointList[controller.nextWayPoint].position;
         Vector3 direction = (destination - controller.transform.position).normalized;
 
@@ -24,7 +24,6 @@ public class PatrolAction : Action
         // Set the character animation direction
         controller.characterRenderer.SetDirection(horizontal, vertical);
         Vector2 force = direction * controller.moveSpeed * Time.deltaTime;
-        Debug.Log(force);
         controller.rb.AddForce(force);
         // Move the StateController using the MovementController
         //controller.movementController.MovePosition(new Vector2(horizontal, vertical));
@@ -36,4 +35,5 @@ public class PatrolAction : Action
             controller.nextWayPoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
         }
     }
+
 }

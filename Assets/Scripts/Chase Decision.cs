@@ -23,9 +23,12 @@ public class ChaseDecision : Decision
         Debug.DrawRay(controller.eyes.position, direction, Color.green);
         LayerMask layerMask = LayerMask.GetMask("Player"); // Replace "Player" with the name of the layer your player is on
         RaycastHit2D hit = Physics2D.Linecast(controller.eyes.position, controller.chaseTarget.position, layerMask);
+ 
+
 
         if (hit.collider != null && !controller.playerstatus.Died && !controller.playerstatus.Hide)
         {
+         
             return true;
         }
         else

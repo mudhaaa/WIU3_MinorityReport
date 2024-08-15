@@ -62,7 +62,11 @@ public class StateController : MonoBehaviour
         }
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+
+
     }
+
+
     void Update()
     {
         if (!aiActive)
