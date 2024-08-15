@@ -7336,6 +7336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlackBackground: {fileID: 1959747112}
   dialogSystem: {fileID: 867830306}
+  MainGame: {fileID: 1634118085}
   MiniGame: {fileID: 420824993}
   DelayTime: 1
 --- !u!114 &290356743 stripped
@@ -8045,6 +8046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420824994}
+  - component: {fileID: 420824995}
   m_Layer: 0
   m_Name: DrawerGame
   m_TagString: Untagged
@@ -8070,6 +8072,18 @@ Transform:
   - {fileID: 1906400211}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420824995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420824993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edb6ddeddce09e4f9d22c688ef1e021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &435183933
 GameObject:
   m_ObjectHideFlags: 0
