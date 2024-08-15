@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IODrawer : MonoBehaviour, InteractableObject
+public class IOMiniGame : MonoBehaviour, InteractableObject
 {
     public BackgroundTransparencyAnim BlackBackground;
     public DialogSystem dialogSystem;
