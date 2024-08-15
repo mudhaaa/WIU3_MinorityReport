@@ -37,10 +37,10 @@ public class Sanity : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
-        {
-            ISanity -= Time.deltaTime * 5;
-        }
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    ISanity -= Time.deltaTime * 5;
+        //}
     }
 
     //// Example event handler

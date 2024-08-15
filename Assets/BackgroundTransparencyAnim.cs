@@ -7,7 +7,7 @@ public class BackgroundTransparencyAnim : MonoBehaviour
 {
     // Start is called before the first frame update
     public bool CoroutineRunning = false;
-    [SerializeField] CanvasGroup canvasgroup;
+    [SerializeField] public CanvasGroup canvasgroup;
     [SerializeField] public float TransparencyMax = 0.5f;
     [SerializeField] float LerpSpeed = 0.01f;
     public Coroutine currentcoroutine;
@@ -33,6 +33,48 @@ public class BackgroundTransparencyAnim : MonoBehaviour
             }
             yield return null;
         }
+        yield break;
+    }
+
+    public IEnumerator AppearAnim(float TargetTrans, float Accuracy, float DelayTime = 0)
+    {
+        CoroutineRunning = true;
+        float time = 0;
+        bool Delay = true;
+        while (true)
+        {
+            canvasgroup.alpha = Mathf.Lerp(canvasgroup.alpha, TargetTrans, time);
+            time += Time.deltaTime * LerpSpeed;
+            if (Mathf.Abs(canvasgroup.alpha - TargetTrans) <= Accuracy)
+            {
+                canvasgroup.alpha = TargetTrans;
+                break;
+            }
+            else
+            {
+                yield return null;
+            }
+        }
+        if (Delay)
+        {
+            yield return new WaitForSeconds(DelayTime);
+        }
+        time = 0;
+        while (true)
+        {
+            canvasgroup.alpha = Mathf.Lerp(canvasgroup.alpha, 0.0f, time);
+            time += Time.deltaTime * LerpSpeed;
+            if (Mathf.Abs(canvasgroup.alpha - 0.0f) <= Accuracy)
+            {
+                canvasgroup.alpha = 0.0f;
+                break;
+            }
+            else
+            {
+                yield return null;
+            }
+        }
+        CoroutineRunning = false;
         yield break;
     }
     void Update()
