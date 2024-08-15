@@ -11,7 +11,7 @@ public class Staircase : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the player collided with the stairs
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Abuser"))
         {
             // Transport the player to the new position
             collision.gameObject.transform.position = otherStaircase.position;
