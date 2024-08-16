@@ -413,5 +413,10 @@ public class DialogSystem : MonoBehaviour
         nextLine = true;
         return;
     }
+
+    public bool IsCompleted()
+    {
+        return !gameObject.activeSelf;
+    }
 }
 
