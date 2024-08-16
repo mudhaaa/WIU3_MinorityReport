@@ -28,7 +28,7 @@ public class GalleryButtonAnimationController : MonoBehaviour
         {
             animator.Play("GalleryButtonHighlighted");
         }
-        else if (animator.GetBool("Pressed") || animator.GetBool("Selected"))
+        else if (animator.GetBool("Selected"))
         {
             animator.Play("GalleryButtonPressed_" + Index);
         }

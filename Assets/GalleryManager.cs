@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GalleryManager : MonoBehaviour
@@ -22,7 +23,6 @@ public class GalleryManager : MonoBehaviour
                 EndingLabels[i].text = "???";
             }
         }
-
     }
 
     // Update is called once per frame
@@ -32,17 +32,12 @@ public class GalleryManager : MonoBehaviour
             dialogSystem.IsCompleted() == true)
         {
             int childCount = transform.childCount;
-            for(int i = 0; i < childCount; ++i)
+            for(int i = 1; i < childCount; ++i)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
             }
 
             IsReviewEnding = false;
         }
-    }
-
-    public static void test()
-    {
-        Debug.Log("asd");
     }
 }
