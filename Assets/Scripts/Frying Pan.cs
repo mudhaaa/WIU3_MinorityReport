@@ -87,7 +87,6 @@ public class FryingPan : MonoBehaviour
                 obj.SetActive(false);
             }
             RecipeObjects[FoodToMake].SetActive(true);
-            Debug.Log("All required objects are inside the circle collider and have been deactivated!");
             KitchenGame.FinishGame = true;
             gameObject.SetActive(false);
         }
