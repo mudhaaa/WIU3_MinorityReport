@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+[CreateAssetMenu(menuName = "Scriptable object/SceneFunctions")]
+public class SceneFunctions : ScriptableObject
+{
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+        return;
+    }
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+}
