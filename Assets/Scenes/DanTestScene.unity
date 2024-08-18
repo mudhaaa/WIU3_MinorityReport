@@ -23447,7 +23447,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 4484d23f30a79f74ba3cdca58267f479, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40225,6 +40225,7 @@ GameObject:
   - component: {fileID: 1751258356}
   - component: {fileID: 1751258357}
   - component: {fileID: 1751258358}
+  - component: {fileID: 1751258359}
   m_Layer: 0
   m_Name: Stove
   m_TagString: Untagged
@@ -40344,6 +40345,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1751258359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751258355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6225faf8019a0a142a69cfa8ad007c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlackBackground: {fileID: 1959747112}
+  dialogSystem: {fileID: 867830306}
+  MainGame: {fileID: 1634118085}
+  MiniGame: {fileID: 0}
+  DelayTime: 1
 --- !u!114 &1755244685 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6301140739699164159, guid: 9cd9fe28d3c66ac46a36b3f07fcfd269, type: 3}
@@ -45641,7 +45659,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
