@@ -85,4 +85,8 @@ public class IOToilet : MonoBehaviour, InteractableObject
         MiniGame = true;
         BlackBackground.StartCoroutine(BlackBackground.AppearAnim(1.0f, 0.01f, DelayTime));
     }
+
+    public void ShowInteractGUI()
+    {
+    }
 }
