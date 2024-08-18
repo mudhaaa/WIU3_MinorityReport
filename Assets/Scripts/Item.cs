@@ -11,9 +11,7 @@ public class Item : ScriptableObject {
     public ItemType type;
     //public ActionType actionType;
     public Vector2Int range = new Vector2Int(5, 4);
-    public int Defence = 0;
-    public float Healing = 0.0f;
-    public int AttackDmg = 0;
+    public float SanityRegen = 0.0f;
 
     [Header("Only UI")]
     public bool Stackable = true;
@@ -30,9 +28,8 @@ public class Item : ScriptableObject {
 
 public enum ItemType
 {
-    HealingItem,
-    Armour,
-    Weapon
+    SanityItem,
+    Evidence
 }
 
 

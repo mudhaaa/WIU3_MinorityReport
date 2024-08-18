@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b22d3347328c94680a06b0560fc2df, type: 3}
+  m_Name: Evidence
+  m_EditorClassIdentifier: 
+  type: 1
+  range: {x: 5, y: 4}
+  SanityRegen: 0
+  Stackable: 1
+  image: {fileID: 21300000, guid: 18bcc039e0f10c442b0c59694b417c62, type: 3}
