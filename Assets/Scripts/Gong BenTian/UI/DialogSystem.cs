@@ -30,6 +30,7 @@ public class DialogSystem : MonoBehaviour
 
     public bool IsLineCompleted;
     private bool nextLine;
+    public bool IsDialogueEnded;
 
     public static readonly float[] DisplayCoolDowns = new float[5]{ 0.05f, 0.1f, 0.2f, 0.4f, 0.6f }; 
     public float DisplayCountDown;
@@ -69,6 +70,7 @@ public class DialogSystem : MonoBehaviour
         LineIndex = 0;
         CharacterIndex = 0;
         isOption = false;
+        IsDialogueEnded = false;
 
         //clear the last display
         Name.text = "";
@@ -396,6 +398,7 @@ public class DialogSystem : MonoBehaviour
     {
         TimeSystem.TimeMultipler = 20.0f;
         gameObject.SetActive(false);
+        IsDialogueEnded = true;
     }
 
     public void ChooseOption(int optionIndex)

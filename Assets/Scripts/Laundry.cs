@@ -2,43 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KitchenGame : MonoBehaviour
+public class Laundry : MonoBehaviour
 {
     public bool FinishGame = false;
     public GameObject MainGame;
     public GameObject MiniGame;
     public BackgroundTransparencyAnim BlackBackground;
-    // The layer that can be picked up
-    public LayerMask pickableLayer;
+
+    public LayerMask pickableLayers;
+    [SerializeField] public List<GameObject> Clothes;
 
     // The object being dragged
     private GameObject draggedObject;
-
-    public GameObject[] objectsToDeactivate;
-    [SerializeField] public string FoodToMake;
-
-
     // Start is called before the first frame update
     void Start()
     {
-        // Deactivate the objects
-        foreach (GameObject obj in objectsToDeactivate)
-        {
-            obj.SetActive(false);
-        }
+        pickableLayers = LayerMask.GetMask("White") | LayerMask.GetMask("NotWhite");
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, pickableLayer);
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, pickableLayers);
 
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0))
         {
             // Raycast from the mouse position
-           
+
 
             // Check if the ray hits something with the pickable layer
             if (hit.collider != null)
@@ -56,12 +48,12 @@ public class KitchenGame : MonoBehaviour
                     hitObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 }
             }
-     
-        
-        }
-     
 
-            // Check if the left mouse button is held down
+
+        }
+
+
+        // Check if the left mouse button is held down
         if (Input.GetMouseButton(0) && draggedObject != null)
         {
             // Get the mouse position in world space
@@ -80,6 +72,20 @@ public class KitchenGame : MonoBehaviour
             // Reset the dragged object
             draggedObject = null;
         }
+        bool allClothesInactive = true;
+        foreach (GameObject cloth in Clothes)
+        {
+            if (cloth.activeInHierarchy)
+            {
+                allClothesInactive = false;
+                break;
+            }
+        }
+
+        if (allClothesInactive)
+        {
+            FinishGame = true;
+        }
 
         if (FinishGame)
         {
@@ -96,7 +102,4 @@ public class KitchenGame : MonoBehaviour
             }
         }
     }
-
-
- 
 }
