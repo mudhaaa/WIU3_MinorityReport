@@ -5,9 +5,10 @@ using static UnityEditor.PlayerSettings;
 
 public class SpawnTargetCircles : MonoBehaviour
 {
+    [SerializeField] StickFindTargetCircle stickscript;
     public GameObject TargetCirclePrefab;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         Vector3 pos = transform.position + new Vector3(transform.localScale.x / 2.1f, 0, 0);
         Vector2 rotatedpos = RotatePoint(pos, transform.position, Random.Range(0.0f, 360.0f));
@@ -17,7 +18,7 @@ public class SpawnTargetCircles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z))
+        if (stickscript.Hit)
         {
             Vector3 pos = transform.position + new Vector3(transform.localScale.x / 2.1f, 0, 0);
             Vector2 rotatedpos = RotatePoint(pos, transform.position, Random.Range(0.0f, 360.0f));
@@ -38,5 +39,16 @@ public class SpawnTargetCircles : MonoBehaviour
         );
 
         return pivot + rotatedDirection; // The new rotated position
+    }
+    void OnDisable()
+    {
+        DeleteAllChildren();
+    }
+    public void DeleteAllChildren()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }

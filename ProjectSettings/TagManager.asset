@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Abuser
   - Evidence
+  - TargetCircle
+  - Food
+  - SnakeBody
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PopLock : MonoBehaviour
@@ -9,7 +10,12 @@ public class PopLock : MonoBehaviour
     [SerializeField] float LockRotationSpeed = 1.0f;
     [SerializeField] float SpeedMultiplier = 1.0f;
     [SerializeField] GameObject Stick;
-    void Start()
+    [SerializeField] int MaxHits = 2;
+    [SerializeField] StickFindTargetCircle stickscript;
+    [SerializeField] BackgroundTransparencyAnim BlackBackground;
+    [SerializeField] GameObject MainGame;
+    [SerializeField] GameObject MiniGame;
+    void OnEnable()
     {
         LockRotationSpeed = StartLockRotationSpeed;
         transform.rotation = Quaternion.identity;
@@ -18,6 +24,22 @@ public class PopLock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (stickscript.Hits > MaxHits)
+        {
+            if (BlackBackground.CoroutineRunning == false)
+            {
+                BlackBackground.StartCoroutine(BlackBackground.AppearAnim(1.0f, 0.01f, 0.25f));
+            }
+            if (BlackBackground.canvasgroup.alpha >= 1.0f)
+            {
+                MiniGame.SetActive(false);
+                MainGame.SetActive(true);
+            }
+        }
+        if (stickscript.Hit)
+        {
+            SpeedMultiplier *= -1;
+        }
         transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + (Time.deltaTime * LockRotationSpeed * SpeedMultiplier));
     }
 }
