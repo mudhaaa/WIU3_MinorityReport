@@ -11,6 +11,37 @@ public class SceneFunctions : ScriptableObject
         SceneManager.LoadScene(sceneName);
         return;
     }
+
+    public void LoadMaleBE()
+    {
+        SceneManager.LoadScene("Hit your wife");
+        return;
+    }
+    
+    public void LoadFemaleBE()
+    {
+        SceneManager.LoadScene("Die Screen");
+        return;
+    }
+
+    public void LoadMaleGE()
+    {
+        SceneManager.LoadScene("Win as man");
+        return;
+    }
+
+    public void LoadFemaleGE()
+    {
+        SceneManager.LoadScene("Win as Female");
+        return;
+    }
+
+    public void LoadSuicide()
+    {
+        SceneManager.LoadScene("Lose Screen");
+        return;
+    }
+
     public void ExitGame()
     {
         #if UNITY_EDITOR

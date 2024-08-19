@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public InventorySlot[] inventorySlots;
+    public InventorySlot evidenceSlot;
     public GameObject inventoryItemPrefab;
     public int MaxStackedItems = 64;
 

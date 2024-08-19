@@ -11,10 +11,4 @@ public class UITester : MonoBehaviour
         dialogSystem.FilePath = "Assets/Dialog/test.txt";
         dialogSystem.StartNewDialogues();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

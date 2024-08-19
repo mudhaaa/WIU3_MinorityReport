@@ -6,8 +6,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour, IDataSave
 {
     public static GameManager Instance;
+    public static bool isMale;
 
     public bool[] IsEndingCompleted = new bool[5];
+
+    public bool IsGameEnd = false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,5 +71,15 @@ public class GameManager : MonoBehaviour, IDataSave
         {
             EndingCompletedData += Convert.ToInt32(IsEndingCompleted[i]) << i;
         }
+    }
+
+    public void PlayAsMale()
+    {
+        isMale = true;
+    }
+
+    public void PlayAsFemale()
+    {
+        isMale = false;
     }
 }
