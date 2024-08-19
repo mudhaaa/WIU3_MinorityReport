@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FryingPan : MonoBehaviour
 {
- 
+
     // List of object names that should be inside the circle collider
     [SerializeField] public List<GameObject> FoodObjects;
     [SerializeField] public List<GameObject> RecipeObjects;
@@ -45,16 +45,15 @@ public class FryingPan : MonoBehaviour
             FoodToMake = 3;
         }
         RecipeInfo.SetText("What to make:" + KitchenGame.FoodToMake + " Ingredients Required:" + requiredObjects.Count);
+        CheckAllObjectsInCollider();
     }
     // Trigger detection
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (requiredObjects.Contains(other.gameObject.name))
-        {
-            objectsInCollider.Add(other.gameObject.name);
-            Debug.Log(other.gameObject.name + " entered the circle collider.");
-            CheckAllObjectsInCollider();
-        }
+        objectsInCollider.Add(other.gameObject.name);
+        Debug.Log(other.gameObject.name + " entered the circle collider.");
+
+
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -70,6 +69,7 @@ public class FryingPan : MonoBehaviour
     void CheckAllObjectsInCollider()
     {
         bool allObjectsPresent = true;
+        bool onlyRequiredObjects = true;
 
         foreach (string requiredObject in requiredObjects)
         {
@@ -80,7 +80,16 @@ public class FryingPan : MonoBehaviour
             }
         }
 
-        if (allObjectsPresent)
+        foreach (string objectInCollider in objectsInCollider)
+        {
+            if (!requiredObjects.Contains(objectInCollider))
+            {
+                onlyRequiredObjects = false;
+                break;
+            }
+        }
+
+        if (allObjectsPresent && onlyRequiredObjects)
         {
             foreach (GameObject obj in FoodObjects)
             {

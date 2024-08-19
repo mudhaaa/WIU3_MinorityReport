@@ -4,54 +4,54 @@ using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
-    [SerializeField] float DayMaxMinutes = 8;
-    [SerializeField] float TimeOfCurrentDay = 0;
-    [SerializeField] private DialogSystem dialogSystem;
+    //[SerializeField] float DayMaxMinutes = 8;
+    //[SerializeField] float TimeOfCurrentDay = 0;
+    //[SerializeField] private DialogSystem dialogSystem;
 
-    public int currDay = 0;
+    //public int currDay = 0;
 
-    string[] dialogueMPaths =  { "Assets/Dialog/MaleDay1Start.txt", "Assets/Dialog/MaleDay2Start.txt", "Assets/Dialog/MaleDay3Start.txt", "Assets/Dialog/MaleDay4Start.txt", "Assets/Dialog/MaleDay5Start.txt" };
-    string[] dialogueFPaths = { "Assets/Dialog/FemaleDay1Start.txt", "Assets/Dialog/FemaleDay2Start.txt", "Assets/Dialog/FemaleDay3Start.txt", "Assets/Dialog/FemaleDay4Start.txt", "Assets/Dialog/FemaleDay5Start.txt" };
+    //string[] dialogueMPaths =  { "Assets/Dialog/MaleDay1Start.txt", "Assets/Dialog/MaleDay2Start.txt", "Assets/Dialog/MaleDay3Start.txt", "Assets/Dialog/MaleDay4Start.txt", "Assets/Dialog/MaleDay5Start.txt" };
+    //string[] dialogueFPaths = { "Assets/Dialog/FemaleDay1Start.txt", "Assets/Dialog/FemaleDay2Start.txt", "Assets/Dialog/FemaleDay3Start.txt", "Assets/Dialog/FemaleDay4Start.txt", "Assets/Dialog/FemaleDay5Start.txt" };
 
 
-    bool timeStopped;
+    //bool timeStopped;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetTodayDialogue();
-        StartCoroutine(PlayStartDialogue());
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    SetTodayDialogue();
+    //    StartCoroutine(PlayStartDialogue());
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!timeStopped && TimeOfCurrentDay > DayMaxMinutes * 60)
-        {
-            currDay++;
-            StartCoroutine(PlayStartDialogue());
-        }
-        if (!timeStopped && TimeOfCurrentDay <= DayMaxMinutes * 60)
-        {
-            TimeOfCurrentDay += Time.deltaTime;
-        }
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (!timeStopped && TimeOfCurrentDay > DayMaxMinutes * 60)
+    //    {
+    //        currDay++;
+    //        StartCoroutine(PlayStartDialogue());
+    //    }
+    //    if (!timeStopped && TimeOfCurrentDay <= DayMaxMinutes * 60)
+    //    {
+    //        TimeOfCurrentDay += Time.deltaTime;
+    //    }
+    //}
 
-    void SetTodayDialogue()
-    {
-        dialogSystem.FilePath = dialogueMPaths[currDay];
-    }
+    //void SetTodayDialogue()
+    //{
+    //    dialogSystem.FilePath = dialogueMPaths[currDay];
+    //}
 
-    IEnumerator PlayStartDialogue()
-    {
-        SetTodayDialogue();
-        dialogSystem.StartNewDialogues();
-        timeStopped = true;
+    //IEnumerator PlayStartDialogue()
+    //{
+    //    //SetTodayDialogue();
+    //    //dialogSystem.StartNewDialogues();
+    //    //timeStopped = true;
 
-        yield return new WaitUntil(() => dialogSystem.IsDialogueEnded);
+    //    //yield return new WaitUntil(() => dialogSystem.IsDialogueEnded);
 
-        timeStopped = false;
-        TimeOfCurrentDay = 0;
+    //    //timeStopped = false;
+    //    //TimeOfCurrentDay = 0;
 
-    }
+    //}
 }
