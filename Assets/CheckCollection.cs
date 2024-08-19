@@ -9,6 +9,10 @@ public class CheckCollection : MonoBehaviour
     public GameObject MiniGame;
     public BackgroundTransparencyAnim BlackBackground;
     public SpawnObjects spawnObjects;
+    public InventoryManager inventoryManager;
+
+    public Item EvidenceReward;
+    public Item NonEvidenceReward;
     bool FinishGame = false;
     int Evidences = 0;
     int NonEvidences = 0;
@@ -17,17 +21,27 @@ public class CheckCollection : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        Evidences = 0;
-        NonEvidences = 0;
-
-        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, transform.localScale, 0, Vector2.zero, Mathf.Infinity, EvidenceLayer);
-        foreach (RaycastHit2D hit in hits)
+        if (!FinishGame)
         {
-            GameObject hitObject = hit.collider.gameObject;
-            Evidences++;
+            Evidences = 0;
+            NonEvidences = 0;
+
+            RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, transform.localScale, 0, Vector2.zero, Mathf.Infinity, EvidenceLayer);
+            foreach (RaycastHit2D hit in hits)
+            {
+                GameObject hitObject = hit.collider.gameObject;
+                Evidences++;
+            }
+
+            RaycastHit2D[] hits2 = Physics2D.BoxCastAll(transform.position, transform.localScale, 0, Vector2.zero, Mathf.Infinity, NonEvidenceLayer);
+            foreach (RaycastHit2D hit in hits2)
+            {
+                GameObject hitObject = hit.collider.gameObject;
+                NonEvidences++;
+            }
         }
 
-        if (Evidences >= spawnObjects.MaxEvidencesSpawned || FinishGame)
+        if ((Evidences + NonEvidences) >= ((spawnObjects.MaxEvidencesSpawned + spawnObjects.MaxNonEvidencesSpawned) / 2) || FinishGame)
         {
             if (BlackBackground.CoroutineRunning == false)
             {
@@ -36,6 +50,8 @@ public class CheckCollection : MonoBehaviour
             }
             if (BlackBackground.canvasgroup.alpha >= 1.0f)
             {
+                inventoryManager.AddItem(EvidenceReward, Evidences);
+                inventoryManager.AddItem(NonEvidenceReward, NonEvidences);
                 FinishGame = false;
                 MiniGame.SetActive(false);
                 MainGame.SetActive(true);

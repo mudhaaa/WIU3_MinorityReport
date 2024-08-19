@@ -9,7 +9,7 @@ public class InventoryManager : MonoBehaviour
     public int MaxStackedItems = 64;
 
     [SerializeField] Item testdrugs;
-    public bool AddItem(Item item/*, bool QuestCompletion*/)
+    public bool AddItem(Item item, int Amount)
     {
         for (int i = 0; i < inventorySlots.Length; i++)
         {
@@ -17,7 +17,7 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.ITEM == item && item.Stackable && itemInSlot.count < MaxStackedItems)
             {
-                itemInSlot.count++;
+                itemInSlot.count += Amount;
                 itemInSlot.RefreshCount();
                 return true;
             }
@@ -29,6 +29,7 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot == null)
             {
                 SpawnNewItem(item, slot/*, QuestCompletion*/);
+                slot.GetComponentInChildren<InventoryItem>().count += Amount - 1;
                 return true;
             }
         }
@@ -58,6 +59,6 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        AddItem(testdrugs);
+        AddItem(testdrugs, 5);
     }
 }

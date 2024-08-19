@@ -14,7 +14,7 @@ public class Eating : MonoBehaviour
         if (inventoryitem != null && SanityScript.ISanity < SanityScript.maxsanity)
         {
             src.Play();
-            SanityScript.ISanity = Mathf.Clamp(SanityScript.ISanity + inventoryitem.ITEM.Healing, 0, SanityScript.maxsanity);
+            SanityScript.ISanity = Mathf.Clamp(SanityScript.ISanity + inventoryitem.ITEM.SanityRegen, 0, SanityScript.maxsanity);
             if (inventoryitem.count <= 1)
             {
                 Destroy(inventoryitem.gameObject);
