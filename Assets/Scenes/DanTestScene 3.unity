@@ -7181,7 +7181,7 @@ Transform:
   m_GameObject: {fileID: 248751802}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -100.369995, y: 15.44, z: 0}
+  m_LocalPosition: {x: -100.369995, y: 14.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7491,7 +7491,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6225faf8019a0a142a69cfa8ad007c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
+  NewInteractText: Interact
   BlackBackground: {fileID: 1959747112}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
   dialogSystem: {fileID: 867830306}
   MainGame: {fileID: 1634118085}
   MiniGame: {fileID: 420824993}
@@ -7685,6 +7689,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 867830306}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
+  NewInteractText: Interact
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
   filePath:
   - Assets/Dialog/FanDialogue.txt
 --- !u!114 &309345579 stripped
@@ -8350,6 +8358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a705a9892785d488420eaf2b2fe340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: TargetCircle
+  interactionTime: 2
+  Hits: 0
+  Hit: 0
 --- !u!1 &410988050
 GameObject:
   m_ObjectHideFlags: 0
@@ -9414,6 +9426,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 867830306}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
+  NewInteractText: Interact
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
   filePath:
   - Assets/Dialog/DinnerTableDialogue.txt
 --- !u!1 &541262057
@@ -10535,7 +10551,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.37
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -10547,7 +10563,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -10557,7 +10573,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3.89
+  m_PointLightOuterRadius: 4.64
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -10729,7 +10745,7 @@ Transform:
   m_GameObject: {fileID: 641832858}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.89, y: 3.53, z: 0}
+  m_LocalPosition: {x: -0.89, y: 2.37, z: 0}
   m_LocalScale: {x: 11, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11913,6 +11929,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e1327d78c80d44899fde9f41ece650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FinishGame: 0
+  MainGame: {fileID: 0}
+  MiniGame: {fileID: 0}
+  BlackBackground: {fileID: 0}
   pickableLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -11921,6 +11941,7 @@ MonoBehaviour:
   - {fileID: 342547506}
   - {fileID: 1892724485}
   - {fileID: 954951927}
+  FoodToMake: 
 --- !u!1 &795863707
 GameObject:
   m_ObjectHideFlags: 0
@@ -12710,7 +12731,7 @@ Transform:
   m_GameObject: {fileID: 827276426}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.31, y: 8.29, z: 0}
+  m_LocalPosition: {x: -5.31, y: 7.38, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12756,7 +12777,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c0a5bde60ffff54488f94c3d6017d7bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15724,6 +15745,11 @@ MonoBehaviour:
   LockRotationSpeed: 50
   SpeedMultiplier: 1
   Stick: {fileID: 394576435}
+  MaxHits: 2
+  stickscript: {fileID: 0}
+  BlackBackground: {fileID: 0}
+  MainGame: {fileID: 0}
+  MiniGame: {fileID: 0}
 --- !u!114 &993897838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15833,8 +15859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387ba96b9a1a0a54d980192b105ccdbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DayMaxMin: 1
-  TimeOfCurrentDay: 0
 --- !u!4 &1006583551
 Transform:
   m_ObjectHideFlags: 0
@@ -16015,6 +16039,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 867830306}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
+  NewInteractText: Interact
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
   filePath:
   - Assets/Dialog/Painting1Dialogue.txt
 --- !u!1001 &1012181842
@@ -16483,6 +16511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e0af18997b65f44a6ed788849f70f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stickscript: {fileID: 0}
   TargetCirclePrefab: {fileID: 5506401029788271176, guid: 98b7eb10d1ca91e49bd5ceb8d02ea44b, type: 3}
 --- !u!1 &1038453376
 GameObject:
@@ -16628,6 +16657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 867830306}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
+  NewInteractText: Interact
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
   filePath:
   - Assets/Dialog/Painting2Dialogue.txt
 --- !u!1 &1039173034
@@ -16896,7 +16929,7 @@ Transform:
   m_GameObject: {fileID: 1181172081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.25, y: 3.76, z: 0}
+  m_LocalPosition: {x: -10.66, y: 2.54, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17012,6 +17045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 867830306}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
+  NewInteractText: Interact
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
   filePath:
   - Assets/Dialog/CouchDialogue.txt
 --- !u!1 &1187322178
@@ -17726,7 +17763,7 @@ Transform:
   m_GameObject: {fileID: 1306500891}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.24, y: 6.44, z: 0}
+  m_LocalPosition: {x: -12.24, y: 5.77, z: 0}
   m_LocalScale: {x: 12, y: 13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18078,6 +18115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8288d1686dbcbf8449b7bfa7e7bc70c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractGUI: {fileID: 0}
   BlackBackground: {fileID: 1959747112}
   MiniGameBackground: {fileID: 628149299}
 --- !u!114 &1310902078 stripped
@@ -33392,6 +33430,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogSystem: {fileID: 867830306}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
+  NewInteractText: Interact
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
   filePath:
   - Assets/Dialog/BathtubDialogue.txt
 --- !u!1 &1669279579
@@ -34164,7 +34206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6225faf8019a0a142a69cfa8ad007c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
+  NewInteractText: Interact
   BlackBackground: {fileID: 1959747112}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
   dialogSystem: {fileID: 867830306}
   MainGame: {fileID: 1634118085}
   MiniGame: {fileID: 790263888}
@@ -35761,7 +35807,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6225faf8019a0a142a69cfa8ad007c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractGUI: {fileID: 0}
+  InteractText: {fileID: 0}
+  NewInteractText: Interact
   BlackBackground: {fileID: 1959747112}
+  InteractGUIOffset: {x: 0, y: 1, z: 0}
   dialogSystem: {fileID: 867830306}
   MainGame: {fileID: 1634118085}
   MiniGame: {fileID: 1790184156}
@@ -37840,6 +37890,9 @@ MonoBehaviour:
   MiniGame: {fileID: 420824993}
   BlackBackground: {fileID: 1959747112}
   spawnObjects: {fileID: 347461746}
+  inventoryManager: {fileID: 0}
+  EvidenceReward: {fileID: 0}
+  NonEvidenceReward: {fileID: 0}
   EvidenceLayer:
     serializedVersion: 2
     m_Bits: 128
