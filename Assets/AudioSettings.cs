@@ -10,14 +10,16 @@ public class AudioSettings : MonoBehaviour
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Slider bgmVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject settingsMenu;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        masterVolumeSlider.value = 0.5f;
-        bgmVolumeSlider.value = 0.5f;
-        sfxVolumeSlider.value = 0.5f;
-
+        masterVolumeSlider.value = 1f;
+        bgmVolumeSlider.value = 1f;
+        sfxVolumeSlider.value = 1f;
     }
 
     // Update is called once per frame
@@ -57,6 +59,8 @@ public class AudioSettings : MonoBehaviour
 
     public void Show()
     {
-        this.gameObject.SetActive(!this.gameObject.activeSelf);
+        Debug.Log("Showing");
+        settingsMenu.SetActive(!settingsMenu.activeSelf);
+        mainMenu.SetActive(!mainMenu.activeSelf);
     }
 }
