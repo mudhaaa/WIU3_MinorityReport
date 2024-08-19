@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI; // Add this namespace for NavMeshAgent
+using Pathfinding;
 
 [CreateAssetMenu(menuName = "PluggableAI/Actions/Patrol")]
 public class PatrolAction : Action
@@ -12,6 +13,14 @@ public class PatrolAction : Action
         Patrol(controller);
     }
 
+
+    void OnPathComplete(Path p, StateController controller)
+    {
+        if (!p.error)
+        {
+            controller.path = p;
+        }
+    }
     private void Patrol(StateController controller)
     {
       
@@ -26,7 +35,7 @@ public class PatrolAction : Action
         Vector2 force = direction * controller.moveSpeed * Time.deltaTime;
         controller.rb.AddForce(force);
         // Move the StateController using the MovementController
-        //controller.movementController.MovePosition(new Vector2(horizontal, vertical));
+       
 
         float distance = Vector3.Distance(destination, controller.transform.position);
         controller.seeker.StartPath(controller.rb.position, destination);
