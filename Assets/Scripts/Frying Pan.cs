@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class FryingPan : MonoBehaviour
 {
-
     // List of object names that should be inside the circle collider
     [SerializeField] public List<GameObject> FoodObjects;
     [SerializeField] public List<GameObject> RecipeObjects;

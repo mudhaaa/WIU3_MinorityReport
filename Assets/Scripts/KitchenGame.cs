@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class KitchenGame : MonoBehaviour
 {
+    public enum Foods
+    {
+        Burger = 0,
+        Steak,
+        Salmon,
+        RoastedChicken,
+        NumOfFoods
+    }
+    public static string[] FoodNames = new string[] {"Burger", "Steak", "Salmon", "RoastedChicken"};
+
     public bool FinishGame = false;
     public GameObject MainGame;
     public GameObject MiniGame;
@@ -15,7 +25,7 @@ public class KitchenGame : MonoBehaviour
     private GameObject draggedObject;
 
     public GameObject[] objectsToDeactivate;
-    [SerializeField] public string FoodToMake;
+    [SerializeField] public Foods FoodToMake;
 
 
     // Start is called before the first frame update
