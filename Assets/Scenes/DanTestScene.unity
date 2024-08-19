@@ -12529,6 +12529,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 087497b8a25ba914fa0f66f67f394a0e, type: 2}
     - target: {fileID: 1053884716865057590, guid: bf8a19274520aa04b8651e54ca7ddf2e, type: 3}
+      propertyPath: evidenceSlot
+      value: 
+      objectReference: {fileID: 1591096749}
+    - target: {fileID: 1053884716865057590, guid: bf8a19274520aa04b8651e54ca7ddf2e, type: 3}
       propertyPath: inventoryItemPrefab
       value: 
       objectReference: {fileID: 5176750549855176542, guid: 72337ac6da77ec64d9f665b3635e213d, type: 3}
@@ -14923,6 +14927,37 @@ Transform:
   - {fileID: 1603717535}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &691041371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691041372}
+  m_Layer: 0
+  m_Name: SpawnPoint(Sub Bed Room)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691041372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691041371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -58.14, y: 8.05, z: 6.3979506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697629195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8992908140462050082, guid: 9cd9fe28d3c66ac46a36b3f07fcfd269, type: 3}
@@ -16677,6 +16712,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840556954}
   m_CullTransparentMesh: 1
+--- !u!1 &845657823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845657824}
+  m_Layer: 0
+  m_Name: SpawnPoint(Main Bed Room)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &845657824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845657823}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.18, y: -6.76, z: 6.3979506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &851586729
 GameObject:
   m_ObjectHideFlags: 0
@@ -20577,8 +20643,8 @@ MonoBehaviour:
   - {x: 0.07999992, y: 0.07999999, z: 0}
   - {x: 0.07999992, y: -0.080000006, z: 0}
   m_ShapePathHash: 0
-  m_Mesh: {fileID: 2043755913}
-  m_InstanceId: 85414
+  m_Mesh: {fileID: 2043424704}
+  m_InstanceId: 102766
   m_LocalBounds:
     m_Center: {x: 0, y: -0.000000007450581, z: 0}
     m_Extent: {x: 0.07999992, y: 0.08, z: 0}
@@ -20691,6 +20757,18 @@ PrefabInstance:
       propertyPath: animationEvent
       value: 
       objectReference: {fileID: 1301545871}
+    - target: {fileID: 204977553669590814, guid: 50687dfa97102fc42bb5687c2f7b3455, type: 3}
+      propertyPath: SpawnPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 204977553669590814, guid: 50687dfa97102fc42bb5687c2f7b3455, type: 3}
+      propertyPath: SpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 845657824}
+    - target: {fileID: 204977553669590814, guid: 50687dfa97102fc42bb5687c2f7b3455, type: 3}
+      propertyPath: SpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 691041372}
     - target: {fileID: 231125889565642817, guid: 50687dfa97102fc42bb5687c2f7b3455, type: 3}
       propertyPath: m_Name
       value: Main Character
@@ -38475,6 +38553,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 947722732}
   m_SourcePrefab: {fileID: 100100000, guid: 9cd9fe28d3c66ac46a36b3f07fcfd269, type: 3}
+--- !u!114 &1591096749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1386197643208425904, guid: 9cd9fe28d3c66ac46a36b3f07fcfd269, type: 3}
+  m_PrefabInstance: {fileID: 1591096748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e824647bcf71bd547835ab055e7983da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1593732807 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1937977184730505222, guid: 9cd9fe28d3c66ac46a36b3f07fcfd269, type: 3}
@@ -44223,7 +44312,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &2043755913
+--- !u!43 &2043424704
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46889,3 +46978,5 @@ SceneRoots:
   - {fileID: 1595790088}
   - {fileID: 685472367}
   - {fileID: 2036225658}
+  - {fileID: 845657824}
+  - {fileID: 691041372}

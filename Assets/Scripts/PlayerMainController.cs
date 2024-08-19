@@ -11,6 +11,9 @@ public class PlayerMainController : MonoBehaviour
     AnimationController AnimationController;
     Rigidbody2D rb;
 
+    [SerializeField] TimeSystem pTimeSystem;
+    [SerializeField] Transform[] SpawnPoints;
+
     void Start()
     {
         AnimationController = GetComponent<AnimationController>();
@@ -35,5 +38,17 @@ public class PlayerMainController : MonoBehaviour
     public void CheckThisFrame()
     {
         Debug.Log("ThisFrame");
+    }
+
+    public void OnDayStart()
+    {
+        if(pTimeSystem.Day <= 3)
+        {
+            transform.position = SpawnPoints[0].position;
+        }
+        else if(pTimeSystem.Day > 3)
+        {
+            transform.position = SpawnPoints[1].position;
+        }
     }
 }
