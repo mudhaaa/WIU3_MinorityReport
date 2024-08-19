@@ -58,6 +58,24 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    private int ReturnTotalEvidenceAmt()
+    {
+        int EvidenceAmt = 0;
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            InventorySlot slot = inventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot != null)
+            {
+                if (itemInSlot.ITEM.type == ItemType.Evidence)
+                {
+                    EvidenceAmt++;
+                }
+            }
+        }
+        return EvidenceAmt;
+    }
+
     private void Start()
     {
         AddItem(testdrugs, 5);
