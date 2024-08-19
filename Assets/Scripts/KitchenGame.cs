@@ -27,6 +27,7 @@ public class KitchenGame : MonoBehaviour
     public GameObject[] objectsToDeactivate;
     [SerializeField] public Foods FoodToMake;
 
+    public TimeSystem timeSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,9 @@ public class KitchenGame : MonoBehaviour
         {
             obj.SetActive(false);
         }
+
+        timeSystem.pOnDayStart += OnDayStart;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,7 +52,7 @@ public class KitchenGame : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Raycast from the mouse position
-           
+
 
             // Check if the ray hits something with the pickable layer
             if (hit.collider != null)
@@ -66,8 +70,6 @@ public class KitchenGame : MonoBehaviour
                     hitObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 }
             }
-     
-        
         }
      
 
@@ -107,6 +109,21 @@ public class KitchenGame : MonoBehaviour
         }
     }
 
+    private void OnDayStart()
+    {
+        Debug.Log(Foods.NumOfFoods);
 
+        // Deactivate the objects
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
+        }
+
+        if (timeSystem.Day < (int)Foods.NumOfFoods)
+        {
+            Debug.Log((Foods)timeSystem.Day);
+            FoodToMake = (Foods)timeSystem.Day;
+        }
+    }
  
 }
