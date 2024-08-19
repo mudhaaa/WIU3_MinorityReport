@@ -44,14 +44,14 @@ public class DayManager : MonoBehaviour
 
     //IEnumerator PlayStartDialogue()
     //{
-    //    SetTodayDialogue();
-    //    dialogSystem.StartNewDialogues();
-    //    timeStopped = true;
+    //    //SetTodayDialogue();
+    //    //dialogSystem.StartNewDialogues();
+    //    //timeStopped = true;
 
-    //    yield return new WaitUntil(() => dialogSystem.IsDialogueEnded);
+    //    //yield return new WaitUntil(() => dialogSystem.IsDialogueEnded);
 
-    //    timeStopped = false;
-    //    TimeOfCurrentDay = 0;
+    //    //timeStopped = false;
+    //    //TimeOfCurrentDay = 0;
 
-//    }
+    //}
 }

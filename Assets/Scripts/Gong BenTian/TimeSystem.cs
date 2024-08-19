@@ -193,11 +193,11 @@ public class TimeSystem : MonoBehaviour
                 {
                     if (GameManager.isMale == true)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/MaleMorning1.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleDay1Start.txt";
                     }
                     else if(GameManager.isMale == false)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/FemaleMorning1.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleDay1Start.txt";
                     }
 
                     break;
@@ -206,11 +206,11 @@ public class TimeSystem : MonoBehaviour
                 {
                     if (GameManager.isMale == true)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/MaleMorning2.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleDay2Start.txt";
                     }
                     else if (GameManager.isMale == false)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/FemaleMorning2.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleDay2Start.txt";
                     }
 
                     break;
@@ -219,11 +219,11 @@ public class TimeSystem : MonoBehaviour
                 {
                     if (GameManager.isMale == true)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/MaleMorning3.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleDay3Start.txt";
                     }
                     else if (GameManager.isMale == false)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/FemaleMorning3.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleDay3Start.txt";
                     }
 
                     break;
@@ -232,11 +232,11 @@ public class TimeSystem : MonoBehaviour
                 {
                     if (GameManager.isMale == true)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/MaleMorning4.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleDay4Start.txt";
                     }
                     else if (GameManager.isMale == false)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/FemaleMorning4.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleDay4Start.txt";
                     }
 
                     break;
@@ -245,11 +245,11 @@ public class TimeSystem : MonoBehaviour
                 {
                     if (GameManager.isMale == true)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/MaleMorning5.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleDay5Start.txt";
                     }
                     else if (GameManager.isMale == false)
                     {
-                        pDialogSystem.FilePath = "Assets/Dialog/FemaleMorning5.txt";
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleDay5Start.txt";
                     }
 
                     break;
