@@ -8,6 +8,11 @@ using UnityEngine.UI;
 
 public class DialogSystem : MonoBehaviour
 {
+    public static DialogSystem Instance;
+
+    public delegate void OnDialogEnd();
+    public OnDialogEnd onDialogEnd = null;
+
     public Image Background;
 
     public Text Content;
@@ -30,7 +35,6 @@ public class DialogSystem : MonoBehaviour
 
     public bool IsLineCompleted;
     private bool nextLine;
-    public bool IsDialogueEnded;
 
     public static readonly float[] DisplayCoolDowns = new float[5]{ 0.05f, 0.1f, 0.2f, 0.4f, 0.6f }; 
     public float DisplayCountDown;
@@ -40,6 +44,11 @@ public class DialogSystem : MonoBehaviour
     private string newAddedKey;
     private bool isOption;
 
+    private void Start()
+    {
+        Instance = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -47,8 +56,7 @@ public class DialogSystem : MonoBehaviour
         {
             UpdateLine();
         }
-
-        if (isOption == false && Input.GetMouseButtonDown(0) && IsLineCompleted == true)
+        else if (isOption == false && Input.GetMouseButtonDown(0) && IsLineCompleted == true)
         {
             nextLine = true;
         }
@@ -70,7 +78,6 @@ public class DialogSystem : MonoBehaviour
         LineIndex = 0;
         CharacterIndex = 0;
         isOption = false;
-        IsDialogueEnded = false;
 
         //clear the last display
         Name.text = "";
@@ -105,7 +112,7 @@ public class DialogSystem : MonoBehaviour
         //reset the countdown timer
         DisplayCountDown = 0;
 
-        TimeSystem.TimeMultipler = 0.0f;
+        TimeSystem.TimeMultipler = TimeSystem.DialogTimeMultipler;
 
         return true;
     }
@@ -356,21 +363,21 @@ public class DialogSystem : MonoBehaviour
 
     public void UpdateLine()
     {
-        if(DisplayCountDown >= 0.0001f)
+        if(Input.GetMouseButtonDown(0) == true || isOption == true)
+        {
+            CharacterIndex = DialogToDisplay.Length;
+            Content.text = DialogToDisplay;
+            IsLineCompleted = true;
+
+            return;
+        }
+        else if(DisplayCountDown >= 0.0001f)
         {
             DisplayCountDown -= Time.deltaTime;
             return;
         }
 
-        if (isOption == false)
-        {
-            CharacterIndex++;
-
-        }
-        else
-        {
-            CharacterIndex = DialogToDisplay.Length;
-        }
+        CharacterIndex++;
 
         Content.text = DialogToDisplay.Substring(0, CharacterIndex);
 
@@ -396,9 +403,14 @@ public class DialogSystem : MonoBehaviour
 
     private void EndDialog()
     {
-        TimeSystem.TimeMultipler = 20.0f;
+        TimeSystem.TimeMultipler = TimeSystem.NormalTimeMultipler;
         gameObject.SetActive(false);
-        IsDialogueEnded = true;
+
+        if (onDialogEnd != null)
+        {
+            onDialogEnd();
+            onDialogEnd = null;
+        }
     }
 
     public void ChooseOption(int optionIndex)
@@ -415,6 +427,11 @@ public class DialogSystem : MonoBehaviour
 
         nextLine = true;
         return;
+    }
+
+    public bool IsCompleted()
+    {
+        return !gameObject.activeSelf;
     }
 }
 

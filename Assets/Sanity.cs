@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Sanity : MonoBehaviour
 {
+    public SceneFunctions sceneFunctions;
+
     // Define the delegate type
     public delegate void FloatValueChangedDelegate(float newValue, float newMaxValue);
 
@@ -23,6 +25,16 @@ public class Sanity : MonoBehaviour
                 sanity = value;
                 // Trigger the event when the value changes
                 SanityChanged?.Invoke(value, maxsanity);
+
+                if (sanity <= 0.0001f)
+                {
+                    DialogSystem.Instance.onDialogEnd = sceneFunctions.LoadSuicide;
+                    DialogSystem.Instance.FilePath = "Assets/Dialog/Ending 5.txt";
+                    GameManager.Instance.IsEndingCompleted[4] = true;
+                    DialogSystem.Instance.StartNewDialogues();
+
+
+                }
             }
         }
     }
@@ -37,10 +49,10 @@ public class Sanity : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKey(KeyCode.E))
-        //{
-        //    ISanity -= Time.deltaTime * 5;
-        //}
+        if (Input.GetKey(KeyCode.E))
+        {
+            ISanity -= Time.deltaTime * 5;
+        }
     }
 
     //// Example event handler
