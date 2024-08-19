@@ -16,7 +16,6 @@ public class StateController : MonoBehaviour
     [SerializeField] public float attackRange = 1.5f;
     [SerializeField] public Transform chaseTarget;
     [SerializeField] public Transform attackPos;
-    [SerializeField] public MovementController movementController;
     [SerializeField] public CharacterRenderer characterRenderer;
     [SerializeField] public PlayerMainController playerstatus;
     public bool aiActive = true;
@@ -26,6 +25,7 @@ public class StateController : MonoBehaviour
     [SerializeField] public List<Transform> wayPointList = new List<Transform>();
     [SerializeField] public int nextWayPoint = 0;
     public float moveSpeed = 2f;
+
 
 
     public Path path;
