@@ -9,7 +9,6 @@ public class TaskListUIManager : MonoBehaviour
 {
     public Animator animator;
 
-    public Text Day;
     public Text Task1;
     public Text Task2;
     public Text Task3;
@@ -50,8 +49,6 @@ public class TaskListUIManager : MonoBehaviour
 
     public void OnDayStart()
     {
-        Day.text = "Day " + (timeSystem.Day + 1);
-
         Task1.text = "1. " + Task1s[timeSystem.Day];
 
         if(Task2s[timeSystem.Day] != "")

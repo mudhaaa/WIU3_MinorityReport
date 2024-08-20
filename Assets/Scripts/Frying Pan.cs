@@ -20,12 +20,6 @@ public class FryingPan : MonoBehaviour
     // A HashSet to keep track of the objects currently in the circle collider
     private HashSet<string> objectsInCollider = new HashSet<string>();
 
-    public TimeSystem timeSystem;
-
-    private void Start()
-    {
-        timeSystem.pOnDayStart += OnDayStart;
-    }
 
     private void Update()
     {
@@ -104,17 +98,5 @@ public class FryingPan : MonoBehaviour
             KitchenGame.FinishGame = true;
             gameObject.SetActive(false);
         }
-    }
-
-    public void OnDayStart()
-    {
-        foreach (GameObject obj in FoodObjects)
-        {
-            obj.SetActive(true);
-        }
-
-        RecipeObjects[FoodToMake].SetActive(false);
-        KitchenGame.FinishGame = false;
-        gameObject.SetActive(true);
     }
 }
