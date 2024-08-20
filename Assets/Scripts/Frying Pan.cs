@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class FryingPan : MonoBehaviour
 {
-
     // List of object names that should be inside the circle collider
     [SerializeField] public List<GameObject> FoodObjects;
     [SerializeField] public List<GameObject> RecipeObjects;
@@ -21,25 +20,31 @@ public class FryingPan : MonoBehaviour
     // A HashSet to keep track of the objects currently in the circle collider
     private HashSet<string> objectsInCollider = new HashSet<string>();
 
+    public TimeSystem timeSystem;
+
+    private void Start()
+    {
+        timeSystem.pOnDayStart += OnDayStart;
+    }
 
     private void Update()
     {
-        if (KitchenGame.FoodToMake == "Burger")
+        if (KitchenGame.FoodToMake == KitchenGame.Foods.Burger)
         {
             requiredObjects = requiredObjects1;
             FoodToMake = 0;
         }
-        else if (KitchenGame.FoodToMake == "Steak")
+        else if (KitchenGame.FoodToMake == KitchenGame.Foods.Steak)
         {
             requiredObjects = requiredObjects2;
             FoodToMake = 1;
         }
-        else if (KitchenGame.FoodToMake == "Salmon")
+        else if (KitchenGame.FoodToMake == KitchenGame.Foods.Salmon)
         {
             requiredObjects = requiredObjects3;
             FoodToMake = 2;
         }
-        else if (KitchenGame.FoodToMake == "Roasted Chicken")
+        else if (KitchenGame.FoodToMake == KitchenGame.Foods.RoastedChicken)
         {
             requiredObjects = requiredObjects4;
             FoodToMake = 3;
@@ -99,5 +104,17 @@ public class FryingPan : MonoBehaviour
             KitchenGame.FinishGame = true;
             gameObject.SetActive(false);
         }
+    }
+
+    public void OnDayStart()
+    {
+        foreach (GameObject obj in FoodObjects)
+        {
+            obj.SetActive(true);
+        }
+
+        RecipeObjects[FoodToMake].SetActive(false);
+        KitchenGame.FinishGame = false;
+        gameObject.SetActive(true);
     }
 }
