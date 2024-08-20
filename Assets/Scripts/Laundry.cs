@@ -8,7 +8,6 @@ public class Laundry : MonoBehaviour
     public GameObject MainGame;
     public GameObject MiniGame;
     public BackgroundTransparencyAnim BlackBackground;
-    public GameObject ParticleSystem;
 
     public LayerMask pickableLayers;
     [SerializeField] public List<GameObject> Clothes;
@@ -19,7 +18,6 @@ public class Laundry : MonoBehaviour
     void Start()
     {
         pickableLayers = LayerMask.GetMask("White") | LayerMask.GetMask("NotWhite");
-        ParticleSystem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -91,7 +89,6 @@ public class Laundry : MonoBehaviour
 
         if (FinishGame)
         {
-            ParticleSystem.SetActive(true);
             if (BlackBackground.CoroutineRunning == false)
             {
                 FinishGame = true;

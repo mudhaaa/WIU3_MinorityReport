@@ -20,8 +20,6 @@ public class PlayerMainController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Hide = false;
         Died = false;
-
-        pTimeSystem.pOnDayStart += OnDayStart;
     }
 
     // Update is called once per frame

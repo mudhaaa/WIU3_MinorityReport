@@ -5,9 +5,6 @@ using UnityEngine.Rendering.Universal;
 
 public class TimeSystem : MonoBehaviour
 {
-    public delegate void OnDayStart();
-    public OnDayStart pOnDayStart;
-
     public DialogSystem pDialogSystem;
     public InventoryManager pInventoryManager;
 
@@ -19,7 +16,7 @@ public class TimeSystem : MonoBehaviour
     public int Day;
 
     public const float LengthOfTime = 480;
-    public const float NormalTimeMultipler = 1.0f;
+    public const float NormalTimeMultipler = 60.0f;
     public const float DialogTimeMultipler = 0.0f;
     public static float TimeMultipler = 1.0f;
 
@@ -91,26 +88,35 @@ public class TimeSystem : MonoBehaviour
         ++Day;
         if (Day >= 5)
         {
-            if (pInventoryManager.ReturnTotalEvidenceAmt() < 4)
+            if (pInventoryManager.evidenceSlot.transform.childCount > 0)
+            {
+                if (pInventoryManager.evidenceSlot.transform.GetChild(0).GetComponent<InventoryItem>().count < 4)
+                {
+                    pDialogSystem.onDialogEnd += sceneFunctions.LoadSuicide;
+                    pDialogSystem.FilePath = "Assets/Dialog/Ending 5.txt";
+                    GameManager.Instance.IsEndingCompleted[4] = true;
+                }
+                else if (pInventoryManager.evidenceSlot.transform.GetChild(0).GetComponent<InventoryItem>().count >= 4)
+                {
+                    if (GameManager.isMale == true)
+                    {
+                        pDialogSystem.onDialogEnd += sceneFunctions.LoadMaleGE;
+                        pDialogSystem.FilePath = "Assets/Dialog/Ending 3.txt";
+                        GameManager.Instance.IsEndingCompleted[2] = true;
+                    }
+                    else
+                    {
+                        pDialogSystem.onDialogEnd += sceneFunctions.LoadFemaleGE;
+                        pDialogSystem.FilePath = "Assets/Dialog/Ending 4.txt";
+                        GameManager.Instance.IsEndingCompleted[3] = true;
+                    }
+                }
+            }
+            else
             {
                 pDialogSystem.onDialogEnd += sceneFunctions.LoadSuicide;
                 pDialogSystem.FilePath = "Assets/Dialog/Ending 5.txt";
                 GameManager.Instance.IsEndingCompleted[4] = true;
-            }
-            else if (pInventoryManager.ReturnTotalEvidenceAmt() >= 4)
-            {
-                if (GameManager.isMale == true)
-                {
-                    pDialogSystem.onDialogEnd += sceneFunctions.LoadMaleGE;
-                    pDialogSystem.FilePath = "Assets/Dialog/Ending 3.txt";
-                    GameManager.Instance.IsEndingCompleted[2] = true;
-                }
-                else
-                {
-                    pDialogSystem.onDialogEnd += sceneFunctions.LoadFemaleGE;
-                    pDialogSystem.FilePath = "Assets/Dialog/Ending 4.txt";
-                    GameManager.Instance.IsEndingCompleted[3] = true;
-                }
             }
         }
         else
@@ -255,10 +261,5 @@ public class TimeSystem : MonoBehaviour
         warningGiven = false;
         IsNight = false;
         NextDay = false;
-
-        if(pOnDayStart != null)
-        {
-            pOnDayStart();
-        }
     }
 }
