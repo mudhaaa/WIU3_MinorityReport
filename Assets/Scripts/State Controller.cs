@@ -21,7 +21,7 @@ public class StateController : MonoBehaviour
     [SerializeField] public CharacterRenderer characterRenderer;
     [SerializeField] public PlayerMainController playerstatus;
     [SerializeField] public bool gotHit;
-    [SerializeField] public bool IsFemale;
+
     public bool aiActive = true;
     public bool flip;
 
@@ -117,6 +117,7 @@ public class StateController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<PlayerMainController>().Died = true;
             dialogSystem.onDialogEnd += sceneFunctions.LoadGeneralBE;
             dialogSystem.FilePath = "Assets/Dialog/Ending 1.txt";
             

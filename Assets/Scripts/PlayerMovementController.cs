@@ -7,6 +7,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private GameObject projectilePrefab; // Assign your projectile prefab in the Inspector
     [SerializeField] private GameObject gluePrefab;
+    [SerializeField] private PlayerMainController playerMainController;
     public enum FacingDirection { Up, Down, Left, Right }
 
     public FacingDirection facingDirection;
@@ -24,33 +25,37 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Direction = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, Input.GetAxisRaw("Vertical") * moveSpeed);
+        if (!playerMainController.Hide)
+        {
+            Direction = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, Input.GetAxisRaw("Vertical") * moveSpeed);
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ShootProjectile();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ShootProjectile();
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                SpawnGlue();
+            }
+            // Update facing direction based on input
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                facingDirection = FacingDirection.Up;
+            }
+            else if (Input.GetKeyDown(KeyCode.S))
+            {
+                facingDirection = FacingDirection.Down;
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                facingDirection = FacingDirection.Left;
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                facingDirection = FacingDirection.Right;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SpawnGlue();
-        }
-        // Update facing direction based on input
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            facingDirection = FacingDirection.Up;
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            facingDirection = FacingDirection.Down;
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            facingDirection = FacingDirection.Left;
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            facingDirection = FacingDirection.Right;
-        }
+       
     }
     private void FixedUpdate()
     {
