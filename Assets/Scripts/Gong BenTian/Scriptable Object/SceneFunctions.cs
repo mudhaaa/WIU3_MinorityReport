@@ -18,7 +18,7 @@ public class SceneFunctions : ScriptableObject
         return;
     }
     
-    public void LoadFemaleBE()
+    public void LoadGeneralBE()
     {
         SceneManager.LoadScene("Die Screen");
         return;

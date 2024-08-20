@@ -12,12 +12,16 @@ public class StateController : MonoBehaviour
     public State remainState;
 
 
+    [SerializeField] public DialogSystem dialogSystem;
+    [SerializeField] public SceneFunctions sceneFunctions;
     [SerializeField] public float lookSphereCastRadius = 2f;
     [SerializeField] public float attackRange = 1.5f;
     [SerializeField] public Transform chaseTarget;
     [SerializeField] public Transform attackPos;
     [SerializeField] public CharacterRenderer characterRenderer;
     [SerializeField] public PlayerMainController playerstatus;
+    [SerializeField] public bool gotHit;
+    [SerializeField] public bool IsFemale;
     public bool aiActive = true;
     public bool flip;
 
@@ -107,5 +111,15 @@ public class StateController : MonoBehaviour
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
 
 
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            dialogSystem.onDialogEnd += sceneFunctions.LoadGeneralBE;
+            dialogSystem.FilePath = "Assets/Dialog/Ending 1.txt";
+            
+        }
     }
 }

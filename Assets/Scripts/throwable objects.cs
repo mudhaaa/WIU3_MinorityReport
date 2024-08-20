@@ -18,7 +18,7 @@ public class ThrowableObject : MonoBehaviour
         if (collision.gameObject.tag == "Abuser")
         {
 
-
+            collision.gameObject.GetComponent<StateController>().gotHit = true;
             DestroyObject();
         }
     }
