@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,8 +16,12 @@ public class PopLock : MonoBehaviour
     [SerializeField] BackgroundTransparencyAnim BlackBackground;
     [SerializeField] GameObject MainGame;
     [SerializeField] GameObject MiniGame;
+    public GameObject InvetigationGUI;
+    public TextMeshProUGUI investigationtext;
     void OnEnable()
     {
+        SpeedMultiplier = 1.0f;
+        InvetigationGUI.SetActive(true);
         LockRotationSpeed = StartLockRotationSpeed;
         transform.rotation = Quaternion.identity;
     }
@@ -24,7 +29,8 @@ public class PopLock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (stickscript.Hits > MaxHits)
+        investigationtext.text = "Turns: " + (stickscript.Hits) + " / " + (MaxHits);
+        if (stickscript.Hits >= MaxHits)
         {
             if (BlackBackground.CoroutineRunning == false)
             {
@@ -38,8 +44,12 @@ public class PopLock : MonoBehaviour
         }
         if (stickscript.Hit)
         {
-            SpeedMultiplier *= -1;
+            SpeedMultiplier *= -1.1f;
         }
         transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z + (Time.deltaTime * LockRotationSpeed * SpeedMultiplier));
+    }
+    void OnDisable()
+    {
+        InvetigationGUI.SetActive(false);
     }
 }

@@ -10,7 +10,9 @@ public class DraggableObject2D : MonoBehaviour
     private Vector2 mousePosition = Vector2.zero;
     private Vector2 initialPosition;
     private Vector2 initialMousePosition;
-    private bool isDragging = false;
+    public bool isDragging = false;
+    [SerializeField] AudioSource SoundOnDrag;
+    [SerializeField] AudioSource SoundOnCollision;
 
     void Update()
     {
@@ -28,7 +30,10 @@ public class DraggableObject2D : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("YEAHYEAH");
+        if (SoundOnDrag != null)
+        {
+            SoundOnDrag.Play();
+        }
         isDragging = true;
         initialPosition = transform.position;
     }
@@ -43,5 +48,11 @@ public class DraggableObject2D : MonoBehaviour
     void OnMouseDrag()
     {
         // Do nothing, handled in Update()
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (SoundOnCollision != null)
+            SoundOnCollision.Play();
     }
 }

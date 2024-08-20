@@ -5,6 +5,7 @@ using UnityEngine;
 public class BirdFlappyDeathController : MonoBehaviour
 {
     public BirdFlappyController birdFlappyController;
+    public BirdFlappyGameManager birdFlappyGameManager;
     public DeleteObjectsOnDisable InteractableObjects;
     float Timer;
     float MaxTimer = 2.0f;
@@ -16,6 +17,7 @@ public class BirdFlappyDeathController : MonoBehaviour
 
     private void OnEnable()
     {
+        birdFlappyGameManager.FlappyCount = 0;
         InteractableObjects.DeleteAllChildren();
     }
     // Update is called once per frame

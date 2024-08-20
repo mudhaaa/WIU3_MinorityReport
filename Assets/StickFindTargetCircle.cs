@@ -12,6 +12,7 @@ public class StickFindTargetCircle : MonoBehaviour
     private float timer = 0f;
     public int Hits = 0;
     public bool Hit = false;
+    public AudioSource PickLockSound;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -32,6 +33,7 @@ public class StickFindTargetCircle : MonoBehaviour
                 if(collidedObject != null)
                 {
                     Hits++;
+                    PickLockSound.Play();
                     Hit = true;
                     Destroy(collidedObject);
                 }

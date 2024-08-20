@@ -35,7 +35,7 @@ public class SpawnFlappyObstacles : MonoBehaviour
     void SpawnObstacle()
     {
         Vector3 ScreenWorld = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 1.1f, Random.Range(0, Screen.height), 0));
-        SpawnPoint = new Vector3(ScreenWorld.x, (Mathf.Abs(ScreenWorld.y) - 7.0f)  * (ScreenWorld.y / Mathf.Abs(ScreenWorld.y)), 0.0f);
+        SpawnPoint = new Vector3(ScreenWorld.x, Mathf.MoveTowards(ScreenWorld.y, 3.0f, 4.0f), 0.0f);
         Debug.Log(SpawnPoint.y);
         GameObject obstacle = Instantiate(ObstaclePrefab, SpawnPoint, Quaternion.identity, transform);
         Destroy(obstacle, DestroyTime);
