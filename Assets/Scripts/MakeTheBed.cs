@@ -10,7 +10,6 @@ public class MakeTheBed : MonoBehaviour
     public GameObject MiniGame;
     public BackgroundTransparencyAnim BlackBackground;
     public LayerMask pickableLayers;
-    public GameObject ParticleSystem;
     // The layer that can be picked up
 
 
@@ -25,7 +24,6 @@ public class MakeTheBed : MonoBehaviour
     {
         pickableLayers = LayerMask.GetMask("Pillow") | LayerMask.GetMask("Blanket");
         PiecesPlaced = 0;
-        ParticleSystem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -87,7 +85,6 @@ public class MakeTheBed : MonoBehaviour
         }
         if (FinishGame)
         {
-            ParticleSystem.SetActive(true);
             if (BlackBackground.CoroutineRunning == false)
             {
                 FinishGame = true;
