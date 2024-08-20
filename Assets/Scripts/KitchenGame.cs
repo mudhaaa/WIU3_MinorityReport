@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class KitchenGame : MonoBehaviour
 {
+    public enum Foods
+    {
+        Burger = 0,
+        Steak,
+        Salmon,
+        RoastedChicken,
+        NumOfFoods
+    }
+    public static string[] FoodNames = new string[] {"Burger", "Steak", "Salmon", "RoastedChicken"};
+
     public bool FinishGame = false;
     public GameObject MainGame;
     public GameObject MiniGame;
@@ -15,8 +25,9 @@ public class KitchenGame : MonoBehaviour
     private GameObject draggedObject;
 
     public GameObject[] objectsToDeactivate;
-    [SerializeField] public string FoodToMake;
+    [SerializeField] public Foods FoodToMake;
 
+    public TimeSystem timeSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +49,7 @@ public class KitchenGame : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Raycast from the mouse position
-           
+
 
             // Check if the ray hits something with the pickable layer
             if (hit.collider != null)
@@ -56,8 +67,6 @@ public class KitchenGame : MonoBehaviour
                     hitObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 }
             }
-     
-        
         }
      
 
@@ -97,6 +106,18 @@ public class KitchenGame : MonoBehaviour
         }
     }
 
+    public void OnDayStart()
+    {
+        // Deactivate the objects
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
+        }
 
+        if (timeSystem.Day < (int)Foods.NumOfFoods)
+        {
+            FoodToMake = (Foods)timeSystem.Day;
+        }
+    }
  
 }
