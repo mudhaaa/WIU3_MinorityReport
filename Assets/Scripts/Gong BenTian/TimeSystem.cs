@@ -19,7 +19,7 @@ public class TimeSystem : MonoBehaviour
     public int Day;
 
     public const float LengthOfTime = 480;
-    public const float NormalTimeMultipler = 1.0f;
+    public const float NormalTimeMultipler = 10.0f;
     public const float DialogTimeMultipler = 0.0f;
     public static float TimeMultipler = 1.0f;
 
@@ -69,7 +69,7 @@ public class TimeSystem : MonoBehaviour
         {
             EndTheDay();
         }
-        else if(IsNight == true && NextDay == true)
+        else if(IsNight == true && NextDay == true && Day < TotalOfDay)
         {
             StartNextDay();
         }

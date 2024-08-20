@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InteractController : MonoBehaviour
@@ -8,15 +9,17 @@ public class InteractController : MonoBehaviour
     public BackgroundTransparencyAnim BlackBackground;
     public GameObject MiniGameBackground;
 
-    public GameObject[] miniGames;
-    public GameObject[] evidenceGameObjects;
-    public GameObject[] choresGameObjects;
+    public GameObject[] FirstDayObjects;
+    public GameObject[] SecondDayObjects;
+    public GameObject[] ThirdDayObjects;
+    public GameObject[] FourthDayObjects;
+    public GameObject[] FifthDayObjects;
     public TimeSystem timeSystem;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,17 +37,11 @@ public class InteractController : MonoBehaviour
             interactable = collision.gameObject.GetComponent<InteractableObject>();
             if (collision != null && interactable != null &&
                 (
-                    (collision.gameObject == miniGames[0]) ||
-                    (collision.gameObject == miniGames[1]) ||
-                    (timeSystem.Day == 0 && collision.gameObject == choresGameObjects[0]) ||
-                    (timeSystem.Day == 1 && collision.gameObject == choresGameObjects[1]) ||
-                    (timeSystem.Day == 2 && collision.gameObject == choresGameObjects[2]) /*||
-                    (timeSystem.Day == 0 && collision.gameObject == evidenceGameObjects[0]) ||
-                    (timeSystem.Day == 1 && collision.gameObject == evidenceGameObjects[0]) ||
-                    (timeSystem.Day == 2 && collision.gameObject == evidenceGameObjects[0]) ||
-                    (timeSystem.Day == 3 && collision.gameObject == evidenceGameObjects[0]) ||
-                    (timeSystem.Day == 4 && collision.gameObject == evidenceGameObjects[0])
-                )*/
+                    (timeSystem.Day == 0 && FirstDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 1 && SecondDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 2 && ThirdDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 3 && FourthDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 4 && FifthDayObjects.Contains(collision.gameObject))
                 )
                 )
             {
