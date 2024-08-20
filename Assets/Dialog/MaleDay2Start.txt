@@ -1,7 +1,7 @@
 BGRGBA:0,0,0,255
-C:This chicken is still cold! Good God, no matter what you do, you always seem to screw up! It's almost as if being stupid is the only thing you’re good at!
-LIM:MaleMC_portrait-removebg-preview
-C:Those words from last night still ring in my head through my dreams… I cooked a good meal in my opinion and that’s what matters!
+C:Good God, no matter what you do, you always seem to screw up! It's almost as if being stupid is the only thing you’re good at!
+LIM:MaleMC_portrait
+C:Getting drunk and spouting words like that... I hate it so much!
 C:Hmmm… now that I think about it, how could we afford this much beer? Factoring in the bills and groceries, 2 bottles of beer is going way over budget! 
 C:No way they’re… They’re stealing from me?!! Using MY savings to spend on some beer?! Now how am I going to prove that?
 C:Ah! Receipts! If I can show that our income isn’t enough to pay the bills on top of buying beer, that should suffice!
