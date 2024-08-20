@@ -9,10 +9,12 @@ public class CleanMirror : MonoBehaviour
     public GameObject MiniGame;
     public BackgroundTransparencyAnim BlackBackground;
     public List<GameObject> objectsToRandomize; // List of GameObjects to randomize
+    public GameObject ParticleSystem;
 
     private void Start()
     {
-            RandomizeObjects();
+        RandomizeObjects();
+        ParticleSystem.SetActive(false);
     }
 
     private void RandomizeObjects()
@@ -66,8 +68,10 @@ public class CleanMirror : MonoBehaviour
 
         if (FinishGame)
         {
+            ParticleSystem.SetActive(true);
             if (BlackBackground.CoroutineRunning == false)
             {
+
                 FinishGame = true;
                 BlackBackground.StartCoroutine(BlackBackground.AppearAnim(1.0f, 0.01f, 0.25f));
             }
