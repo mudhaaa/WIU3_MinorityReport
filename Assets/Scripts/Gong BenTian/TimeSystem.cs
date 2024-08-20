@@ -5,6 +5,9 @@ using UnityEngine.Rendering.Universal;
 
 public class TimeSystem : MonoBehaviour
 {
+    public delegate void OnDayStart();
+    public OnDayStart pOnDayStart;
+
     public DialogSystem pDialogSystem;
     public InventoryManager pInventoryManager;
 
@@ -16,7 +19,7 @@ public class TimeSystem : MonoBehaviour
     public int Day;
 
     public const float LengthOfTime = 480;
-    public const float NormalTimeMultipler = 60.0f;
+    public const float NormalTimeMultipler = 1.0f;
     public const float DialogTimeMultipler = 0.0f;
     public static float TimeMultipler = 1.0f;
 
@@ -261,5 +264,10 @@ public class TimeSystem : MonoBehaviour
         warningGiven = false;
         IsNight = false;
         NextDay = false;
+
+        if(pOnDayStart != null)
+        {
+            pOnDayStart();
+        }
     }
 }

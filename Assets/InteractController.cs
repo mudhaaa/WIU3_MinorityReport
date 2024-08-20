@@ -8,8 +8,9 @@ public class InteractController : MonoBehaviour
     public BackgroundTransparencyAnim BlackBackground;
     public GameObject MiniGameBackground;
 
-    public GameObject[] evidenceMiniGames;
-    public GameObject[] choresMiniGames;
+    public GameObject[] miniGames;
+    public GameObject[] evidenceGameObjects;
+    public GameObject[] choresGameObjects;
     public TimeSystem timeSystem;
 
     // Start is called before the first frame update
@@ -31,17 +32,20 @@ public class InteractController : MonoBehaviour
             Collider2D collision = collisions[i];
             InteractableObject interactable = null;
             interactable = collision.gameObject.GetComponent<InteractableObject>();
-            if (collision != null && interactable != null /*&&
+            if (collision != null && interactable != null &&
                 (
-                    (timeSystem.Day == 0 && collision.gameObject == choresMiniGames[0]) ||
-                    (timeSystem.Day == 1 && collision.gameObject == choresMiniGames[1]) ||
-                    (timeSystem.Day == 2 && collision.gameObject == choresMiniGames[2]) ||
-                    (timeSystem.Day == 0 && collision.gameObject == evidenceMiniGames[0]) ||
-                    (timeSystem.Day == 1 && collision.gameObject == evidenceMiniGames[0]) ||
-                    (timeSystem.Day == 2 && collision.gameObject == evidenceMiniGames[0]) ||
-                    (timeSystem.Day == 3 && collision.gameObject == evidenceMiniGames[0]) ||
-                    (timeSystem.Day == 4 && collision.gameObject == evidenceMiniGames[0])
+                    (collision.gameObject == miniGames[0]) ||
+                    (collision.gameObject == miniGames[1]) ||
+                    (timeSystem.Day == 0 && collision.gameObject == choresGameObjects[0]) ||
+                    (timeSystem.Day == 1 && collision.gameObject == choresGameObjects[1]) ||
+                    (timeSystem.Day == 2 && collision.gameObject == choresGameObjects[2]) /*||
+                    (timeSystem.Day == 0 && collision.gameObject == evidenceGameObjects[0]) ||
+                    (timeSystem.Day == 1 && collision.gameObject == evidenceGameObjects[0]) ||
+                    (timeSystem.Day == 2 && collision.gameObject == evidenceGameObjects[0]) ||
+                    (timeSystem.Day == 3 && collision.gameObject == evidenceGameObjects[0]) ||
+                    (timeSystem.Day == 4 && collision.gameObject == evidenceGameObjects[0])
                 )*/
+                )
                 )
             {
                 Debug.Log("Interactable Object " + collision.gameObject.name);
