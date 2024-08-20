@@ -2,11 +2,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 public class CheckCollection : MonoBehaviour
 {
     public GameObject MainGame;
     public GameObject MiniGame;
+    public GameObject InvetigationGUI;
+    public TextMeshProUGUI investigationtext;
     public BackgroundTransparencyAnim BlackBackground;
     public SpawnObjects spawnObjects;
     public InventoryManager inventoryManager;
@@ -19,6 +22,15 @@ public class CheckCollection : MonoBehaviour
     public LayerMask EvidenceLayer;
     public LayerMask NonEvidenceLayer;
     // Start is called before the first frame update
+
+    private void OnEnable()
+    {
+        InvetigationGUI.SetActive(true);
+    }
+    private void OnDisable()
+    {
+        InvetigationGUI.SetActive(false);
+    }
     void Update()
     {
         if (!FinishGame)
@@ -39,8 +51,8 @@ public class CheckCollection : MonoBehaviour
                 GameObject hitObject = hit.collider.gameObject;
                 NonEvidences++;
             }
+            investigationtext.text = "Items Collected: " + (Evidences + NonEvidences) + " / " + ((spawnObjects.MaxEvidencesSpawned + spawnObjects.MaxNonEvidencesSpawned) / 2);
         }
-
         if ((Evidences + NonEvidences) >= ((spawnObjects.MaxEvidencesSpawned + spawnObjects.MaxNonEvidencesSpawned) / 2) || FinishGame)
         {
             if (BlackBackground.CoroutineRunning == false)

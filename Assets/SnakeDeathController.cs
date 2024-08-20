@@ -8,6 +8,7 @@ public class SnakeDeathController : MonoBehaviour
     public SnakeController SnakeController;
     public DeleteObjectsOnDisable Food;
     public DeleteObjectsOnDisable SnakeBodies;
+    public BirdFlappyGameManager birdFlappyGameManager;
     float Timer;
     float MaxTimer = 2.0f;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class SnakeDeathController : MonoBehaviour
 
     private void OnEnable()
     {
+        birdFlappyGameManager.FlappyCount = 0;
         SnakeController.gameObject.transform.localPosition = Vector3.zero;
         SnakeBodies.DeleteAllChildren();
         Food.DeleteAllChildren();

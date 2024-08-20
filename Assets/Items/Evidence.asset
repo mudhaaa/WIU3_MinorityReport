@@ -16,4 +16,4 @@ MonoBehaviour:
   range: {x: 5, y: 4}
   SanityRegen: 0
   Stackable: 1
-  image: {fileID: 21300000, guid: 18bcc039e0f10c442b0c59694b417c62, type: 3}
+  image: {fileID: 21300000, guid: f3ea510d5e1ee2847b628391e5543279, type: 3}

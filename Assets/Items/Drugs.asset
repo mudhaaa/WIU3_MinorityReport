@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   range: {x: 5, y: 4}
-  Defence: 0
-  Healing: 50
-  AttackDmg: 0
+  SanityRegen: 20
   Stackable: 1
   image: {fileID: -1500686425, guid: 5f77378e437bda04abf851aba1579973, type: 3}

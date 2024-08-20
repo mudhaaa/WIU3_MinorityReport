@@ -6,6 +6,15 @@ public class BirdFlappyController : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] Vector3 JumpForce = new Vector3(0.0f, 100.0f, 0.0f);
+    [SerializeField] Animator animator;
+    [SerializeField] AudioSource FlappyHit;
+    [SerializeField] AudioSource FlappyJump;
+
+
+
+    float turnSpeed = 10; // Turret movement parameter
+
+
     // Start is called before the first frame update
 
     private void OnEnable()
@@ -21,12 +30,37 @@ public class BirdFlappyController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             Debug.Log("Pressed For Flappy!");
+            animator.Play("Jump");
             rb.velocity = JumpForce;
+            FlappyJump.Play();
         }
+        // Check if there is any velocity
+        if (rb.velocity != Vector2.zero)
+        {
+
+            if (rb.velocity.y < 0.0f)
+            {
+                animator.Play("Idle");
+            }
+            // Calculate the angle in degrees
+            float angle = Mathf.Atan2(rb.velocity.y, 2.0f) * Mathf.Rad2Deg;
+
+            // Create a rotation based on the angle
+            Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+            // Smoothly rotate towards the target rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        }
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        this.enabled = false;
+        if (this.enabled)
+        {
+            FlappyHit.Play();
+            this.enabled = false;
+        }
     }
 }

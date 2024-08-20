@@ -23,6 +23,7 @@ public class Eating : MonoBehaviour
             {
                 inventoryitem.count -= 1;
             }
+            inventoryitem.RefreshCount();
         }
     }
 }

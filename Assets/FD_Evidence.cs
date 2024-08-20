@@ -7,6 +7,9 @@ public class FD_Evidence : MonoBehaviour
     [Header("Physics 2D")]
     public Rigidbody2D rb;
     [SerializeField] FlashlightDarknessGame game;
+    [SerializeField] AudioSource SoundWhenClicked;
+    [SerializeField] float DestroyWaitTime = 2.0f;
+    bool HitOnce = false;
 
     private Vector2 mousePosition = Vector2.zero;
     private void Start()
@@ -19,7 +22,15 @@ public class FD_Evidence : MonoBehaviour
 
     void OnMouseDown()
     {
-        game.AmountFound++;
-        Destroy(gameObject);
+        if (!HitOnce)
+        {
+            HitOnce = true;
+            if (SoundWhenClicked != null)
+            {
+                SoundWhenClicked.Play();
+            }
+            game.AmountFound++;
+            Destroy(gameObject, DestroyWaitTime);
+        }
     }
 }

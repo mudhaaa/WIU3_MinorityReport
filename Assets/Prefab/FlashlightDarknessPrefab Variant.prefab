@@ -61,6 +61,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3703969866512319039}
   m_SourcePrefab: {fileID: 100100000, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+--- !u!82 &649473246999831841 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4195145345923743206, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+  m_PrefabInstance: {fileID: 3691616944208844999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &3511100452114493430 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 252955084111935281, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
@@ -85,3 +90,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3511100452114493430}
   game: {fileID: 0}
+  SoundWhenClicked: {fileID: 649473246999831841}

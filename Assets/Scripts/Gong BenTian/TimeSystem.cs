@@ -16,7 +16,7 @@ public class TimeSystem : MonoBehaviour
     public int Day;
 
     public const float LengthOfTime = 480;
-    public const float NormalTimeMultipler = 60.0f;
+    public const float NormalTimeMultipler = 1.0f;
     public const float DialogTimeMultipler = 0.0f;
     public static float TimeMultipler = 1.0f;
 
