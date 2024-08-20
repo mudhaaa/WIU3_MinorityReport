@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5105748194904261942}
   - component: {fileID: 5658916637964434179}
   - component: {fileID: 3439065329565697670}
-  - component: {fileID: 3499895236324323418}
+  - component: {fileID: 7302164161883337124}
   m_Layer: 0
   m_Name: Main Character
   m_TagString: Untagged
@@ -262,7 +262,7 @@ MonoBehaviour:
   sceneFunctions: {fileID: 11400000, guid: 23441d1c2b7653e45becfa7fc93ae2d3, type: 2}
   sanity: 0
   maxsanity: 100
---- !u!114 &3499895236324323418
+--- !u!114 &7302164161883337124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,6 +277,9 @@ MonoBehaviour:
   InteractGUI: {fileID: 0}
   BlackBackground: {fileID: 0}
   MiniGameBackground: {fileID: 0}
+  evidenceMiniGames: []
+  choresMiniGames: []
+  timeSystem: {fileID: 0}
 --- !u!1 &940283597895212422
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,9 +37,6 @@ public class KitchenGame : MonoBehaviour
         {
             obj.SetActive(false);
         }
-
-        timeSystem.pOnDayStart += OnDayStart;
-        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -109,10 +106,8 @@ public class KitchenGame : MonoBehaviour
         }
     }
 
-    private void OnDayStart()
+    public void OnDayStart()
     {
-        Debug.Log(Foods.NumOfFoods);
-
         // Deactivate the objects
         foreach (GameObject obj in objectsToDeactivate)
         {
@@ -121,7 +116,6 @@ public class KitchenGame : MonoBehaviour
 
         if (timeSystem.Day < (int)Foods.NumOfFoods)
         {
-            Debug.Log((Foods)timeSystem.Day);
             FoodToMake = (Foods)timeSystem.Day;
         }
     }

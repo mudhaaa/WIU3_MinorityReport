@@ -28,6 +28,7 @@ public class TaskListUIManager : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
+        timeSystem.pOnDayStart += kitchenGame.OnDayStart;
         timeSystem.pOnDayStart += OnDayStart;
     }
 

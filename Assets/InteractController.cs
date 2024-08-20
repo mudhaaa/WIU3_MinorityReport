@@ -31,7 +31,7 @@ public class InteractController : MonoBehaviour
             Collider2D collision = collisions[i];
             InteractableObject interactable = null;
             interactable = collision.gameObject.GetComponent<InteractableObject>();
-            if (collision != null && interactable != null &&
+            if (collision != null && interactable != null /*&&
                 (
                     (timeSystem.Day == 0 && collision.gameObject == choresMiniGames[0]) ||
                     (timeSystem.Day == 1 && collision.gameObject == choresMiniGames[1]) ||
@@ -41,7 +41,7 @@ public class InteractController : MonoBehaviour
                     (timeSystem.Day == 2 && collision.gameObject == evidenceMiniGames[0]) ||
                     (timeSystem.Day == 3 && collision.gameObject == evidenceMiniGames[0]) ||
                     (timeSystem.Day == 4 && collision.gameObject == evidenceMiniGames[0])
-                )
+                )*/
                 )
             {
                 Debug.Log("Interactable Object " + collision.gameObject.name);
