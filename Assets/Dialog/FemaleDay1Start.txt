@@ -1,4 +1,4 @@
-LIM:MaleMC_portrait-removebg-preview
+LIM:FemaleMC_portrait
 BGRGBA:0,0,0,255
 C:Currently, our fights haven’t escalated to anything dangerous, but I still have to find a way to keep myself safe.
 C:I should start trying to find a way to expose the recent drinking problem first. This could definitely be used as evidence.

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InteractController : MonoBehaviour
@@ -7,10 +8,18 @@ public class InteractController : MonoBehaviour
     public GameObject InteractGUI;
     public BackgroundTransparencyAnim BlackBackground;
     public GameObject MiniGameBackground;
+
+    public GameObject[] FirstDayObjects;
+    public GameObject[] SecondDayObjects;
+    public GameObject[] ThirdDayObjects;
+    public GameObject[] FourthDayObjects;
+    public GameObject[] FifthDayObjects;
+    public TimeSystem timeSystem;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,7 +35,15 @@ public class InteractController : MonoBehaviour
             Collider2D collision = collisions[i];
             InteractableObject interactable = null;
             interactable = collision.gameObject.GetComponent<InteractableObject>();
-            if (collision != null && interactable != null)
+            if (collision != null && interactable != null &&
+                (
+                    (timeSystem.Day == 0 && FirstDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 1 && SecondDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 2 && ThirdDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 3 && FourthDayObjects.Contains(collision.gameObject)) ||
+                    (timeSystem.Day == 4 && FifthDayObjects.Contains(collision.gameObject))
+                )
+                )
             {
                 Debug.Log("Interactable Object " + collision.gameObject.name);
                 float Distance = Vector2.Distance(collision.gameObject.transform.position, transform.position);

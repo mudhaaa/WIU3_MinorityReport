@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20b22d3347328c94680a06b0560fc2df, type: 3}
-  m_Name: Drugs
+  m_Name: Weapon
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   range: {x: 5, y: 4}
-  SanityRegen: 20
+  SanityRegen: 0
   Stackable: 1
-  image: {fileID: -1500686425, guid: 5f77378e437bda04abf851aba1579973, type: 3}
+  image: {fileID: 21300000, guid: babf37dffb32f7642bb5016aaaa7a767, type: 3}
