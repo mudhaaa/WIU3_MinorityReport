@@ -1,12 +1,11 @@
 BGRGBA:0,0,0,255
 C:God, seeing you just pisses me off. I don’t even want to sleep in the same room as you!
-C:(Last night, you were forced to sleep in the bed in the storage room. You wake up and the first thing you see is a camera hung above, scanning the whole room.)
-LIM:FemaleMC_portrait
-C:What the…
-C:(Is that a camera? Is this still my home anymore?)
-C:(I shouldn’t say anything. It could be used against me somehow.)
-C:(Maybe this could be used as evidence.)
-C:(Spying on me, controlling what I do counts as a form of mental abuse.)
-C:(There must be other cameras around the house.)
-C:(If I can find them, it could work out in my favour.)
-C:(There could be some hidden throughout the house.)
+C:(Last night, you were thrown onto the bed in the storage room and chained to the bed frame. Luckily, you had a paperclip on you.)
+LIM:MaleMC_portrait-removebg-preview
+C:…Even after sleeping, these chains really hurt… Ah, I know!
+C:If I take photos of these injuries, that could be great! I could take a picture of the chains too! 
+C:Now to find a camera… 
+C:*sigh* 
+C:Now that takes me back to when things were good.
+C:Our old DSLR is somewhere in the bedroom. Shame it’s being used for something like this now…
+C:First things first, gotta get out of these chains!
