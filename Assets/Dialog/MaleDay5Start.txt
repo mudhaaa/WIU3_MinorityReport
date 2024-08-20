@@ -1,10 +1,5 @@
 N:You
+LIM:MaleMC_portrait-removebg-preview
 BGRGBA:0,0,0,255
-C:(You wake up as usual. You feel something's off. You slept through the whole day. Probably due to the abuse tiring you out.)
-C:*tires screeching
-LIM:FemaleMC_portrait
-N:Ember Deep
-C:HONEY *burp* I’M HOOOME!
-LIM:MaleMC_bruised_portrait
-N:You
-C:(Here already?! Sounding all drunk too. I gotta hide somewhere.)
+C:Currently, our fights haven’t escalated to anything dangerous, but I still have to find a way to keep myself safe.
+C:I should start trying to find a way to expose the recent drinking problem first. This could definitely be used as evidence for the recent acts of violence.

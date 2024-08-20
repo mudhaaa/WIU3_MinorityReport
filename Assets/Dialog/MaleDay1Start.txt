@@ -1,5 +1,5 @@
+LIM:MaleMC_portrait-removebg-preview
 BGRGBA:0,0,0,255
-LIM:MaleMC_portrait
 C:Currently, our fights haven’t escalated to anything dangerous, but I still have to find a way to keep myself safe.
 C:I should start trying to find a way to expose the recent drinking problem first. This could definitely be used as evidence.
 C:Maybe if I can find a bunch of beer bottles, it’ll be enough for the police to help me.
