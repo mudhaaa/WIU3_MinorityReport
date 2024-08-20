@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20b22d3347328c94680a06b0560fc2df, type: 3}
-  m_Name: Evidence
+  m_Name: Pills
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   range: {x: 5, y: 4}
-  SanityRegen: 0
+  SanityRegen: 15
   Stackable: 1
-  image: {fileID: 21300000, guid: 18bcc039e0f10c442b0c59694b417c62, type: 3}
+  image: {fileID: 21300000, guid: f2d93325fec42fd42b4d515e1b890673, type: 3}

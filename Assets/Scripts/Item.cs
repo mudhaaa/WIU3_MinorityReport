@@ -29,7 +29,8 @@ public class Item : ScriptableObject {
 public enum ItemType
 {
     SanityItem,
-    Evidence
+    Evidence,
+    SelfDefense
 }
 
 
