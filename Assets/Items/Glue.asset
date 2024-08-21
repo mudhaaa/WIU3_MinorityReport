@@ -15,5 +15,6 @@ MonoBehaviour:
   type: 2
   range: {x: 5, y: 4}
   SanityRegen: 0
+  ItemInteractScript: {fileID: 11400000, guid: ea7126d565259454387d3d1eaaf5bffd, type: 2}
   Stackable: 1
   image: {fileID: 21300000, guid: 5e336cadd5fd82248be164fbde761b67, type: 3}

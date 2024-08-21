@@ -13,6 +13,7 @@ public class StickFindTargetCircle : MonoBehaviour
     public int Hits = 0;
     public bool Hit = false;
     public AudioSource PickLockSound;
+    [SerializeField] ParticleSystem ParticlePrefab;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -35,6 +36,7 @@ public class StickFindTargetCircle : MonoBehaviour
                     Hits++;
                     PickLockSound.Play();
                     Hit = true;
+                    Instantiate(ParticlePrefab, collidedObject.transform.position, Quaternion.identity);
                     Destroy(collidedObject);
                 }
                 canPressKey = false;      // Reset the flag

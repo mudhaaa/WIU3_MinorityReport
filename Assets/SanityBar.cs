@@ -63,6 +63,7 @@ public class SanityBar : MonoBehaviour
         {
             slider.value = Mathf.Lerp(slider.value, TargetValue, time);
             time += Time.deltaTime * LerpSpeed;
+            Debug.Log("Stuck");
             if (Mathf.Abs(slider.value - TargetValue) <= Accuracy)
             {
                 slider.value = TargetValue;

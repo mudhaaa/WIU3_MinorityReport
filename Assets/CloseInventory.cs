@@ -7,7 +7,6 @@ public class CloseInventory : MonoBehaviour
 {
     // Start is called before the first frame update
     bool CoroutineRunning = false;
-    [SerializeField] TranslateAnim EquipmentTranslateAnim;
     [SerializeField] TranslateAnim InventoryTranslateAnim;
     [SerializeField] BackgroundTransparencyAnim backgroundTransparencyAnim;
     [SerializeField] BackgroundTransparencyAnim SanityBar;
@@ -26,12 +25,6 @@ public class CloseInventory : MonoBehaviour
     public IEnumerator OnClose()
     {
         CoroutineRunning = true;
-        if (EquipmentTranslateAnim.CoroutineRunning)
-        {
-            EquipmentTranslateAnim.CoroutineRunning = false;
-            StopCoroutine(EquipmentTranslateAnim.currentcoroutine);
-        }
-        EquipmentTranslateAnim.currentcoroutine = StartCoroutine(EquipmentTranslateAnim.Anim(new Vector2(EquipmentTranslateAnim.TargetPosition.x, -Screen.height), 0.01f));
 
         if (InventoryTranslateAnim.CoroutineRunning)
         {
@@ -56,7 +49,7 @@ public class CloseInventory : MonoBehaviour
 
         while (CoroutineRunning)
         {
-            if (EquipmentTranslateAnim.CoroutineRunning == false && InventoryTranslateAnim.CoroutineRunning == false && backgroundTransparencyAnim.CoroutineRunning == false && SanityBar.CoroutineRunning ==false)
+            if (InventoryTranslateAnim.CoroutineRunning == false && backgroundTransparencyAnim.CoroutineRunning == false && SanityBar.CoroutineRunning ==false)
             {
                 CoroutineRunning = false;
                 gameObject.SetActive(false);
@@ -83,13 +76,6 @@ public class CloseInventory : MonoBehaviour
             CoroutineRunning = false;
             //StopCoroutine(currentcoroutine);
         }
-
-        if (EquipmentTranslateAnim.CoroutineRunning)
-        {
-            EquipmentTranslateAnim.CoroutineRunning = false;
-            StopCoroutine(EquipmentTranslateAnim.currentcoroutine);
-        }
-        EquipmentTranslateAnim.currentcoroutine = StartCoroutine(EquipmentTranslateAnim.Anim(EquipmentTranslateAnim.TargetPosition, 0.01f));
         if (InventoryTranslateAnim.CoroutineRunning)
         {
             InventoryTranslateAnim.CoroutineRunning = false;

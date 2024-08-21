@@ -27,7 +27,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
+        //Debug.Log(transform.parent);
+        transform.SetParent(transform.root.GetChild(0));
     }
 
     public void RefreshCount()
@@ -35,11 +36,18 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         countText.text = count.ToString();
         bool TextActive = count > 1;
         countText.gameObject.SetActive(TextActive);
+
+        if (count < 1)
+        {
+            Destroy(gameObject);
+        }
     }
     public void InitialiseItem(Item newitem/*, bool QuestCompletion*/)
     {
         item = newitem.Clone();
         image.sprite = newitem.image;
+
+        item.ItemInteractScript.Init(item);
         //float QuestBonus = 0;
 
         //if (QuestCompletion)

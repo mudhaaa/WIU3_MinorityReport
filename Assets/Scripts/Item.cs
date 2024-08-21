@@ -13,6 +13,8 @@ public class Item : ScriptableObject {
     public Vector2Int range = new Vector2Int(5, 4);
     public float SanityRegen = 0.0f;
 
+    public ItemInteraction ItemInteractScript;
+
     [Header("Only UI")]
     public bool Stackable = true;
 
@@ -22,7 +24,15 @@ public class Item : ScriptableObject {
     // Add a cloning method
     public Item Clone()
     {
-        return (Item)this.MemberwiseClone();
+        // Create a shallow copy of the Item
+        Item clone = (Item)this.MemberwiseClone();
+        // If you want to create a deep copy of the ItemInteractScript
+        if (ItemInteractScript != null)
+        {
+            clone.ItemInteractScript = Instantiate(ItemInteractScript);
+        }
+
+        return clone;
     }
 }
 

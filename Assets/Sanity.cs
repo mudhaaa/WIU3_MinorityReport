@@ -22,11 +22,11 @@ public class Sanity : MonoBehaviour
         {
             if (value != sanity)
             {
-                sanity = value;
+                sanity = Mathf.Clamp(value, 0, maxsanity);
                 // Trigger the event when the value changes
-                SanityChanged?.Invoke(value, maxsanity);
+                SanityChanged?.Invoke(sanity, maxsanity);
 
-                if (sanity <= 0.0001f)
+                if (sanity <= 0)
                 {
                     DialogSystem.Instance.onDialogEnd = sceneFunctions.LoadSuicide;
                     DialogSystem.Instance.FilePath = "Assets/Dialog/Ending 5.txt";
