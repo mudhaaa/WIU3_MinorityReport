@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
+    [SerializeField] private PlayerMainController playerMainController;
+    public enum FacingDirection { Up, Down, Left, Right }
 
     public Vector2 DirectionFacing = Vector2.zero;
 
@@ -21,17 +23,16 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-
-        if (Direction != Vector2.zero)
+        if (!playerMainController.Hide)
         {
-            DirectionFacing = Direction;
+            Direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+
+            if (Direction != Vector2.zero)
+            {
+                DirectionFacing = Direction;
+            }
         }
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    SpawnGlue();
-        //}
     }
     private void FixedUpdate()
     {

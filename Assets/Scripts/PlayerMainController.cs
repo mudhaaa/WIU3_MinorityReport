@@ -13,7 +13,9 @@ public class PlayerMainController : MonoBehaviour
 
     [SerializeField] TimeSystem pTimeSystem;
     [SerializeField] Transform[] SpawnPoints;
-
+    [SerializeField] Vector3 originalPosition;
+    [SerializeField] SpriteRenderer sprite;
+    [SerializeField] InteractController interactController;
     void Start()
     {
         AnimationController = GetComponent<AnimationController>();
@@ -35,6 +37,12 @@ public class PlayerMainController : MonoBehaviour
         {
             AnimationController.PlayAnimation(rb.velocity, "Idle");
         }
+        if (Input.GetKeyUp(KeyCode.E) && Hide)
+        {
+            Unhide();
+            Debug.Log("unhide");
+        }
+
     }
 
     public void CheckThisFrame()
@@ -52,5 +60,25 @@ public class PlayerMainController : MonoBehaviour
         {
             transform.position = SpawnPoints[1].position;
         }
+    }
+
+    public void Hiding()
+    {
+        Hide = true;
+        originalPosition = transform.position;
+        sprite.enabled = false;
+        interactController.enabled = false;
+        GetComponent<Renderer>().enabled = false; // disable renderer to make player invisible
+        GetComponent<Collider2D>().enabled = false; // disable collider to make player non-collidable
+    }
+
+    public void Unhide()
+    {
+        Hide = false;
+        sprite.enabled = true;
+        interactController.enabled = true;
+        GetComponent<Renderer>().enabled = true; // enable renderer to make player visible again
+        GetComponent<Collider2D>().enabled = true; // enable collider to make player collidable again
+        transform.position = originalPosition; // restore original position
     }
 }

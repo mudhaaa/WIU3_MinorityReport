@@ -64,7 +64,7 @@ public class InteractController : MonoBehaviour
             InteractGUI.SetActive(false);
         }
         // put else then set the gui active to false
-        if (Input.GetKey(KeyCode.E) && BlackBackground.CoroutineRunning == false && MiniGameBackground.activeSelf == false)
+        if (Input.GetKeyUp(KeyCode.E) && BlackBackground.CoroutineRunning == false && MiniGameBackground.activeSelf == false)
         {
             if (NearestCollision != null) {
                 Nearestinteractable.Interact();
