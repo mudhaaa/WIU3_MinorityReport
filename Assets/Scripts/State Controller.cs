@@ -35,6 +35,7 @@ public class StateController : MonoBehaviour
     public Path path;
     public Seeker seeker;
     public Rigidbody2D rb;
+
     public void SetupAI(bool aiActivationFromManager)
     {
        
@@ -98,8 +99,6 @@ public class StateController : MonoBehaviour
         }
     }
 
-
-
     private void DeactivateGameObject()
     {
         gameObject.SetActive(false);
@@ -119,8 +118,9 @@ public class StateController : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerMainController>().Died = true;
             dialogSystem.onDialogEnd += sceneFunctions.LoadGeneralBE;
-            dialogSystem.FilePath = "Assets/Dialog/Ending 1.txt";
-            
+            GameManager.Instance.IsEndingCompleted[0] = true;
+            dialogSystem.FilePath = "Assets/Dialog/GeneralBadEnding.txt";
+            dialogSystem.StartNewDialogues();
         }
     }
 }

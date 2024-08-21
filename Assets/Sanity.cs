@@ -29,7 +29,7 @@ public class Sanity : MonoBehaviour
                 if (sanity <= 0)
                 {
                     DialogSystem.Instance.onDialogEnd = sceneFunctions.LoadSuicide;
-                    DialogSystem.Instance.FilePath = "Assets/Dialog/Ending 5.txt";
+                    DialogSystem.Instance.FilePath = "Assets/Dialog/SuicideEnding.txt";
                     GameManager.Instance.IsEndingCompleted[4] = true;
                     DialogSystem.Instance.StartNewDialogues();
 

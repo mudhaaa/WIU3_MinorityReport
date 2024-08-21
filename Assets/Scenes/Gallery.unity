@@ -515,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogPath
-      value: Assets/Dialog/test.txt
+      value: Assets/Dialog/MaleGoodEnding.txt
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogSystem
@@ -611,15 +611,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5728135361382673459, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_Text
-      value: Ending 3
+      value: Man Good Ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1585843817}
+      objectReference: {fileID: 537338078}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFilePath
+      value: PlayManGoodEnding
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GalleryManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -942,7 +954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogPath
-      value: Assets/Dialog/test.txt
+      value: Assets/Dialog/MaleBadEnding.txt
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogSystem
@@ -1038,17 +1050,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5728135361382673459, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_Text
-      value: 'Ending 2
-
-'
+      value: Man Bad Ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1585843817}
+      objectReference: {fileID: 537338078}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFilePath
+      value: PlayManBadEnding
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GalleryManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1447,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogPath
-      value: Assets/Dialog/test.txt
+      value: Assets/Dialog/SuicideEnding.txt
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogSystem
@@ -1543,15 +1565,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5728135361382673459, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_Text
-      value: Ending 5
+      value: Hidden Ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1585843817}
+      objectReference: {fileID: 537338078}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFilePath
+      value: PlaySuicideEnding
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GalleryManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1593,7 +1627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogPath
-      value: Assets/Dialog/test.txt
+      value: Assets/Dialog/FemaleGoodEnding.txt
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogSystem
@@ -1689,17 +1723,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5728135361382673459, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_Text
-      value: 'Ending 4
-
-'
+      value: Female Good Ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1585843817}
+      objectReference: {fileID: 537338078}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetFilePath
+      value: PlayWomanGoodEnding
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GalleryManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1769,7 +1813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogPath
-      value: Assets/Dialog/test.txt
+      value: Assets/Dialog/GeneralBadEnding.txt
       objectReference: {fileID: 0}
     - target: {fileID: 378617951133133512, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: dialogSystem
@@ -1863,14 +1907,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5728135361382673459, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_Text
+      value: General Bad Ending
+      objectReference: {fileID: 0}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_Transition
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1585843817}
+      objectReference: {fileID: 537338078}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGeneralBadEnding
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158564772239713270, guid: 97b72b9c117872942b714b2bd46904e4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GalleryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

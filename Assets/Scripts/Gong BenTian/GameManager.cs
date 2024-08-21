@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour, IDataSave
 {
     public static GameManager Instance;
-    public static bool isMale;
+    public static bool isMale = true;
 
     public bool[] IsEndingCompleted = new bool[5];
 

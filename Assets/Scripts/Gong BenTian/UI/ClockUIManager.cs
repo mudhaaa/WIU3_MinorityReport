@@ -13,6 +13,11 @@ public class ClockUIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Timing.Day >= 4)
+        {
+            gameObject.SetActive(false);
+        }
+
         Clock.fillAmount = StartingFill + ((Timing.currentTiming / TimeSystem.LengthOfTime) * 0.69f);
     }
 }

@@ -409,7 +409,7 @@ public class DialogSystem : MonoBehaviour
         if (onDialogEnd != null)
         {
             onDialogEnd();
-            onDialogEnd = null;
+            //onDialogEnd = null;
         }
     }
 

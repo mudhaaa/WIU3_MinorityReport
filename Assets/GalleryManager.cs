@@ -40,4 +40,34 @@ public class GalleryManager : MonoBehaviour
             IsReviewEnding = false;
         }
     }
+
+    public void PlayGeneralBadEnding()
+    {
+        dialogSystem.FilePath = "Assets/Dialog/GeneralBadEnding.txt";
+        dialogSystem.StartNewDialogues();
+    }
+
+    public void PlayManBadEnding()
+    {
+        dialogSystem.FilePath = "Assets/Dialog/MaleBadEnding.txt";
+        dialogSystem.StartNewDialogues();
+    }
+
+    public void PlayManGoodEnding()
+    {
+        dialogSystem.FilePath = "Assets/Dialog/MaleGoodEnding.txt";
+        dialogSystem.StartNewDialogues();
+    }
+
+    public void PlayWomanGoodEnding()
+    {
+        dialogSystem.FilePath = "Assets/Dialog/FemaleGoodEnding.txt";
+        dialogSystem.StartNewDialogues();
+    }
+
+    public void PlaySuicideEnding()
+    {
+        dialogSystem.FilePath = "Assets/Dialog/SuicideEnding.txt";
+        dialogSystem.StartNewDialogues();
+    }
 }

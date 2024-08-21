@@ -18,6 +18,8 @@ public class TimeSystem : MonoBehaviour
 
     public Animator globalLightAnimator;
 
+    public GameObject Abuser;
+
     public const int TotalOfDay = 5;
     public int Day;
 
@@ -68,8 +70,13 @@ public class TimeSystem : MonoBehaviour
                 StartOfGame = false;
             }
         }
+        
         Debug.Log(TimeMultipler);
-        currentTiming += Time.deltaTime * TimeMultipler;
+        if (Day < 4)
+        {
+            currentTiming += Time.deltaTime * TimeMultipler;
+        }
+        
         globalLightAnimator.speed = TimeMultipler;
         
         if (currentTiming < 120.0f)
@@ -116,7 +123,7 @@ public class TimeSystem : MonoBehaviour
 
     private void EndTheDay()
     {
-        if(pOnDayEnd != null)
+        if (pOnDayEnd != null)
         {
             pOnDayEnd();
             pOnDayEnd = null;
@@ -125,96 +132,61 @@ public class TimeSystem : MonoBehaviour
         IsNight = true;
 
         ++Day;
-        if (Day >= 5)
+        switch (Day)
         {
-            if (pInventoryManager.evidenceSlot.transform.childCount > 0)
-            {
-                if (pInventoryManager.evidenceSlot.transform.GetChild(0).GetComponent<InventoryItem>().count < 4)
-                {
-                    pDialogSystem.onDialogEnd += sceneFunctions.LoadSuicide;
-                    pDialogSystem.FilePath = "Assets/Dialog/Ending 5.txt";
-                    GameManager.Instance.IsEndingCompleted[4] = true;
-                }
-                else if (pInventoryManager.evidenceSlot.transform.GetChild(0).GetComponent<InventoryItem>().count >= 4)
+            case 1:
                 {
                     if (GameManager.isMale == true)
                     {
-                        pDialogSystem.onDialogEnd += sceneFunctions.LoadMaleGE;
-                        pDialogSystem.FilePath = "Assets/Dialog/Ending 3.txt";
-                        GameManager.Instance.IsEndingCompleted[2] = true;
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleNight1.txt";
                     }
-                    else
+                    else if (GameManager.isMale == false)
                     {
-                        pDialogSystem.onDialogEnd += sceneFunctions.LoadFemaleGE;
-                        pDialogSystem.FilePath = "Assets/Dialog/Ending 4.txt";
-                        GameManager.Instance.IsEndingCompleted[3] = true;
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleNight1.txt";
                     }
+
+                    break;
                 }
-            }
-            else
-            {
-                pDialogSystem.onDialogEnd += sceneFunctions.LoadSuicide;
-                pDialogSystem.FilePath = "Assets/Dialog/Ending 5.txt";
-                GameManager.Instance.IsEndingCompleted[4] = true;
-            }
-        }
-        else
-        {
-            switch (Day)
-            {
-                case 1:
+            case 2:
+                {
+                    if (GameManager.isMale == true)
                     {
-                        if (GameManager.isMale == true)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/MaleNight1.txt";
-                        }
-                        else if (GameManager.isMale == false)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/FemaleNight1.txt";
-                        }
-
-                        break;
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleNight2.txt";
                     }
-                case 2:
+                    else if (GameManager.isMale == false)
                     {
-                        if (GameManager.isMale == true)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/MaleNight2.txt";
-                        }
-                        else if (GameManager.isMale == false)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/FemaleNight2.txt";
-                        }
-
-                        break;
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleNight2.txt";
                     }
-                case 3:
+
+                    break;
+                }
+            case 3:
+                {
+                    if (GameManager.isMale == true)
                     {
-                        if (GameManager.isMale == true)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/MaleNight3.txt";
-                        }
-                        else if (GameManager.isMale == false)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/FemaleNight3.txt";
-                        }
-
-                        break;
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleNight3.txt";
                     }
-                case 4:
+                    else if (GameManager.isMale == false)
                     {
-                        if (GameManager.isMale == true)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/MaleNight4.txt";
-                        }
-                        else if (GameManager.isMale == false)
-                        {
-                            pDialogSystem.FilePath = "Assets/Dialog/FemaleNight4.txt";
-                        }
-
-                        break;
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleNight3.txt";
                     }
-            }
+
+                    break;
+                }
+            case 4:
+                {
+                    if (GameManager.isMale == true)
+                    {
+                        pDialogSystem.FilePath = "Assets/Dialog/MaleNight4.txt";
+                    }
+                    else if (GameManager.isMale == false)
+                    {
+                        pDialogSystem.FilePath = "Assets/Dialog/FemaleNight4.txt";
+                    }
+
+                    break;
+                }
+
         }
 
         pDialogSystem.onDialogEnd += StartNextDay;
@@ -223,6 +195,8 @@ public class TimeSystem : MonoBehaviour
 
     private void StartNextDay()
     {
+        pDialogSystem.onDialogEnd -= StartNextDay;
+
         currentTiming = 0;
         NormalTimeMultipler = 1.0f;
         //display morning text for different days
@@ -291,6 +265,7 @@ public class TimeSystem : MonoBehaviour
                         pDialogSystem.FilePath = "Assets/Dialog/FemaleDay5Start.txt";
                     }
 
+                    Abuser.SetActive(true);
                     break;
                 }
         }

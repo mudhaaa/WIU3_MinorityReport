@@ -32,7 +32,7 @@ public class SceneFunctions : ScriptableObject
 
     public void LoadFemaleGE()
     {
-        SceneManager.LoadScene("Win as Female");
+        SceneManager.LoadScene("Win as Woman");
         return;
     }
 
