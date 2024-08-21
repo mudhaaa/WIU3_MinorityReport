@@ -8,6 +8,7 @@ public class IKSolver2D : MonoBehaviour
     public bool Grounded = false;
     public bool followmouse = false;
 
+    public DialogSystem pDialogSystem;
     private void Start()
     {
         _effectorLength = (_tip.position - _effector.position).magnitude;
@@ -17,6 +18,12 @@ public class IKSolver2D : MonoBehaviour
 
     private void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
+
         if (followmouse)
         {
             if (!Input.GetMouseButton(0))

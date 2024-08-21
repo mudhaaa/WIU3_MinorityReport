@@ -23,16 +23,26 @@ public class CheckCollection : MonoBehaviour
     public LayerMask NonEvidenceLayer;
     // Start is called before the first frame update
 
+    public DialogSystem pDialogSystem;
+    public TimeSystem pTimeSystem;
+
     private void OnEnable()
     {
+        pTimeSystem.pOnDayEnd += EndGame;
         InvetigationGUI.SetActive(true);
     }
     private void OnDisable()
     {
         InvetigationGUI.SetActive(false);
+        pTimeSystem.pOnDayEnd -= EndGame;
     }
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         if (!FinishGame)
         {
             Evidences = 0;
@@ -53,6 +63,7 @@ public class CheckCollection : MonoBehaviour
             }
             investigationtext.text = "Items Collected: " + (Evidences + NonEvidences) + " / " + ((spawnObjects.MaxEvidencesSpawned + spawnObjects.MaxNonEvidencesSpawned) / 2);
         }
+        
         if ((Evidences + NonEvidences) >= ((spawnObjects.MaxEvidencesSpawned + spawnObjects.MaxNonEvidencesSpawned) / 2) || FinishGame)
         {
             if (BlackBackground.CoroutineRunning == false)
@@ -69,6 +80,11 @@ public class CheckCollection : MonoBehaviour
                 MainGame.SetActive(true);
             }
         }
+    }
 
+    public void EndGame()
+    {
+        MiniGame.SetActive(false);
+        MainGame.SetActive(true);
     }
 }

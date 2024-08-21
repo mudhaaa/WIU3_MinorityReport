@@ -29,8 +29,12 @@ public class FD_Evidence : MonoBehaviour
             {
                 SoundWhenClicked.Play();
             }
-            game.AmountFound++;
-            Destroy(gameObject, DestroyWaitTime);
+
+            if (game != null)
+            {
+                game.AmountFound++;
+                Destroy(gameObject, DestroyWaitTime);
+            }
         }
     }
 }

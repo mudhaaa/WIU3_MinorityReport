@@ -14,15 +14,29 @@ public class Laundry : MonoBehaviour
 
     // The object being dragged
     private GameObject draggedObject;
+
+    public DialogSystem pDialogSystem;
+    public TimeSystem pTimeSystem;
+
     // Start is called before the first frame update
     void Start()
     {
         pickableLayers = LayerMask.GetMask("White") | LayerMask.GetMask("NotWhite");
     }
 
+    private void OnEnable()
+    {
+        pTimeSystem.pOnDayEnd += OnDayEnd;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, pickableLayers);
 
@@ -101,5 +115,17 @@ public class Laundry : MonoBehaviour
                 MainGame.SetActive(true);
             }
         }
+    }
+
+    public void OnDisable()
+    {
+        pTimeSystem.pOnDayEnd -= OnDayEnd;
+    }
+
+    public void OnDayEnd()
+    {
+        FinishGame = false;
+        MiniGame.SetActive(false);
+        MainGame.SetActive(true);
     }
 }

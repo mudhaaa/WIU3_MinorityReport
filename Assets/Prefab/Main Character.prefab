@@ -107,9 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  projectilePrefab: {fileID: 0}
-  gluePrefab: {fileID: 0}
-  facingDirection: 0
+  playerMainController: {fileID: 204977553669590814}
+  DirectionFacing: {x: 0, y: 0}
 --- !u!50 &6274935473142717152
 Rigidbody2D:
   serializedVersion: 4
@@ -199,6 +198,9 @@ MonoBehaviour:
   Died: 0
   pTimeSystem: {fileID: 0}
   SpawnPoints: []
+  originalPosition: {x: 0, y: 0, z: 0}
+  sprite: {fileID: 0}
+  interactController: {fileID: 0}
 --- !u!114 &5105748194904261942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,8 +279,11 @@ MonoBehaviour:
   InteractGUI: {fileID: 0}
   BlackBackground: {fileID: 0}
   MiniGameBackground: {fileID: 0}
-  evidenceMiniGames: []
-  choresMiniGames: []
+  FirstDayObjects: []
+  SecondDayObjects: []
+  ThirdDayObjects: []
+  FourthDayObjects: []
+  FifthDayObjects: []
   timeSystem: {fileID: 0}
 --- !u!1 &940283597895212422
 GameObject:

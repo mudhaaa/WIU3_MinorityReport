@@ -10,10 +10,9 @@ public class BirdFlappyController : MonoBehaviour
     [SerializeField] AudioSource FlappyHit;
     [SerializeField] AudioSource FlappyJump;
 
-
-
     float turnSpeed = 10; // Turret movement parameter
 
+    public DialogSystem pDialogSystem;
 
     // Start is called before the first frame update
 
@@ -27,6 +26,11 @@ public class BirdFlappyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         if (Input.GetKeyUp(KeyCode.Space))
         {
             Debug.Log("Pressed For Flappy!");
@@ -51,9 +55,21 @@ public class BirdFlappyController : MonoBehaviour
             // Smoothly rotate towards the target rotation
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
         }
-
-
     }
+
+    public void FixedUpdate()
+    {
+        if (pDialogSystem.IsCompleted() == false)
+        {
+            rb.velocity = Vector3.zero;
+            rb.gravityScale = 0;
+        }
+        else if (rb.gravityScale < 1 && pDialogSystem.IsCompleted() == true)
+        {
+            rb.gravityScale = 2;
+        }
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

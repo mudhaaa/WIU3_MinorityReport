@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 26008900953594616, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: DestroyWaitTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4293872723914054136, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -53,41 +57,9 @@ PrefabInstance:
       value: FlashlightDarknessPrefab Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 2481713535991684846, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
     - {fileID: 5201898074046773083, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8799382985632753212, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3703969866512319039}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
---- !u!82 &649473246999831841 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4195145345923743206, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
-  m_PrefabInstance: {fileID: 3691616944208844999}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &3511100452114493430 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 252955084111935281, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
-  m_PrefabInstance: {fileID: 3691616944208844999}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5271166742442295035 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8799382985632753212, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
-  m_PrefabInstance: {fileID: 3691616944208844999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3703969866512319039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5271166742442295035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61a0839c3dca9c40b8a3a07659b4d03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 3511100452114493430}
-  game: {fileID: 0}
-  SoundWhenClicked: {fileID: 649473246999831841}

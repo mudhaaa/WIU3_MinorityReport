@@ -10,9 +10,17 @@ public class CleanMirror : MonoBehaviour
     public BackgroundTransparencyAnim BlackBackground;
     public List<GameObject> objectsToRandomize; // List of GameObjects to randomize
 
+    public DialogSystem pDialogSystem;
+    public TimeSystem pTimeSystem;
+
     private void Start()
     {
             RandomizeObjects();
+    }
+
+    private void OnEnable()
+    {
+        pTimeSystem.pOnDayEnd += OnDayEnd;
     }
 
     private void RandomizeObjects()
@@ -35,6 +43,11 @@ public class CleanMirror : MonoBehaviour
 
     private void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -78,5 +91,17 @@ public class CleanMirror : MonoBehaviour
                 MainGame.SetActive(true);
             }
         }
+    }
+
+    public void OnDisable()
+    {
+        pTimeSystem.pOnDayEnd -= OnDayEnd;
+    }
+
+    public void OnDayEnd()
+    {
+        FinishGame = false;
+        MiniGame.SetActive(false);
+        MainGame.SetActive(true);
     }
 }

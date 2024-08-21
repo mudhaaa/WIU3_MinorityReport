@@ -17,6 +17,9 @@ public class SnakeController : MonoBehaviour
     [SerializeField] float MaxSnakeMoveTimer = 0.25f;
     [SerializeField] AudioSource MoveSFX;
     [SerializeField] AudioSource GameOverSFX;
+
+    public DialogSystem pDialogSystem;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -30,6 +33,11 @@ public class SnakeController : MonoBehaviour
     }
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         float HorDir = Input.GetAxisRaw("Horizontal");
         float VerDir = Input.GetAxisRaw("Vertical");
         if (HorDir != 0 && HorDir != -Direction.x)
@@ -50,6 +58,11 @@ public class SnakeController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         if (SnakeMoveTimer > MaxSnakeMoveTimer)
         {
             if (Mathf.Abs(LastHorDir) > 0 || Mathf.Abs(LastVerDir) > 0)

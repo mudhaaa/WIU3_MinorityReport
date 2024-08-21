@@ -1,0 +1,18 @@
+BGRGBA:0,0,0,255
+N:Judge
+C:I will announce the final judge.
+N:Judge
+C:Given that Ms.Ember Deep have alcoholism, anger disorders.
+N:Judge
+C:Ms.Ember Deep has been subjecting Mr.John Deep to long-term verbal, mental and physical violence, depriving him of his personal and economic freedoms, and ignoring his basic human rights.
+N:Judge
+C:This court announces that it will sentence Mr.John Deep to five years in prison for excessive self-defense that caused injury to Ms.Ember Deep, and that he must compensate Ms.Ember Deep for all her losses. Any last word?
+MIM:MaleMC_portrait
+N:Player
+C:Why! I already suffering such a long time.
+MIM:Null
+N:Judge
+C:I am sorry, Mr.John Deep, your experience might be pitiful to others, but we must make fair judgments according to the law.
+MIM:MaleMC_portrait
+N:Player
+C:(If the law could be fairer to men......)

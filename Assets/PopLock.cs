@@ -18,18 +18,30 @@ public class PopLock : MonoBehaviour
     [SerializeField] GameObject MiniGame;
     public GameObject InvetigationGUI;
     public TextMeshProUGUI investigationtext;
+
+    public DialogSystem pDialogSystem;
+    public TimeSystem pTimeSystem;
+
     void OnEnable()
     {
         SpeedMultiplier = 1.0f;
         InvetigationGUI.SetActive(true);
         LockRotationSpeed = StartLockRotationSpeed;
         transform.rotation = Quaternion.identity;
+
+        pTimeSystem.pOnDayEnd += EndGame;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         investigationtext.text = "Turns: " + (stickscript.Hits) + " / " + (MaxHits);
+
         if (stickscript.Hits >= MaxHits)
         {
             if (BlackBackground.CoroutineRunning == false)
@@ -50,6 +62,13 @@ public class PopLock : MonoBehaviour
     }
     void OnDisable()
     {
+        pTimeSystem.pOnDayEnd -= EndGame;
         InvetigationGUI.SetActive(false);
+    }
+
+    public void EndGame()
+    {
+        MiniGame.SetActive(false);
+        MainGame.SetActive(true);
     }
 }

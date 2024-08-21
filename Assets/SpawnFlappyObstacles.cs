@@ -14,6 +14,9 @@ public class SpawnFlappyObstacles : MonoBehaviour
     [SerializeField] float Max = 2;
     [SerializeField] float Min = 0.5f;
     [SerializeField] float DestroyTime = 5.0f;
+
+    public DialogSystem pDialogSystem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,11 @@ public class SpawnFlappyObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         SpawnTimer += Time.deltaTime;
         if (SpawnTimer >= MaxSpawnTimer)
         {
@@ -38,6 +46,7 @@ public class SpawnFlappyObstacles : MonoBehaviour
         SpawnPoint = new Vector3(ScreenWorld.x, Mathf.MoveTowards(ScreenWorld.y, 3.0f, 4.0f), 0.0f);
         Debug.Log(SpawnPoint.y);
         GameObject obstacle = Instantiate(ObstaclePrefab, SpawnPoint, Quaternion.identity, transform);
+        obstacle.GetComponent<BirdFlappyObstacle>().pDialogSystem = pDialogSystem;
         Destroy(obstacle, DestroyTime);
     }
 }   

@@ -1,0 +1,19 @@
+BGRGBA:50,50,50,255
+N:Partner
+C:Finally get you.
+N:Player
+C:......
+C:(You try to say something but your throat is strangled)
+BGRGBA:120,120,120,255
+N:Partner
+C:What do you think you are trying to do!
+BGRGBA:200,200,200,255
+N:Partner
+C:Try to run out of home to call a group of cop to arrest your partner!
+N:Player
+C:......
+BGRGBA:255,255,255,255
+N:Partner
+C:Since now, you betray me, then I will have to make you never betray me again...
+C:(Since then, you lost contact for a long time. No one know where you go, when will you back.)
+C:(2 monthes later, your corpse been found by police in the park 200 mile away from your house.)

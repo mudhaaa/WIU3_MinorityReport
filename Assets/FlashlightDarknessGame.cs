@@ -18,6 +18,9 @@ public class FlashlightDarknessGame : MonoBehaviour
     public InventoryManager inventoryManager;
     public Item EvidenceReward;
 
+    public DialogSystem pDialogSystem;
+    public TimeSystem pTimeSystem;
+
     public int AmountFound {  
         get { return amtfound; } 
         set {
@@ -31,11 +34,18 @@ public class FlashlightDarknessGame : MonoBehaviour
         InvetigationGUI.SetActive(true);
         amtfound = 0;
         GlobalLight.enabled = false;
+
+        pTimeSystem.pOnDayEnd += EndGame;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         investigationtext.text = "Items Collected: " + (amtfound) + " / " + (MaxAmtFound);
         if (amtfound >= MaxAmtFound)
         {
@@ -52,9 +62,17 @@ public class FlashlightDarknessGame : MonoBehaviour
         }
     }
 
+    public void EndGame()
+    {
+        MainGame.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
     private void OnDisable()
     {
         GlobalLight.enabled = true;
         InvetigationGUI.SetActive(false);
+
+        pTimeSystem.pOnDayEnd -= EndGame;
     }
 }
