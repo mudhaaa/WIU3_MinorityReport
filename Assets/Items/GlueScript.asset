@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eeb1c57012bd094fa657002c9ae3e9f, type: 3}
   m_Name: GlueScript
   m_EditorClassIdentifier: 
+  Text: Glue
+  gluePrefab: {fileID: 7301223790164496639, guid: 76e5fe21adf6f3e4d8a24934f62598f5, type: 3}
