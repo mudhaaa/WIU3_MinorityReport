@@ -29,6 +29,7 @@ public class KitchenGame : MonoBehaviour
 
     public DialogSystem pDialogSystem;
     public TimeSystem timeSystem;
+    public FinishMiniGame FinishMiniGame;
 
     // Start is called before the first frame update
     void Start()
@@ -113,6 +114,7 @@ public class KitchenGame : MonoBehaviour
                 FinishGame = false;
                 MiniGame.SetActive(false);
                 MainGame.SetActive(true);
+                FinishMiniGame.FinishedGame = true;
             }
         }
     }

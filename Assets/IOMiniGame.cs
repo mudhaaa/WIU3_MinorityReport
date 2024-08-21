@@ -18,6 +18,8 @@ public class IOMiniGame : MonoBehaviour, InteractableObject
     bool Activated = false;
     [SerializeField] float DelayTime = 1.0f;
 
+    public bool Interactable = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,15 +42,25 @@ public class IOMiniGame : MonoBehaviour, InteractableObject
 
     public void Interact()
     {
-        dialogSystem.FilePath = "Assets/Dialog/ToiletDialogue.txt";
-        dialogSystem.StartNewDialogues();
-        Activated = true;
-        BlackBackground.StartCoroutine(BlackBackground.AppearAnim(1.0f, 0.01f, DelayTime));
+        if (Interactable)
+        {
+            dialogSystem.FilePath = "Assets/Dialog/ToiletDialogue.txt";
+            dialogSystem.StartNewDialogues();
+            Activated = true;
+            BlackBackground.StartCoroutine(BlackBackground.AppearAnim(1.0f, 0.01f, DelayTime));
+        }
     }
     public void ShowInteractGUI()
     {
-        InteractText.text = NewInteractText;
-        InteractGUI.SetActive(true);
-        InteractGUI.transform.position = transform.position + InteractGUIOffset;
+        if (Interactable)
+        {
+            InteractText.text = NewInteractText;
+            InteractGUI.SetActive(true);
+            InteractGUI.transform.position = transform.position + InteractGUIOffset;
+        }
+        else
+        {
+            InteractGUI.SetActive(false);
+        }
     }
 }

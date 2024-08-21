@@ -81,6 +81,11 @@ public class PlayerHotbar : MonoBehaviour
                             SelectedItem.count--;
                             SelectedItem.RefreshCount();
                         }
+                        if (SelectedItem.ITEM.type == ItemType.SanityItem)
+                        {
+                            TimeSystem.TimeMultipler += 0.5f;
+                            TimeSystem.NormalTimeMultipler += 0.5f;
+                        }
                     }
                 }
             }

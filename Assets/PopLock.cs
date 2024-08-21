@@ -16,6 +16,9 @@ public class PopLock : MonoBehaviour
     [SerializeField] BackgroundTransparencyAnim BlackBackground;
     [SerializeField] GameObject MainGame;
     [SerializeField] GameObject MiniGame;
+    public Item Reward;
+    public int RewardAmt;
+    public InventoryManager Inventory;
     public GameObject InvetigationGUI;
     public TextMeshProUGUI investigationtext;
 
@@ -50,6 +53,7 @@ public class PopLock : MonoBehaviour
             }
             if (BlackBackground.canvasgroup.alpha >= 1.0f)
             {
+                Inventory.AddItem(Reward, RewardAmt);
                 MiniGame.SetActive(false);
                 MainGame.SetActive(true);
             }

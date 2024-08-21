@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CleanMirror : MonoBehaviour
@@ -12,6 +13,7 @@ public class CleanMirror : MonoBehaviour
 
     public DialogSystem pDialogSystem;
     public TimeSystem pTimeSystem;
+    public FinishMiniGame FinishMiniGame;
 
     private void Start()
     {
@@ -89,6 +91,7 @@ public class CleanMirror : MonoBehaviour
                 FinishGame = false;
                 MiniGame.SetActive(false);
                 MainGame.SetActive(true);
+                FinishMiniGame.FinishedGame = true;
             }
         }
     }

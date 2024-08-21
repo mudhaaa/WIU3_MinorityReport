@@ -10,6 +10,7 @@ public class MakeTheBed : MonoBehaviour
     public GameObject MiniGame;
     public BackgroundTransparencyAnim BlackBackground;
     public LayerMask pickableLayers;
+    public FinishMiniGame FinishMiniGame;
     // The layer that can be picked up
 
 
@@ -106,6 +107,7 @@ public class MakeTheBed : MonoBehaviour
                 FinishGame = false;
                 MiniGame.SetActive(false);
                 MainGame.SetActive(true);
+                FinishMiniGame.FinishedGame = true;
             }
         }
     }

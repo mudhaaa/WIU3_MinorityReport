@@ -13,6 +13,10 @@ public class ArcadeExit : MonoBehaviour
 
     public TimeSystem pTimeSystem;
 
+    public FinishMiniGame FinishMiniGame;
+    [SerializeField] bool Arcade;
+    [SerializeField] Sanity PlayerSanity;
+
     bool Exit = false;
     // Start is called before the first frame update
     void OnEnable()
@@ -40,9 +44,17 @@ public class ArcadeExit : MonoBehaviour
                 CameraEffects.profile = NormalProf;
                 gameObject.SetActive(false);
                 MainGame.SetActive(true);
-                if(MiniGameUI != null)
+                if (FinishMiniGame != null)
+                {
+                    FinishMiniGame.FinishedGame = true;
+                }
+                if (MiniGameUI != null)
                 {
                     MiniGameUI.SetActive(false);
+                }
+                if (Arcade)
+                {
+                    PlayerSanity.ISanity += 5;
                 }
             }
         }

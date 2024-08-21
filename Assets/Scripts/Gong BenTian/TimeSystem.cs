@@ -22,7 +22,7 @@ public class TimeSystem : MonoBehaviour
     public int Day;
 
     public const float LengthOfTime = 480;
-    public const float NormalTimeMultipler = 1.0f;
+    public static float NormalTimeMultipler = 1.0f;
     public const float DialogTimeMultipler = 0.0f;
     public static float TimeMultipler = 1.0f;
 
@@ -32,8 +32,13 @@ public class TimeSystem : MonoBehaviour
 
     public bool IsNight;
     public bool NextDay;
+    public Sanity PlayerSanity;
+    public float SanityReductionMultiplier = 1.0f;
 
+    public int ChoresDoneForTheDay = 0;
+    public int ChoresToBeDoneToday = 1;
 
+    bool StartOfGame = true;
     private void Start()
     {
         StartNextDay();
@@ -42,6 +47,28 @@ public class TimeSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentTiming == 0 && pDialogSystem.gameObject.activeSelf == false)
+        {
+            if (StartOfGame == false)
+            {
+                if (ChoresDoneForTheDay < ChoresToBeDoneToday)
+                {
+                    SanityReductionMultiplier = 2.0f;
+                }
+                else
+                {
+                    SanityReductionMultiplier = 1.0f;
+                }
+
+                PlayerSanity.ISanity -= 15 * SanityReductionMultiplier;
+                ChoresDoneForTheDay = 0;
+            }
+            else
+            {
+                StartOfGame = false;
+            }
+        }
+        Debug.Log(TimeMultipler);
         currentTiming += Time.deltaTime * TimeMultipler;
         globalLightAnimator.speed = TimeMultipler;
         
@@ -197,9 +224,9 @@ public class TimeSystem : MonoBehaviour
     private void StartNextDay()
     {
         currentTiming = 0;
-
+        NormalTimeMultipler = 1.0f;
         //display morning text for different days
-        switch(Day)
+        switch (Day)
         {
             case 0:
                 {

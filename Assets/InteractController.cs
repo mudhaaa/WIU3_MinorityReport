@@ -19,7 +19,7 @@ public class InteractController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        timeSystem.pOnDayStart += GetChoresForToday;
     }
 
     // Update is called once per frame
@@ -69,6 +69,45 @@ public class InteractController : MonoBehaviour
             if (NearestCollision != null) {
                 Nearestinteractable.Interact();
             }
+        }
+    }
+
+    int GetAmtOfChores(GameObject[] DayObjects)
+    {
+        int MaxChores = 0;
+        for (int i = 0; i < DayObjects.Length; i++)
+        {
+            GameObject DayObject = DayObjects[i];
+            IOMiniGame miniGame = DayObject.GetComponent<IOMiniGame>();
+            if (miniGame != null && miniGame.MiniGame.GetComponent<FinishMiniGame>().Chore)
+            {
+                MaxChores++;
+            }
+        }
+        return MaxChores;
+    }
+
+    void GetChoresForToday()
+    {
+        if (timeSystem.Day == 0)
+        {
+            timeSystem.ChoresToBeDoneToday = GetAmtOfChores(FirstDayObjects);
+        }
+        else if (timeSystem.Day == 1)
+        {
+            timeSystem.ChoresToBeDoneToday = GetAmtOfChores(SecondDayObjects);
+        }
+        else if (timeSystem.Day == 2)
+        {
+            timeSystem.ChoresToBeDoneToday = GetAmtOfChores(ThirdDayObjects);
+        }
+        else if (timeSystem.Day == 3)
+        {
+            timeSystem.ChoresToBeDoneToday = GetAmtOfChores(FourthDayObjects);
+        }
+        else if (timeSystem.Day == 4)
+        {
+            timeSystem.ChoresToBeDoneToday = GetAmtOfChores(FifthDayObjects);
         }
     }
 }

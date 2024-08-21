@@ -17,7 +17,7 @@ public class Laundry : MonoBehaviour
 
     public DialogSystem pDialogSystem;
     public TimeSystem pTimeSystem;
-
+    public FinishMiniGame FinishMiniGame;
     // Start is called before the first frame update
     void Start()
     {
@@ -113,6 +113,7 @@ public class Laundry : MonoBehaviour
                 FinishGame = false;
                 MiniGame.SetActive(false);
                 MainGame.SetActive(true);
+                FinishMiniGame.FinishedGame = true;
             }
         }
     }
