@@ -19,6 +19,8 @@ public class FlashlightDarknessGame : MonoBehaviour
     public InventoryManager inventoryManager;
     public Item ReceiptReward;
     public Item WineBottleReward;
+    public TimeSystem pTimeSystem;
+    public DialogSystem pDialogSystem;
 
     public int ReceiptAmountFound {  
         get { return receiptamtfound; } 
