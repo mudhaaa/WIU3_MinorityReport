@@ -12,6 +12,9 @@ public class SpawnObjects : MonoBehaviour
     public GameObject ReceiptPrefab;
     public GameObject WineBottlePrefab;
     public GameObject NonEvidencePrefab;
+
+    public DialogSystem pDialogSystem;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -21,20 +24,23 @@ public class SpawnObjects : MonoBehaviour
             {
                 Vector3 SpawnArea = Area.GetScale();
                 Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
-                Instantiate(ReceiptPrefab, pos, Quaternion.identity, Parent);
+                GameObject temp = Instantiate(ReceiptPrefab, pos, Quaternion.identity, Parent);
+                temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
             }
             else
             {
                 Vector3 SpawnArea = Area.GetScale();
                 Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
-                Instantiate(WineBottlePrefab, pos, Quaternion.identity, Parent);
+                GameObject temp = Instantiate(WineBottlePrefab, pos, Quaternion.identity, Parent);
+                temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
             }
         }
         for (int i = 0; i < MaxNonEvidencesSpawned; i++)
         {
             Vector3 SpawnArea = Area.GetScale();
             Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
-            Instantiate(NonEvidencePrefab, pos, Quaternion.identity, Parent);
+            GameObject temp = Instantiate(NonEvidencePrefab, pos, Quaternion.identity, Parent);
+            temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
         }
 
     }
