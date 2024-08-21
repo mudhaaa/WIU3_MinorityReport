@@ -14,6 +14,9 @@ public class StickFindTargetCircle : MonoBehaviour
     public bool Hit = false;
     public AudioSource PickLockSound;
     [SerializeField] ParticleSystem ParticlePrefab;
+
+    public DialogSystem pDialogSystem;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -23,6 +26,11 @@ public class StickFindTargetCircle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         Hit = false;
         if (canPressKey)
         {

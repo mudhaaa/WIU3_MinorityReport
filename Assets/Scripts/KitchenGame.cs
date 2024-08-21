@@ -27,6 +27,7 @@ public class KitchenGame : MonoBehaviour
     public GameObject[] objectsToDeactivate;
     [SerializeField] public Foods FoodToMake;
 
+    public DialogSystem pDialogSystem;
     public TimeSystem timeSystem;
 
     // Start is called before the first frame update
@@ -39,9 +40,19 @@ public class KitchenGame : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        timeSystem.pOnDayEnd += OnDayEnd;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero, Mathf.Infinity, pickableLayer);
 
@@ -106,6 +117,11 @@ public class KitchenGame : MonoBehaviour
         }
     }
 
+    public void OnDisable()
+    {
+        timeSystem.pOnDayEnd -= OnDayEnd;
+    }
+
     public void OnDayStart()
     {
         // Deactivate the objects
@@ -120,4 +136,10 @@ public class KitchenGame : MonoBehaviour
         }
     }
  
+    public void OnDayEnd()
+    {
+        MiniGame.SetActive(false);
+        MainGame.SetActive(true);
+    }
+
 }

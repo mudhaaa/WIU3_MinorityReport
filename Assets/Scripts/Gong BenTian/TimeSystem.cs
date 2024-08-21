@@ -8,6 +8,9 @@ public class TimeSystem : MonoBehaviour
     public delegate void OnDayStart();
     public OnDayStart pOnDayStart;
 
+    public delegate void OnDayEnd();
+    public OnDayEnd pOnDayEnd;
+
     public DialogSystem pDialogSystem;
     public InventoryManager pInventoryManager;
 
@@ -19,7 +22,7 @@ public class TimeSystem : MonoBehaviour
     public int Day;
 
     public const float LengthOfTime = 480;
-    public const float NormalTimeMultipler = 10.0f;
+    public const float NormalTimeMultipler = 1.0f;
     public const float DialogTimeMultipler = 0.0f;
     public static float TimeMultipler = 1.0f;
 
@@ -86,6 +89,12 @@ public class TimeSystem : MonoBehaviour
 
     private void EndTheDay()
     {
+        if(pOnDayEnd != null)
+        {
+            pOnDayEnd();
+            pOnDayEnd = null;
+        }
+
         IsNight = true;
 
         ++Day;

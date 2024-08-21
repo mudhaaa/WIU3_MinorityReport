@@ -11,12 +11,14 @@ public class ArcadeExit : MonoBehaviour
     public Volume CameraEffects;
     public VolumeProfile NormalProf;
 
+    public TimeSystem pTimeSystem;
 
     bool Exit = false;
     // Start is called before the first frame update
     void OnEnable()
     {
         Exit = false;
+        pTimeSystem.pOnDayEnd += OnDayEnd;
     }
 
     // Update is called once per frame
@@ -44,5 +46,16 @@ public class ArcadeExit : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnDisable()
+    {
+        pTimeSystem.pOnDayEnd -= OnDayEnd;
+    }
+
+    public void OnDayEnd()
+    {
+        Exit = true;
+        Debug.Log("Arcade Exit");
     }
 }

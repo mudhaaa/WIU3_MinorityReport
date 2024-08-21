@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 4770764616120642646}
   - component: {fileID: 4195145345923743206}
   - component: {fileID: 3065574202417308109}
+  - component: {fileID: 26008900953594616}
   - component: {fileID: 2481713535991684846}
   m_Layer: 7
   m_Name: Correct
@@ -191,6 +192,7 @@ MonoBehaviour:
   isDragging: 0
   SoundOnDrag: {fileID: 4195145345923743206}
   SoundOnCollision: {fileID: 3065574202417308109}
+  pDialogSystem: {fileID: 0}
 --- !u!50 &252955084111935281
 Rigidbody2D:
   serializedVersion: 4
@@ -455,6 +457,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &26008900953594616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799382985632753212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61a0839c3dca9c40b8a3a07659b4d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 252955084111935281}
+  game: {fileID: 0}
+  SoundWhenClicked: {fileID: 4195145345923743206}
+  DestroyWaitTime: 2
 --- !u!114 &2481713535991684846
 MonoBehaviour:
   m_ObjectHideFlags: 0

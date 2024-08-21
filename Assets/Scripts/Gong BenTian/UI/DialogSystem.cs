@@ -433,5 +433,10 @@ public class DialogSystem : MonoBehaviour
     {
         return !gameObject.activeSelf;
     }
+
+    public void SetFilePath(string newPath)
+    {
+        FilePath = newPath;
+    }
 }
 

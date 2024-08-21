@@ -14,8 +14,15 @@ public class DraggableObject2D : MonoBehaviour
     [SerializeField] AudioSource SoundOnDrag;
     [SerializeField] AudioSource SoundOnCollision;
 
+    public DialogSystem pDialogSystem;
+
     void Update()
     {
+        if(pDialogSystem.IsCompleted() == false)
+        {
+            return;
+        }
+
         if (isDragging)
         {
             initialMousePosition = mousePosition;
