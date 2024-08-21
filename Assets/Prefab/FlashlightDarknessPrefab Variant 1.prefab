@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 105027142949494745, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b1d549dda6f7104092939f6db482a41, type: 3}
+    - target: {fileID: 2481713535991684846, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: Draggable
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922033926520408886, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2922033926520408886, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4293872723914054136, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -48,9 +64,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4770764616120642646, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770764616120642646, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8799382985632753212, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
       propertyPath: m_Name
-      value: FlashlightDarknessPrefab Variant
+      value: FlashlightDarknessPrefab Variant 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5201898074046773083, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
@@ -60,7 +84,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8799382985632753212, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3703969866512319039}
+      addedObject: {fileID: -8250751071265638184}
   m_SourcePrefab: {fileID: 100100000, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
 --- !u!82 &649473246999831841 stripped
 AudioSource:
@@ -77,7 +101,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8799382985632753212, guid: ddc0a1cfce2c48048872937fb16957f6, type: 3}
   m_PrefabInstance: {fileID: 3691616944208844999}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3703969866512319039
+--- !u!114 &-8250751071265638184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5271166742442295035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61a0839c3dca9c40b8a3a07659b4d03, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dfa6fd640d0af84b944c6f41bed4ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3511100452114493430}

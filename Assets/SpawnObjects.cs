@@ -9,16 +9,26 @@ public class SpawnObjects : MonoBehaviour
     public int MaxEvidencesSpawned = 5;
     public int MaxNonEvidencesSpawned = 5;
     [SerializeField] Transform Parent;
-    public GameObject EvidencePrefab;
+    public GameObject ReceiptPrefab;
+    public GameObject WineBottlePrefab;
     public GameObject NonEvidencePrefab;
     // Start is called before the first frame update
     void OnEnable()
     {
         for (int i = 0; i < MaxEvidencesSpawned; i++)
         {
-            Vector3 SpawnArea = Area.GetScale();
-            Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
-            Instantiate(EvidencePrefab, pos, Quaternion.identity, Parent);
+            if (WineBottlePrefab == null || Random.Range(0, 2) == 0)
+            {
+                Vector3 SpawnArea = Area.GetScale();
+                Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
+                Instantiate(ReceiptPrefab, pos, Quaternion.identity, Parent);
+            }
+            else
+            {
+                Vector3 SpawnArea = Area.GetScale();
+                Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
+                Instantiate(WineBottlePrefab, pos, Quaternion.identity, Parent);
+            }
         }
         for (int i = 0; i < MaxNonEvidencesSpawned; i++)
         {

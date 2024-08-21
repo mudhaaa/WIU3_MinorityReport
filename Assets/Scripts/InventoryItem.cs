@@ -47,7 +47,10 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         item = newitem.Clone();
         image.sprite = newitem.image;
 
-        item.ItemInteractScript.Init(item);
+        if (item.ItemInteractScript != null)
+        {
+            item.ItemInteractScript.Init(item);
+        }
         //float QuestBonus = 0;
 
         //if (QuestCompletion)

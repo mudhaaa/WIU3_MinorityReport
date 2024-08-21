@@ -10,18 +10,28 @@ public class FlashlightDarknessGame : MonoBehaviour
     public GameObject InvetigationGUI;
     public TextMeshProUGUI investigationtext;
     float prev_intensity = 0.5f;
-    int amtfound = 0;
+    int receiptamtfound = 0;
+    int winebottleamtfound = 0;
     [SerializeField] int MaxAmtFound = 0;
     public BackgroundTransparencyAnim BlackBackground;
     public GameObject MainGame;
 
     public InventoryManager inventoryManager;
-    public Item EvidenceReward;
+    public Item ReceiptReward;
+    public Item WineBottleReward;
 
-    public int AmountFound {  
-        get { return amtfound; } 
+    public int ReceiptAmountFound {  
+        get { return receiptamtfound; } 
         set {
-            amtfound = value; 
+            receiptamtfound = value; 
+        }
+    }
+    public int WineBottleAmountFound 
+    {
+        get { return winebottleamtfound; }
+        set
+        {
+            winebottleamtfound = value;
         }
     }
 
@@ -29,15 +39,16 @@ public class FlashlightDarknessGame : MonoBehaviour
     void OnEnable()
     {
         InvetigationGUI.SetActive(true);
-        amtfound = 0;
+        receiptamtfound = 0;
+        winebottleamtfound = 0;
         GlobalLight.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        investigationtext.text = "Items Collected: " + (amtfound) + " / " + (MaxAmtFound);
-        if (amtfound >= MaxAmtFound)
+        investigationtext.text = "Items Collected: " + (receiptamtfound + winebottleamtfound) + " / " + (MaxAmtFound);
+        if (receiptamtfound + winebottleamtfound >= MaxAmtFound)
         {
             if (BlackBackground.CoroutineRunning == false)
             {
@@ -45,7 +56,8 @@ public class FlashlightDarknessGame : MonoBehaviour
             }
             if (BlackBackground.canvasgroup.alpha >= 1.0f)
             {
-                inventoryManager.AddItem(EvidenceReward, amtfound);
+                inventoryManager.AddItem(ReceiptReward, receiptamtfound);
+                inventoryManager.AddItem(WineBottleReward, winebottleamtfound);
                 MainGame.SetActive(true);
                 gameObject.SetActive(false);
             }

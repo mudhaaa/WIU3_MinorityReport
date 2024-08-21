@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FD_Evidence : MonoBehaviour
+public class FD_WineBottle : MonoBehaviour
 {
     [Header("Physics 2D")]
     public Rigidbody2D rb;
@@ -29,7 +29,7 @@ public class FD_Evidence : MonoBehaviour
             {
                 SoundWhenClicked.Play();
             }
-            game.ReceiptAmountFound++;
+            game.WineBottleAmountFound++;
             Destroy(gameObject, DestroyWaitTime);
         }
     }

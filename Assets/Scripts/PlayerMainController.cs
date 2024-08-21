@@ -52,11 +52,11 @@ public class PlayerMainController : MonoBehaviour
 
     public void OnDayStart()
     {
-        if(pTimeSystem.Day <= 3)
+        if (pTimeSystem.Day <= 3)
         {
             transform.position = SpawnPoints[0].position;
         }
-        else if(pTimeSystem.Day > 3)
+        else if (pTimeSystem.Day > 3)
         {
             transform.position = SpawnPoints[1].position;
         }
