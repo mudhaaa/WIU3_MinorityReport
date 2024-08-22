@@ -7,11 +7,26 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private RuntimeAnimatorController ManController;
+    [SerializeField] private RuntimeAnimatorController WomanController;
     private static readonly string[] walkanimations = { "Walk North", "Walk North West", "Walk West", "Walk South West", "Walk South", "Walk South East", "Walk East", "Walk North East" };
     private static readonly string[] attackanimations = { "Attack North", "Attack North West", "Attack West", "Attack South West", "Attack South", "Attack South East", "Attack East", "Attack North East" };
     private static readonly string[] sprintanimations = { "Sprint North", "Sprint North West", "Sprint West", "Sprint South West", "Sprint South", "Sprint South East", "Sprint East", "Sprint North East" };
     private static readonly string[] idleanimations = { "Idle North", "Idle North West", "Idle West", "Idle South West", "Idle South", "Idle South East", "Idle East", "Idle North East" };
     private static readonly string[] deathanimations = { "Death North", "Death North West", "Death West", "Death South West", "Death South", "Death South East", "Death East", "Death North East" };
+
+    private void Start()
+    {
+        if (GameManager.isMale == true)
+        {
+            animator.runtimeAnimatorController = ManController;
+        }
+        else
+        {
+            animator.runtimeAnimatorController = WomanController;
+        }
+    }
+
     // Find index based direction
     private int DirectionToIndex(Vector2 direction)
     {

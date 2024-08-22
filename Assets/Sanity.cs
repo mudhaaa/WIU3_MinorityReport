@@ -28,6 +28,7 @@ public class Sanity : MonoBehaviour
 
                 if (sanity <= 0)
                 {
+                    Debug.Log("asdasdasd");
                     DialogSystem.Instance.onDialogEnd = sceneFunctions.LoadSuicide;
                     DialogSystem.Instance.FilePath = "Assets/Dialog/SuicideEnding.txt";
                     GameManager.Instance.IsEndingCompleted[4] = true;
@@ -49,10 +50,10 @@ public class Sanity : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
-        {
-            ISanity -= Time.deltaTime * 5;
-        }
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    ISanity -= Time.deltaTime * 5;
+        //}
     }
 
     //// Example event handler
