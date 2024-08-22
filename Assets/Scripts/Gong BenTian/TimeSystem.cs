@@ -76,6 +76,10 @@ public class TimeSystem : MonoBehaviour
         {
             currentTiming += Time.deltaTime * TimeMultipler;
         }
+        else
+        {
+            currentTiming = 1.0F;
+        }
         
         globalLightAnimator.speed = TimeMultipler;
         
