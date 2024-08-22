@@ -74,7 +74,7 @@ public class PlayerHotbar : MonoBehaviour
             {
                 if (SelectedItem.ITEM.ItemInteractScript != null)
                 {
-                    if (SelectedItem.ITEM.type == ItemType.SanityItem || TimeSystem.Day >= 5)
+                    if (SelectedItem.ITEM.type == ItemType.SanityItem || TimeSystem.Day >= 4)
                     {
                         if (SelectedItem.ITEM.ItemInteractScript.Interact(this.gameObject))
                         {
