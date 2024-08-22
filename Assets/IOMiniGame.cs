@@ -9,6 +9,8 @@ public class IOMiniGame : MonoBehaviour, InteractableObject
     public GameObject InteractGUI;
     public TextMeshProUGUI InteractText;
     [SerializeField] string NewInteractText = "Interact";
+    [SerializeField] string ioTextFilePath = "Assets/Dialog/BathtubDialogue";
+
 
     public BackgroundTransparencyAnim BlackBackground;
     [SerializeField] Vector3 InteractGUIOffset = new Vector3(0, 1,0);
@@ -44,7 +46,7 @@ public class IOMiniGame : MonoBehaviour, InteractableObject
     {
         if (Interactable)
         {
-            dialogSystem.FilePath = "Assets/Dialog/ToiletDialogue.txt";
+            dialogSystem.FilePath = ioTextFilePath;
             dialogSystem.StartNewDialogues();
             Activated = true;
             BlackBackground.StartCoroutine(BlackBackground.AppearAnim(1.0f, 0.01f, DelayTime));

@@ -1,7 +1,7 @@
 BGRGBA:0,0,0,255
-N:Player
+N:You
 C:I've had enough, the constant abuse, the endless torture, I can't stand it.
-N:Player
+N:You
 C:The police wouldn't help me out, I couldn't do anything to escape that monster.
-N:Player
-C:Wherever I'm about to end up at, It'll probably still be better than living in this house.
+N:You
+C:Wherever I end up, it'll still be better than living in this house.

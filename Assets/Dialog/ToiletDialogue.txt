@@ -1,2 +1,2 @@
-N:Main Character
+N:You
 C:Thats a toilet.
