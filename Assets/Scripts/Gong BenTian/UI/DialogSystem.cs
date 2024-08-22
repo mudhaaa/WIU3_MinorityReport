@@ -5,6 +5,7 @@ using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class DialogSystem : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class DialogSystem : MonoBehaviour
     public Text[] ButtonLabels;
 
     public string FilePath;
+
     public string[] Dialogues;
     public int LineIndex;
 
@@ -135,9 +137,17 @@ public class DialogSystem : MonoBehaviour
             return false;
         }
 
+        FilePath = FilePath.Remove(0, 7);
+        FilePath = FilePath.Remove(FilePath.Length - 4, 4);
+
         //read in the file 
-        Dialogues = File.ReadAllLines(FilePath);
-        
+        Dialogues = Resources.Load<TextAsset>(FilePath).text.Split('\n');
+        for(int i = 0; i < Dialogues.Length; ++i)
+        {
+            Dialogues[i] = Dialogues[i].Remove(Dialogues[i].Length - 1, 1);
+        }
+
+
         //check if the file is empty
         if(Dialogues.Length <= 0)
         {

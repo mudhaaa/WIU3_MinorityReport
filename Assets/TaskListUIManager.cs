@@ -27,7 +27,10 @@ public class TaskListUIManager : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+    }
 
+    private void Awake()
+    {
         timeSystem.pOnDayStart += kitchenGame.OnDayStart;
         timeSystem.pOnDayStart += OnDayStart;
     }

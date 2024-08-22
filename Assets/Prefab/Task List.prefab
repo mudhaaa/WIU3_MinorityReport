@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cc93887d239be4999828aecc5b1b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 6049593057342749252}
   Day: {fileID: 6055152675515700380}
   Task1: {fileID: 469825247060782719}
   Task2: {fileID: 2147002481650173532}

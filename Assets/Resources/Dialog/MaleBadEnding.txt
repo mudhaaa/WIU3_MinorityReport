@@ -1,0 +1,18 @@
+BGRGBA:0,0,0,255
+N:Judge
+C:I will announce the final judgement.
+N:Judge
+C:While it appears that Mrs. Ember Deep has a severe alcohol addiction, recklessly spends their spouse's money and has extreme anger management issues.
+N:Judge
+C:However, Mr. John Deep, your actions have crossed the line. Your wife has endured multiple injuries, likely due to physical assault. 
+N:Judge
+C:This court announces that it will order a restraining order against Mr. Deep, prohibiting you from contacting or approaching your wife. You will also be required to attend anger management counseling.
+MIM:MaleMC_portrait
+N:You
+C:Why! But she was trying to kill me, I had no other choice but to defend myself.
+MIM:Null
+N:Judge
+C:I am sorry, Mr. Deep, your experience might be pitiful to others, but we must still judge you according to the law.
+MIM:MaleMC_portrait
+N:Player
+C:(If only the law wasn't so biased towards women in abuse cases, then that monster would finally get what she deserves and I wouldn't have to suffer like this......)

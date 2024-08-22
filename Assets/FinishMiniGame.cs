@@ -11,11 +11,14 @@ public class FinishMiniGame : MonoBehaviour
     public bool Chore = false;
     public bool RestartPerDayAvailable = false;
 
-    public bool FinishedGame {
-        get {  
-            return finishgame; 
+    public bool FinishedGame
+    {
+        get
+        {
+            return finishgame;
         }
-        set {
+        set
+        {
             if (value != finishgame)
             {
                 if (value)
@@ -27,8 +30,9 @@ public class FinishMiniGame : MonoBehaviour
             }
         }
     }
+
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         pTimeSystem.pOnDayStart += OnDayStart;
     }

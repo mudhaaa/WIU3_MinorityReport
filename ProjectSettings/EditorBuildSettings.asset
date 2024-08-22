@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2ddff099eefdf43419c37c85b5c9c645
   - enabled: 1
-    path: Assets/Scenes/Gallery.unity
-    guid: a2e961c9bed9c824cb89ca4efadf0cee
-  - enabled: 1
     path: Assets/Scenes/DanTestScene.unity
     guid: fc21392cb729ddb459e7eff9895b4a9d
+  - enabled: 1
+    path: Assets/Scenes/Gallery.unity
+    guid: a2e961c9bed9c824cb89ca4efadf0cee
   - enabled: 1
     path: Assets/Scenes/Hit your wife.unity
     guid: 86a11949cd8aea34bb2fe64cc48e60a4
@@ -26,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win as man.unity
     guid: ed3739de08b632e4b827f70ba01cde7d
-  - enabled: 1
-    path: Assets/Scenes/DanTestScene 3.unity
-    guid: d0923c9c88bc80d42a5d52672eeb63b6
   - enabled: 1
     path: Assets/Scenes/Win as Woman.unity
     guid: 38a0f0e9231ccd64cad9df4ac3112c3f

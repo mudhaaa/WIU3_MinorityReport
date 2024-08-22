@@ -1,0 +1,5 @@
+BGRGBA:0,0,0,255
+C:Things got violent last night. Hit you clean on the face, using a common household object as a weapon.
+LIM:FemaleMC_bruised_portrait
+C:*sigh*...I guess I could use it as more evidence.
+C:Wonder where it is.

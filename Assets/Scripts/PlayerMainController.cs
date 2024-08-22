@@ -22,7 +22,10 @@ public class PlayerMainController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Hide = false;
         Died = false;
+    }
 
+    private void OnEnable()
+    {
         pTimeSystem.pOnDayStart += OnDayStart;
     }
 
@@ -40,14 +43,8 @@ public class PlayerMainController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E) && Hide)
         {
             Unhide();
-            Debug.Log("unhide");
         }
 
-    }
-
-    public void CheckThisFrame()
-    {
-        Debug.Log("ThisFrame");
     }
 
     public void OnDayStart()

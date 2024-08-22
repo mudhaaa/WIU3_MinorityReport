@@ -17,7 +17,7 @@ public class InteractController : MonoBehaviour
     public TimeSystem timeSystem;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         timeSystem.pOnDayStart += GetChoresForToday;
     }

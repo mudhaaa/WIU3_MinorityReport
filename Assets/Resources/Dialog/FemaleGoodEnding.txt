@@ -1,0 +1,12 @@
+BGRGBA:0,0,0,255
+N:Judge
+C:I will announce the final judgement.
+N:Judge
+C:Given that Mr.John Deep severe has alcoholism, recklessly spends the houses money and extreme anger issues.
+N:Judge
+C:Mr.John Deep has been subjecting Mrs.Ember Deep to long-term verbal, mental and physical abuse, depriving her of personal and economic freedoms, and ignoring her basic human rights.
+N:Judge
+C:This court announces that it will sentence Mr.John Deep to fifteen years in prison for domestic abuse and attempted murder towards Mrs.Ember Deep, and that he must compensate Mrs.Ember Deep for all her losses. Any last word?
+MIM:FemaleMC_portrait
+N:Player
+C:I hope you rot in that cell you piece of shit, this is what you get for putting me through all that hell.

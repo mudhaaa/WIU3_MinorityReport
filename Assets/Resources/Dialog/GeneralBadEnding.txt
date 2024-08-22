@@ -1,0 +1,19 @@
+BGRGBA:50,50,50,255
+N:Partner
+C:Finally got you shit head.
+N:You
+C:......
+C:(You try to say something but you can't escape your partners grasp)
+BGRGBA:120,120,120,255
+N:Partner
+C:What were you trying to do huh?!
+BGRGBA:200,200,200,255
+N:Partner
+C:Trying to run out of the house and call the cops on me!
+N:You
+C:......
+BGRGBA:255,255,255,255
+N:Partner
+C:Since you've tried to betray me, then I'll have to make sure you never betray me again...
+C:(Since then, no one knows where you went or when you will come back.)
+C:(2 months later, your corpse was found by the police in the park 200 miles away from your home.)

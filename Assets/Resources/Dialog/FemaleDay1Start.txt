@@ -1,0 +1,9 @@
+LIM:FemaleMC_portrait
+BGRGBA:0,0,0,255
+C:Currently, our fights haven’t escalated to anything dangerous, but I still have to find a way to keep myself safe.
+C:I should start trying to find a way to expose the recent drinking problem first. This could definitely be used as evidence.
+C:Maybe if I can find a bunch of beer bottles, it’ll be enough for the police to help me.
+C:I should get some chores done too. Maybe that’ll get them off my back too. I can start with the bed.
+LIM:Null
+N:Tutorial
+C:(Doing chores such as making the bed or doing the laundry can make your abuser more lenient with you, making you feel safer.)

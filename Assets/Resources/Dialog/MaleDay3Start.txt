@@ -1,0 +1,12 @@
+BGRGBA:0,0,0,255
+C:God, seeing you just pisses me off. I don’t even want to sleep in the same room as you!
+C:(Last night, you were forced to sleep in the bed in the storage room. You wake up and the first thing you see is a camera hung above, scanning the whole room.)
+LIM:MaleMC_portrait
+C:What the…
+C:(Is that a camera? Is this still my home anymore?)
+C:(I shouldn’t say anything. It could be used against me somehow.)
+C:(Maybe this could be used as evidence.)
+C:(Spying on me, controlling what I do counts as a form of mental abuse.)
+C:(There must be other cameras around the house.)
+C:(If I can find them, it could work out in my favour.)
+C:(There could be some hidden throughout the house.)

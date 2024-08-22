@@ -1,0 +1,15 @@
+BGRGBA:0,0,0,255
+N:Judge
+C:I will announce the final judgement.
+N:Judge
+C:Given that Mrs.Ember Deep severe has alcoholism, recklessly spends the houses money and extreme anger issues.
+N:Judge
+C:Mrs.Ember Deep has been subjecting Mr.John Deep to long-term verbal, mental and physical abuse, depriving him of personal and economic freedoms, and ignoring his basic human rights.
+N:Judge
+C:This court announces that it will sentence Mrs.Ember Deep to two years in prison for domestic abuse and attempted murder towards Mr.John Deep, and that he must compensate Mr.John Deep for all his losses. Any last word?
+MIM:MaleMC_portrait
+N:Player
+C:I hope you rot in that cell you piece of shit, this is what you get for putting me through all that hell.
+MIM:Null
+N:Player
+C:(Even though you are happy that you won the case, you can't but feel frustrated that your wife is only being sentenced to two years in prison, even though the punishment for domestic abuse is meant to be much harsher, It'll only be two years until that monster is allowed back in society.....)

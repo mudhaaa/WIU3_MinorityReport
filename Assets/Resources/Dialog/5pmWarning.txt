@@ -1,0 +1,3 @@
+N:Main Character
+C:(It is going to be 6, I should speed up a bit)
+C:(It will be good to use the rest of the time cleaning up the traces)

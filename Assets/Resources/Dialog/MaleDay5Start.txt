@@ -1,0 +1,10 @@
+N:You
+BGRGBA:0,0,0,255
+C:(You wake up as usual. You feel something's off. You slept through the whole day. Probably due to the abuse tiring you out.)
+C:*tires screeching
+LIM:FemaleMC_portrait
+N:Ember Deep
+C:HONEY *burp* I’M HOOOME!
+LIM:MaleMC_bruised_portrait
+N:You
+C:(Here already?! Sounding all drunk too. I gotta hide somewhere.)

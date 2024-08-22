@@ -71,7 +71,6 @@ public class TimeSystem : MonoBehaviour
             }
         }
         
-        Debug.Log(TimeMultipler);
         if (Day < 4)
         {
             currentTiming += Time.deltaTime * TimeMultipler;
@@ -110,11 +109,6 @@ public class TimeSystem : MonoBehaviour
         {
             EndTheDay();
         }
-        else if(IsNight == true && NextDay == true && Day < TotalOfDay)
-        {
-            StartNextDay();
-        }
-        
     }
 
     private void GiveWarning()
