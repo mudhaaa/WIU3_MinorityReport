@@ -22,7 +22,7 @@ public class IOMiniGame : MonoBehaviour, InteractableObject
 
     public bool Interactable = true;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame w da
     void Start()
     {
 

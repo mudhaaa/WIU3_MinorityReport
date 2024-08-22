@@ -13,6 +13,7 @@ public class IODialogue : MonoBehaviour, InteractableObject
     public TextMeshProUGUI InteractText;
     int count = 0;
     [SerializeField] private string[] filePath;
+
     // Start is called before the first frame update
     void Start()
     {
