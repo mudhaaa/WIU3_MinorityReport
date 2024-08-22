@@ -31,6 +31,11 @@ public class KitchenGame : MonoBehaviour
     public TimeSystem timeSystem;
     public FinishMiniGame FinishMiniGame;
 
+    public GameObject[] Ingredients;
+    private Vector3[] IngredientDefaultPositions;
+
+    public GameObject FryingPan;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,16 +131,33 @@ public class KitchenGame : MonoBehaviour
 
     public void OnDayStart()
     {
-        // Deactivate the objects
+        if(timeSystem.Day == 0)
+        {
+            IngredientDefaultPositions = new Vector3[Ingredients.Length];
+            for (int i = 0; i < Ingredients.Length; ++i)
+            {
+                IngredientDefaultPositions[i] = Ingredients[i].transform.localPosition;
+            }
+        }
+
+        // activate the objects
         foreach (GameObject obj in objectsToDeactivate)
         {
             obj.SetActive(false);
+        }
+
+        for(int i = 0; i < Ingredients.Length; ++i)
+        {
+            Ingredients[i].SetActive(true);
+            Ingredients[i].transform.localPosition = IngredientDefaultPositions[i];
         }
 
         if (timeSystem.Day < (int)Foods.NumOfFoods)
         {
             FoodToMake = (Foods)timeSystem.Day;
         }
+
+        FryingPan.SetActive(true);
     }
  
     public void OnDayEnd()

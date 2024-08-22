@@ -25,6 +25,8 @@ public class StateController : MonoBehaviour
     public bool aiActive = true;
     public bool flip;
 
+    public DialogSystem pDialogSystem;
+
     // Waypoint system
     [SerializeField] public List<Transform> wayPointList = new List<Transform>();
     [SerializeField] public int nextWayPoint = 0;
@@ -74,7 +76,7 @@ public class StateController : MonoBehaviour
 
     void Update()
     {
-        if (!aiActive)
+        if (!aiActive || pDialogSystem.IsCompleted() == false)
         {
             return;
         }

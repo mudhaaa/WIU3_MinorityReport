@@ -49,7 +49,7 @@ public class TimeSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentTiming == 0 && pDialogSystem.gameObject.activeSelf == false)
+        if (currentTiming == 0 && pDialogSystem.gameObject.activeSelf == false && Day <= 4)
         {
             if (StartOfGame == false)
             {

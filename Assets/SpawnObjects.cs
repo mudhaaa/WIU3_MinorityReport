@@ -20,19 +20,27 @@ public class SpawnObjects : MonoBehaviour
     {
         for (int i = 0; i < MaxEvidencesSpawned; i++)
         {
-            if (WineBottlePrefab == null || Random.Range(0, 2) == 0)
+            if (WineBottlePrefab == null)
             {
                 Vector3 SpawnArea = Area.GetScale();
                 Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
                 GameObject temp = Instantiate(ReceiptPrefab, pos, Quaternion.identity, Parent);
-                temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
+
+                if (temp.GetComponent<DraggableObject2D>() != null)
+                {
+                    temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
+                }
             }
             else
             {
                 Vector3 SpawnArea = Area.GetScale();
                 Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
                 GameObject temp = Instantiate(WineBottlePrefab, pos, Quaternion.identity, Parent);
-                temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
+
+                if (temp.GetComponent<DraggableObject2D>() != null)
+                {
+                    temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
+                }
             }
         }
         for (int i = 0; i < MaxNonEvidencesSpawned; i++)
@@ -40,7 +48,12 @@ public class SpawnObjects : MonoBehaviour
             Vector3 SpawnArea = Area.GetScale();
             Vector3 pos = new Vector3(Random.Range(-SpawnArea.x, SpawnArea.x), Random.Range(-SpawnArea.y, SpawnArea.y), 0) + transform.position;
             GameObject temp = Instantiate(NonEvidencePrefab, pos, Quaternion.identity, Parent);
-            temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
+
+            if (temp.GetComponent<DraggableObject2D>() != null)
+            {
+                temp.GetComponent<DraggableObject2D>().pDialogSystem = pDialogSystem;
+            }
+
         }
 
     }

@@ -1915,7 +1915,12 @@ MonoBehaviour:
   - {fileID: 1113368026337645290}
   - {fileID: 8997202489779294246}
   - {fileID: 4966610540088258063}
-  FoodToMake: Steak
+  FoodToMake: 0
+  pDialogSystem: {fileID: 0}
+  timeSystem: {fileID: 0}
+  FinishMiniGame: {fileID: 0}
+  Ingredients: []
+  FryingPan: {fileID: 2764889919598697913}
 --- !u!1 &5788793843154736542
 GameObject:
   m_ObjectHideFlags: 0

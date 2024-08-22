@@ -10,4 +10,3 @@ C:This court announces that it will sentence Mr.John Deep to fifteen years in pr
 MIM:FemaleMC_portrait
 N:Player
 C:I hope you rot in that cell you piece of shit, this is what you get for putting me through all that hell.
-MIM:Null

@@ -16,7 +16,6 @@ public class FryingPan : MonoBehaviour
     [SerializeField] public List<string> requiredObjects;
 
     [SerializeField] public KitchenGame KitchenGame;
-    [SerializeField] public int FoodToMake;
     [SerializeField] public TextMeshProUGUI RecipeInfo;
     // A HashSet to keep track of the objects currently in the circle collider
     private HashSet<string> objectsInCollider = new HashSet<string>();
@@ -40,7 +39,7 @@ public class FryingPan : MonoBehaviour
         {
             requiredObjects = requiredObjects4;
         }
-        RecipeInfo.SetText("What to make:" + KitchenGame.FoodToMake + " Ingredients Required:" + requiredObjects.Count);
+        RecipeInfo.SetText("What to make:" + KitchenGame.FoodNames[(int)KitchenGame.FoodToMake] + " Ingredients Required:" + requiredObjects.Count);
         CheckAllObjectsInCollider();
     }
     // Trigger detection
@@ -91,7 +90,7 @@ public class FryingPan : MonoBehaviour
             {
                 obj.SetActive(false);
             }
-            RecipeObjects[FoodToMake].SetActive(true);
+            RecipeObjects[(int)KitchenGame.FoodToMake].SetActive(true);
             KitchenGame.FinishGame = true;
             gameObject.SetActive(false);
         }

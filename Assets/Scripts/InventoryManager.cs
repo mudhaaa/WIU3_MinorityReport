@@ -8,8 +8,6 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot evidenceSlot;
     public GameObject inventoryItemPrefab;
     public int MaxStackedItems = 64;
-
-    [SerializeField] Item testdrugs;
     public bool AddItem(Item item, int Amount)
     {
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -69,7 +67,7 @@ public class InventoryManager : MonoBehaviour
             {
                 if (itemInSlot.ITEM.type == ItemType.Evidence)
                 {
-                    EvidenceAmt++;
+                    EvidenceAmt += itemInSlot.count;
                 }
             }
         }
@@ -78,6 +76,10 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        AddItem(testdrugs, 5);
+    }
+
+    private void Update()
+    {
+        Debug.Log(ReturnTotalEvidenceAmt());
     }
 }
